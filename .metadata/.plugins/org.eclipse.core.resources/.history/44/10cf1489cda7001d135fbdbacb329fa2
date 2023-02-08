@@ -1,0 +1,33 @@
+package m4_ABP1;
+
+import java.util.Scanner;
+
+public class ciaSeguros {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		// DECLARAR VARIABLES
+
+		String Nombres;
+		String Apellidos;
+		int Telefono;
+		String AFP;
+		byte SistSalud;
+		String Direccion;
+		String Comuna;
+		byte Edad;
+		
+		Scanner myObj = new Scanner(System.in);
+		System.out.println("Ingrese RUT:");
+		int RUT = Integer.parseInt(myObj.nextLine());
+		
+		//Validacion de RUT
+		if (RUT.getStringLength == 0) {
+			System.out.println("EL campo RUT no puede estar vacío");
+		}
+		//System.out.println("El rut es: " + RUT);
+		
+	}
+
+}

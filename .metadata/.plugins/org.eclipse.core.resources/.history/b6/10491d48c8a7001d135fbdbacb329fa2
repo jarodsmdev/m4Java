@@ -1,0 +1,23 @@
+package m4_ABP1;
+
+public class ciaSeguros {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		// DECLARAR VARIABLES
+		int RUT;
+		String Nombres;
+		String Apellidos;
+		int Telefono;
+		String AFP;
+		byte sistSalud;
+		
+		String direccion = "mi casa";
+		
+		RUT = 54654654;
+		
+		System.out.println(direccion);
+	}
+
+}
