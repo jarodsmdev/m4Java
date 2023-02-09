@@ -145,7 +145,6 @@ public class ciaSeguros {
 		do {
 			System.out.println("["+ i +"]Ingrese su edad: ");
 			capturaDatos = myObj.nextLine().trim();
-			i++;
 			if (isNumeric(capturaDatos)) {
 				Edad = Integer.parseInt(capturaDatos);
 				if(Edad < 0 || Edad >120) {

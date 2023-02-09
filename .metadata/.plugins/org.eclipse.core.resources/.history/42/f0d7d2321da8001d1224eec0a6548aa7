@@ -143,20 +143,15 @@ public class ciaSeguros {
 		i=0;
 
 		do {
-			System.out.println("["+ i +"]Ingrese su edad: ");
+			System.out.println("Ingrese su edad: ");
 			capturaDatos = myObj.nextLine().trim();
-			i++;
 			if (isNumeric(capturaDatos)) {
 				Edad = Integer.parseInt(capturaDatos);
-				if(Edad < 0 || Edad >120) {
-					System.out.println("Edades no válidas, sólo se permite hasta 120 años");
-				}
 			}else {
-				System.out.println("Valor ingresado no válido");
 				Edad = 121;
 			}
-		}while(Edad < 0 || Edad > 120);
-		System.out.println("**FIN PROGRAMA**");
+		}while(Edad > 120);
+		
 		
 		
 	}

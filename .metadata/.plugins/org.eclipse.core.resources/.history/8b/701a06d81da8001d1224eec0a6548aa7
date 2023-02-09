@@ -145,7 +145,6 @@ public class ciaSeguros {
 		do {
 			System.out.println("["+ i +"]Ingrese su edad: ");
 			capturaDatos = myObj.nextLine().trim();
-			i++;
 			if (isNumeric(capturaDatos)) {
 				Edad = Integer.parseInt(capturaDatos);
 				if(Edad < 0 || Edad >120) {
@@ -155,7 +154,7 @@ public class ciaSeguros {
 				System.out.println("Valor ingresado no válido");
 				Edad = 121;
 			}
-		}while(Edad < 0 || Edad > 120);
+		}while(Edad < 1 || Edad > 120);
 		System.out.println("**FIN PROGRAMA**");
 		
 		
