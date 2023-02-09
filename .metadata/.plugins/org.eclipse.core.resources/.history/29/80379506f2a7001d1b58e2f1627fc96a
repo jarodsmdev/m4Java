@@ -1,0 +1,59 @@
+package m4_ABP1;
+
+import java.util.Scanner;
+
+public class ciaSeguros {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		// DECLARAR VARIABLES
+		String capturaDatos;
+
+		String Nombres;
+		String Apellidos;
+		int Telefono;
+		String AFP;
+		byte SistSalud;
+		String Direccion;
+		String Comuna;
+		byte Edad;
+		
+		Scanner myObj = new Scanner(System.in);
+		System.out.println("Ingrese RUT:");
+		//RUT = Integer.parseInt(myObj.nextLine());
+		capturaDatos = myObj.nextLine();
+		
+		//Validacion de RUT (solo numeros o vacío)
+		if (isNumeric(capturaDatos)) {
+			int RUT = Integer.parseInt(capturaDatos);
+			if (RUT < 99999999) {
+				System.out.println("RUT: " + RUT);
+			}else {
+				System.out.println("El Rut ingresado es un número muy alto");				
+			}
+		}else {
+			System.out.println("Rut ingresado no es válido");
+			System.exit(0);
+		}
+		
+		//Validar Nombre Obligatorio
+		System.out.println("Ingrese sus Nombres: ");
+		Nombres = myObj.nextLine().trim();
+		while (Nombres.length() == 0)
+			System.out.println("Ingrese sus Nombres: ");
+			Nombres = myObj.nextLine().trim();
+		System.out.println("Nombres: " + Nombres);
+	}
+
+	
+	private static boolean isNumeric(String cadena) {
+		try {
+			Integer.parseInt(cadena);
+			return true;
+		}catch (NumberFormatException nfe) {
+			return false;
+		}
+	}
+
+}

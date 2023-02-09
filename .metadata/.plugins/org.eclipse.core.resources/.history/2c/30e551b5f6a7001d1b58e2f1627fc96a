@@ -1,0 +1,86 @@
+package m4_ABP1;
+
+import java.util.Scanner;
+
+public class ciaSeguros {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		// DECLARAR VARIABLES
+		String capturaDatos;
+		int RUT;
+		String Nombres;
+		String Apellidos;
+		int Telefono;
+		String AFP;
+		byte SistSalud;
+		String Direccion;
+		String Comuna;
+		byte Edad;
+		
+		// Instanciar la clase Scanner
+		Scanner myObj = new Scanner(System.in);
+		
+		
+		
+		//Validacion de RUT (solo numeros, no vacío)
+		System.out.println("Ingrese RUT:");
+		capturaDatos = myObj.nextLine();
+		if (isNumeric(capturaDatos)) {
+			RUT = Integer.parseInt(capturaDatos);
+			if (RUT < 99999999) {
+				System.out.println("RUT: " + RUT);
+			}else {
+				System.out.println("El Rut ingresado es un número muy alto");				
+			}
+		}else {
+			System.out.println("Rut ingresado no es válido");
+			System.exit(0);
+		}
+		
+		//Validar Nombres Obligatorio
+		int i = 0;
+		do {
+			System.out.println("["+ i +"]Ingrese su Nombre: ");
+			Nombres = myObj.nextLine().trim();
+			i++;
+		} while (Nombres.length() == 0);
+		System.out.println("Nombre: " + Nombres);	
+		
+		//Validar Apellidos Obligatorio
+			i = 0;
+			do {
+				System.out.println("["+ i +"]Ingrese su apellido: ");
+				Apellidos = myObj.nextLine().trim();
+				i++;
+			} while (Apellidos.length() == 0);
+				System.out.println("Apellido: " + Apellidos);
+				
+		//Validar Teléfono no más de 15 caracteres
+			do {
+				System.out.println("Ingrese su número telefónico: ");
+				capturaDatos = myObj.nextLine().trim();
+				
+			} while (capturaDatos.length() > 15);
+			
+			
+			if(capturaDatos.length()<= 15) {
+				System.out.println("No más de 15 caracteres");
+			}else {
+				Telefono = Integer.parseInt(Apellidos);
+				System.out.println("Teléfono: " + Telefono);
+			}
+	}
+
+	
+	private static boolean isNumeric(String cadena) {
+		try {
+			Integer.parseInt(cadena);
+			return true;
+		}catch (NumberFormatException nfe) {
+			return false;
+		}
+	}
+
+}
