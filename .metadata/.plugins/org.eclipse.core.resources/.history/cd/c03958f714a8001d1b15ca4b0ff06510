@@ -17,7 +17,7 @@ public class ciaSeguros {
 		String Apellidos;
 		int Telefono;
 		String AFP;
-		int SistSalud;
+		byte SistSalud;
 		String Direccion;
 		String Comuna;
 		byte Edad;
@@ -88,31 +88,20 @@ public class ciaSeguros {
 		}while(capturaDatos.length()==0);
 			
 		//Validar Sistema salud 1 o 2
-		SistSalud = 0;
 		i = 0;
 		do {
 			System.out.println("[" + i +"]Ingrese Sistema de Salud: ");
-			capturaDatos = myObj.nextLine().trim();
-			
 			if (isNumeric(capturaDatos)) {
-				SistSalud = Integer.parseInt(capturaDatos);
-				
-			}else {
-				System.out.println("El valor no es numérico");
+				SistSalud = Byte.parseByte(capturaDatos);
 			}
-			
+			//capturaDatos = myObj.nextLine().trim();
 			i++;
 			if (SistSalud == 1 || SistSalud == 2) {
-				if(SistSalud == 1) {
-					System.out.println("Sistema de Salud: FONASA");
-				}else {
-					System.out.println("Sistema de Salud: Isapre");
-				}
 			}else {
 				System.out.println("Debe seleccionar 1 [Fonasa] o 2 [Isapre]");
 				
 			}
-		}while(SistSalud != 1 && SistSalud != 2);
+		}while(SistSalud != 1 || SistSalud != 2);
 			
 			
 	}

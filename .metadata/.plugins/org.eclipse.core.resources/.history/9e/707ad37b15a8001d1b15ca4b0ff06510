@@ -88,7 +88,6 @@ public class ciaSeguros {
 		}while(capturaDatos.length()==0);
 			
 		//Validar Sistema salud 1 o 2
-		SistSalud = 0;
 		i = 0;
 		do {
 			System.out.println("[" + i +"]Ingrese Sistema de Salud: ");
@@ -103,16 +102,12 @@ public class ciaSeguros {
 			
 			i++;
 			if (SistSalud == 1 || SistSalud == 2) {
-				if(SistSalud == 1) {
-					System.out.println("Sistema de Salud: FONASA");
-				}else {
-					System.out.println("Sistema de Salud: Isapre");
-				}
+				System.out.println("TODO BIEN PERRO");
 			}else {
 				System.out.println("Debe seleccionar 1 [Fonasa] o 2 [Isapre]");
 				
 			}
-		}while(SistSalud != 1 && SistSalud != 2);
+		}while(SistSalud != 1 || SistSalud != 2);
 			
 			
 	}

@@ -103,11 +103,7 @@ public class ciaSeguros {
 			
 			i++;
 			if (SistSalud == 1 || SistSalud == 2) {
-				if(SistSalud == 1) {
-					System.out.println("Sistema de Salud: FONASA");
-				}else {
-					System.out.println("Sistema de Salud: Isapre");
-				}
+				System.out.println("Sistema de Salud: " + SistSalud);
 			}else {
 				System.out.println("Debe seleccionar 1 [Fonasa] o 2 [Isapre]");
 				
