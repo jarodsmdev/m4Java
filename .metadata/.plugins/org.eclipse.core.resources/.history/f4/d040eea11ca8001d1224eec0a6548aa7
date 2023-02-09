@@ -116,15 +116,15 @@ public class ciaSeguros {
 			
 		// Validar direccion no superior a 50 caracteres
 		do {
-			System.out.println("Ingrese su dirección: ");
-			capturaDatos = myObj.nextLine().trim();
-			if (capturaDatos.length() > 50) {
-				System.out.println("Máximo sólo 50 caracteres");
-			}else {
-				Direccion = capturaDatos;
-			};
 			
-		}while(capturaDatos.length()>50);
+		}while();
+		System.out.println("Ingrese su dirección: ");
+		capturaDatos = myObj.nextLine().trim();
+		if (capturaDatos.length() > 50) {
+			System.out.println("Máximo sólo 50 caracteres");
+		}else {
+			Direccion = capturaDatos;
+		};
 		
 		//Validar Comuna obligatorio
 		Comuna = "";

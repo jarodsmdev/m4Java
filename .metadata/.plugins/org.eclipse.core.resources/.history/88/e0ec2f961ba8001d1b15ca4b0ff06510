@@ -115,16 +115,13 @@ public class ciaSeguros {
 		}while(SistSalud != 1 && SistSalud != 2);
 			
 		// Validar direccion no superior a 50 caracteres
-		do {
-			System.out.println("Ingrese su dirección: ");
-			capturaDatos = myObj.nextLine().trim();
-			if (capturaDatos.length() > 50) {
-				System.out.println("Máximo sólo 50 caracteres");
-			}else {
-				Direccion = capturaDatos;
-			};
-			
-		}while(capturaDatos.length()>50);
+		System.out.println("Ingrese su dirección: ");
+		capturaDatos = myObj.nextLine().trim();
+		if (capturaDatos.length() > 50) {
+			System.out.println("Máximo sólo 50 caracteres");
+		}else {
+			Direccion = capturaDatos;
+		};
 		
 		//Validar Comuna obligatorio
 		Comuna = "";
@@ -141,14 +138,12 @@ public class ciaSeguros {
 		
 		// Validar edad menor a 120
 		i=0;
-
+		Edad = 0;
 		do {
 			System.out.println("Ingrese su edad: ");
 			capturaDatos = myObj.nextLine().trim();
 			if (isNumeric(capturaDatos)) {
 				Edad = Integer.parseInt(capturaDatos);
-			}else {
-				Edad = 121;
 			}
 		}while(Edad > 120);
 		
