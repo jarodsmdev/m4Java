@@ -33,9 +33,7 @@ public class M4_ABP_3 {
 		i++;
 	}while(capturador.length()==0 || (!capturador.equals("si") && !capturador.equals("no")));
 	
-	ShowMessage("" + cuidadoSeguridad);
-	ShowMessage("" + leerManual);
-	ShowMessage("" + accidente);
+	
 	// RESOLUCIÓN EN BASE A LAS RESPUESTAS ANTERIORES
 	if (cuidadoSeguridad == false || leerManual == false) {
 		accidente = true;
