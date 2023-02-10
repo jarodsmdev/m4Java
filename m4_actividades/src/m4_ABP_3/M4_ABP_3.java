@@ -19,7 +19,7 @@ public class M4_ABP_3 {
 		ShowMessage("[" + i +"]¿El trabajador cuida los procedimientos de seguridad? \n[Responda 'si' o 'no']\n>");
 		capturador = sc.nextLine(); //captura texto en consola
 		capturador = capturador.toLowerCase().trim(); //transforma texto a minusculas y quita espacios al inicio y fin del string
-		FillVariable(capturador, cuidadoSeguridad);
+		cuidadoSeguridad = ValidarCondicion(capturador);
 		i++;
 	}while(capturador.length()==0 || (!capturador.equals("si") && !capturador.equals("no")));
 	
@@ -29,19 +29,23 @@ public class M4_ABP_3 {
 		ShowMessage("[" + i +"]¿El trabajador ha leído el manual interno de seguridad? \n[Responda 'si' o 'no']\n");
 		capturador = sc.nextLine();
 		capturador = capturador.toLowerCase().trim();
-		FillVariable(capturador, leerManual);
+		leerManual = ValidarCondicion(capturador);
 		i++;
 	}while(capturador.length()==0 || (!capturador.equals("si") && !capturador.equals("no")));
 	
-	
+	ShowMessage("" + cuidadoSeguridad);
+	ShowMessage("" + leerManual);
+	ShowMessage("" + accidente);
 	// RESOLUCIÓN EN BASE A LAS RESPUESTAS ANTERIORES
 	if (cuidadoSeguridad == false || leerManual == false) {
 		accidente = true;
-		System.out.println("Existen grandes probabilidades de que sufra un accidente." );
+		ShowMessage("Existen grandes probabilidades de que sufra un accidente." );
 		
 	} else {
-		System.out.println("Gracias por seguir las normas de seguridad");
+		ShowMessage("Gracias por seguir las normas de seguridad");
 	}
+	
+	ShowMessage("**FIN PROGRAMA**");
 	}
 	
 	//FUNCIÓN PARA MOSTRAR MENSAJE POR CONSOLA
@@ -51,7 +55,8 @@ public class M4_ABP_3 {
 	}
 	
 	//FUNCION PARA INCIALIZAR LAS VARIABLES
-	private static boolean FillVariable(String capturador, boolean variable) {
+	private static boolean ValidarCondicion(String capturador) {
+		boolean variable;
 		if(capturador.equals("si")) {
 			variable = true;
 		}else {
