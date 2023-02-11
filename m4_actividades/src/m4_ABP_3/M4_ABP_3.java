@@ -6,7 +6,6 @@ public class M4_ABP_3 {
 	// TODO Auto-generated method stub
 	
 	int i = 0;
-	boolean accidente = false;
 	boolean leerManual = false;
 	boolean cuidadoSeguridad = false;
 	String capturador = "";
@@ -36,13 +35,13 @@ public class M4_ABP_3 {
 	
 	// RESOLUCIÓN EN BASE A LAS RESPUESTAS ANTERIORES
 	if (cuidadoSeguridad == false || leerManual == false) {
-		accidente = true;
+	
 		ShowMessage("Existen grandes probabilidades de que sufra un accidente." );
 		
 	} else {
 		ShowMessage("Gracias por seguir las normas de seguridad");
 	}
-	
+	sc.close();
 	ShowMessage("**FIN PROGRAMA**");
 	}
 	
