@@ -3,7 +3,6 @@ import java.util.Scanner;
 
 public class M4_ABP_2 {
     public static void main(String[] args) {
-        // TODO Auto-generated method stub
 
         Scanner scanText = new Scanner(System.in); //Instancia de clase Scanner
         boolean out_country = false; //Declaración e inicialización de out_country
