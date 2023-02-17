@@ -17,9 +17,6 @@ public class M4APBRO4 {
 //String funcion;
 //String nombresuperior;
 
-	
-
-	
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -38,21 +35,33 @@ public class M4APBRO4 {
 		System.out.println("Favor ingrese RUT: ");
 		rut = scanner.nextLine();
 		if(existeRegistro(rut, listadoUsuario)) {
-			//SI EXISTE USUARIO
+			//SI EXISTE USUARIO (NO PUEDE CONTINUAR)
 			System.out.println("[ERROR]: Usuario ya Existe en la base de datos");
 		}else {
-			//NO EXISTE USUARIO
+			//NO EXISTE USUARIO (PUEDE GUARDAR)
 			posicion = posicionRegistroVacio(listadoUsuario);
 			//PROCESO DE GUARDADO DE DATOS EN EL ARRAY
-			//NOMBRE: PETICION Y GUARDADO
-			System.out.println("Favor Ingrese Nombre [OBLIGATORIO]");
-			capturador = scanner.nextLine();
-			listadoUsuario[posicion][0] = capturador;
 			
-			//FECHA NACIMIENTO: PETICION Y GUARDADO
-			System.out.println("Favor Ingrese Fecha Nacimiento");
-			capturador = scanner.nextLine();
-			listadoUsuario[posicion][1] = capturador;
+			do {
+				//NOMBRE: PETICION Y GUARDADO
+				System.out.println("Favor Ingrese Nombre [OBLIGATORIO]");
+				capturador = scanner.nextLine();
+				if(capturador.length()==0) {
+					System.out.println("[ERROR] Nombre Obligatorio, favor reintente.");
+				}else {
+					//PASA VALIDACIONES
+					listadoUsuario[posicion][0] = capturador;
+				}
+				
+			}while(capturador.length()==0);
+			do {
+				//FECHA NACIMIENTO: PETICION Y GUARDADO
+				String regExFecha = "^(0[1-9]|[1-2][0-9]|3[0-1])\\/(0[1-9]|1[0-2])\\/([0-9]{4})$";
+				System.out.println("Favor Ingrese Fecha Nacimiento [DD/MM/AAAA]");
+				capturador = scanner.nextLine();
+				listadoUsuario[posicion][1] = capturador;
+			}while(capturador.matches(regExFecha));
+
 			
 			//DIRECCION: PETICION Y GUARDADO
 			System.out.println("Favor Ingrese Dirección  [OBLIGATORIO]");
@@ -89,7 +98,6 @@ public class M4APBRO4 {
 			capturador = scanner.nextLine();
 			listadoUsuario[posicion][9] = capturador;
 			
-			
 		}
 	}
 	
@@ -113,7 +121,5 @@ public class M4APBRO4 {
 			}
 		}
 		return posicionVacio;
-		
 	}
-
 }
