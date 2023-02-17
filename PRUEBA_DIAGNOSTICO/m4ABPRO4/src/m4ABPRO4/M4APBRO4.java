@@ -5,18 +5,18 @@ public class M4APBRO4 {
 	//FILAS (100)/COLUMNAS (2)
 	static String [][] usuarios = new String[100][10];
 	static Scanner scanner = new Scanner(System.in);
-	/*
-	 *  0 String nombre
-	 	1 String fechaNacimiento;
-		2 String rut;
-		3 String direccion;
-		4 String telefono;
-		5 String cantEmpleados;
-		6 String experiencia;
-		7 String departamento;
-		8 String funcion;
-		9 String nombresuperior;
-	 */
+
+//String nombre; 0
+//String fechaNacimiento;
+//String rut; 2
+//String direccion;
+//String telefono;
+//String cantEmpleados;
+//String experiencia;
+//String departamento;
+//String funcion;
+//String nombresuperior;
+
 	
 
 	
@@ -32,7 +32,7 @@ public class M4APBRO4 {
 	
 	//Función para registrar Usuario
 	public static void registrarUsuario(String[][]listadoUsuario) {
-		
+		String capturador = "";
 		String rut = "";
 		int posicion;
 		System.out.println("Favor ingrese RUT: ");
@@ -43,6 +43,52 @@ public class M4APBRO4 {
 		}else {
 			//NO EXISTE USUARIO
 			posicion = posicionRegistroVacio(listadoUsuario);
+			//PROCESO DE GUARDADO DE DATOS EN EL ARRAY
+			//NOMBRE: PETICION Y GUARDADO
+			System.out.println("Favor Ingrese Nombre [OBLIGATORIO]");
+			capturador = scanner.nextLine();
+			listadoUsuario[posicion][0] = capturador;
+			
+			//FECHA NACIMIENTO: PETICION Y GUARDADO
+			System.out.println("Favor Ingrese Fecha Nacimiento");
+			capturador = scanner.nextLine();
+			listadoUsuario[posicion][1] = capturador;
+			
+			//DIRECCION: PETICION Y GUARDADO
+			System.out.println("Favor Ingrese Dirección  [OBLIGATORIO]");
+			capturador = scanner.nextLine();
+			listadoUsuario[posicion][3] = capturador;
+			
+			//TELEFONO: PETICION Y GUARDADO
+			System.out.println("Favor Ingrese Teléfono  [OBLIGATORIO]");
+			capturador = scanner.nextLine();
+			listadoUsuario[posicion][4] = capturador;
+			
+			//CANT EMPLEADOS: PETICION Y GUARDADO
+			System.out.println("Favor Ingrese Cantidad Empleados");
+			capturador = scanner.nextLine();
+			listadoUsuario[posicion][5] = capturador;
+			
+			//EXPERIENCIA: PETICION Y GUARDADO
+			System.out.println("Favor Ingrese Experiencia en años");
+			capturador = scanner.nextLine();
+			listadoUsuario[posicion][6] = capturador;
+			
+			//DEPARTAMENTO: PETICION Y GUARDADO
+			System.out.println("Favor Ingrese Departamento  [OBLIGATORIO]");
+			capturador = scanner.nextLine();
+			listadoUsuario[posicion][7] = capturador;
+			
+			//FUNCION: PETICION Y GUARDADO
+			System.out.println("Favor Ingrese Función  [OBLIGATORIO]");
+			capturador = scanner.nextLine();
+			listadoUsuario[posicion][8] = capturador;
+			
+			//NOMBRE SUPERIOR: PETICION Y GUARDADO
+			System.out.println("Favor Ingrese Nombre Superior");
+			capturador = scanner.nextLine();
+			listadoUsuario[posicion][9] = capturador;
+			
 			
 		}
 	}
