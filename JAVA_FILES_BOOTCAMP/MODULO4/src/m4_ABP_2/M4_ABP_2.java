@@ -40,8 +40,7 @@ public class M4_ABP_2 {
             //DESEA HACER PCR
             if(textCapture.equals("si")){
                 //SIMULA UN RESULTADO PCR 50% PROBABILIDADES ENTRE 0 Y 1
-                pcr_result = (int)(Math.random()*2); 
-
+                pcr_result = (int)(Math.random()*2);
         
                 //Valida resultado de pcr_result POSITIVO/NEGATIVO
                 if(pcr_result == 1){
