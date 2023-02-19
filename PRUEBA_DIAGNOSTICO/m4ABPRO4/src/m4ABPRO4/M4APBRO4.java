@@ -369,7 +369,7 @@ public class M4APBRO4 {
     
     	do {
     		//PEDIR RUT
-    		System.out.println("[+] Ingrese el RUT del Usuario que desea Eliminar: \nPresione [SALIR] para volver al menú Principal");
+    		System.out.println("[+] Ingrese el RUT del Usuario que desea Eliminar: \nIngrese [SALIR] para volver al menú Principal");
     		rutEliminar = scanner.nextLine().trim();
     		//VALIDA INGRESO RUT/VACIO/SI EXISTE,ETC
     		if(rutEliminar.length() == 0) {
