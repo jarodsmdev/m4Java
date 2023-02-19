@@ -1,6 +1,5 @@
 package m4ABPRO4;
 
-//import java.util.Arrays; //para utilizar el array
 import java.util.Scanner;
 
 
@@ -14,14 +13,15 @@ public class M4APBRO4 {
 	
 	//EXPRESIONES REGULARES
 	static String regExNumerica = "^[0-9]+$"; //SÓLO ACEPTA CARACTERES NUMÉRICOS
-	static String RegExRut = "^\\d{1,8}-[0-9K]$"; //CAMBIAR A 6 EL 1 EN PRODUCCCION DEBUG****;
+	static String RegExRut = "^\\d{1,8}-[0-9Kk]$"; //CAMBIAR A 6 EL 1 EN PRODUCCCION DEBUG****;
 	static String regExTelefono = "\\d{3,}";
 	//static String regExTelefono = "^\\d{3}[\\d+()]*$"; //3 DÍGITOS ADICIONALMENTE EL SIGNO +
 	//static String regExTelefono = "^\\+?[0-9]{1,3}[-\\s]?\\(?\\d{3}\\)?[-\\s]?\\d{3}[-\\s]?\\d{4}$";
 	static String regExFecha = "^(0?[1-9]|[12][0-9]|3[01])\\/(0?[1-9]|1[0-2])\\/((?:19|20)[0-9]{2}|18[0-9]{2})|\\b29\\/02\\/((?:19|20)(?:04|08|[2468][048]|[13579][26])|(?:2000))$";
 	static String regSiNo = "^(si|no)$";
+	
 	//VARIABLES GLOBALES
-	static int filaLibre;
+	static int fila;
 	static boolean primerInicio = true;
 
 
@@ -37,20 +37,21 @@ public class M4APBRO4 {
 	//REGISTRA USUARIOS EN EL ARRAY OBLIGATORIO 1 DE CADA UNO, 3 USUARIOS EN TOTAL
 	public static void registrarUsuario(String[][]listadoUsuario) {
 		if(primerInicio) {
+			
 			System.out.println("[!] ¡SE HA DETECTADO QUE ESTE ES EL PRIMER INICIO!:\nDEBEMOS INICIAR CON 3 PEFILES DE USUARIOS PARA CONTINUAR\n");
 			System.out.println("[!] PRIMER PERFIL DE USUARIO A CREAR DEBE SER TIPO CLIENTE\n");
-			scanner.nextLine();
-			filaLibre = posicionRegistroVacio(usuarios);
+			//scanner.nextLine();
+			fila = posicionRegistroVacio(usuarios);
 			guardarDatosComunes(usuarios);
 			guardarCliente();
 			
-			System.out.println("[!] SEGUNDO PERFIL DE USUARIO A CREAR DEBE SER DE TIPO PROFESIONAL");    		
-			filaLibre = posicionRegistroVacio(usuarios);
+			System.out.println("[!] SEGUNDO PERFIL DE USUARIO A CREAR DEBE SER DE TIPO PROFESIONAL\n");    		
+			fila = posicionRegistroVacio(usuarios);
 			guardarDatosComunes(usuarios);
 			guardarProfesional();
 			
-			System.out.println("[!] TERCER PERFIL DE USUARIO A CREAR DEBE SER DE TIPO ADMINISTRATIVO");    		
-			filaLibre = posicionRegistroVacio(usuarios);
+			System.out.println("[!] TERCER PERFIL DE USUARIO A CREAR DEBE SER DE TIPO ADMINISTRATIVO\n");    		
+			fila = posicionRegistroVacio(usuarios);
 			guardarDatosComunes(usuarios);
 			guardarAdministrativo();
 			
@@ -60,8 +61,9 @@ public class M4APBRO4 {
 			//REGRESA AL MENU PRINCIPAL
 			menuPrincipal();			
 		}else {
-			scanner.nextLine();
-			filaLibre = posicionRegistroVacio(usuarios);
+			System.out.println("SISTEMA DE USUARIOS\n\t[!] REGISTRAR USUARIO [!]\n");
+			//scanner.nextLine();
+			fila = posicionRegistroVacio(usuarios);
 			guardarDatosComunes(usuarios);
 			menuPerfilUsuario();
 			menuPrincipal();
@@ -70,61 +72,70 @@ public class M4APBRO4 {
 	
 	//AUTORA: PRISCILA CARRILLO
 	public static void menuPrincipal() {
+		int opcion;
+		String capturador = "";
+		
 		if(primerInicio) {
 			System.out.println("SISTEMA DE USUARIOS\n");
 			registrarUsuario(usuarios);
 		}
-		int opcion = 0;
-        
-       	System.out.println("-------------------------------------------------------");
-       	System.out.println("SISTEMA DE USUARIOS\n\t[!] MENÚ PRINCIPAL [!]\n");
-        System.out.println("[+] Por favor, seleccione una opción:\n");
-        System.out.println("\t1. Registrar usuario");
-        System.out.println("\t2. Mostrar usuarios");
-        System.out.println("\t3. Contar usuarios por categoría");
-        System.out.println("\t4. Modificar usuarios");
-        System.out.println("\t5. Eliminar usuario");
-        System.out.println("\t6. Salir");
-        System.out.println("-------------------------------------------------------");
-        
-        //si se ingresa un número que no está en la lista, debe salir "Error" u "Opción inválida" en la consola//
-        
-        while(opcion != 6) {   //ciclo while hasta que seleccione la opcion 6//
-        	
-        opcion = scanner.nextInt();
-        
+		
+		do {
+			System.out.println("-------------------------------------------------------");
+	       	System.out.println("SISTEMA DE USUARIOS\n\t[!] MENÚ PRINCIPAL [!]\n");
+	        System.out.println("[+] Por favor, seleccione una opción:\n");
+	        System.out.println("\t1. Registrar usuario");
+	        System.out.println("\t2. Mostrar usuarios");
+	        System.out.println("\t3. Contar usuarios por categoría");
+	        System.out.println("\t4. Modificar usuarios");
+	        System.out.println("\t5. Eliminar usuario");
+	        System.out.println("\t6. Salir");
+	        System.out.println("-------------------------------------------------------");
+	        
+	        capturador = scanner.nextLine();
+	        
+	        if(capturador.matches("^[1-6]$")) {
+				opcion = Integer.parseInt(capturador);
+			}else {
+				opcion = 0;			
+			}
+	        
 	        switch(opcion) {     //Se usa switch para llamar a la función//
-	            case 1:
-	            	 System.out.println("[!] Registrar usuario...");
-	            	registrarUsuario(usuarios);
-	                break;
-	            case 2:
-	            	System.out.println("[!] Mostrando " + totalUsuarios(usuarios) + " usuarios en Total\n");
-	                mostrarUsuarios(usuarios);
-	                break;
-	            case 3:
-	            	System.out.println("[!] Resumen de Usuarios: ");
-	            	contarUsuariosPorCategoria(usuarios);
-	            	menuPrincipal();
-	                break;
-	            case 4:
-	            	System.out.println("[!]Modificar Usuario: ");
-	                modificarUsuario();
-	                break;
-	            case 5:
-	            	eliminarUsuario();
-	                break;
-	            case 6:
-	                System.out.println("Gracias, hasta pronto.");
-	                System.exit(0);
-	                break;
-	            default:
-	                System.out.println("[ERROR] Opción inválida. Por favor, seleccione una opción del menú de 1 - 6.");
-	                break;            
-	        }
+            case 1:
+            	//System.out.println("[!] Registrar usuario...");
+            	registrarUsuario(usuarios);
+                break;
+            case 2:
+            	System.out.println("SISTEMA DE USUARIOS\n\t[!] LISTADO DE USUARIOS [!]\n");
+            	System.out.println("[!] Mostrando " + totalUsuarios(usuarios) + " usuarios en Total\n");
+                mostrarUsuarios(usuarios);
+                break;
+            case 3:
+            	System.out.println("SISTEMA DE USUARIOS\n\t[!] RESUMEN POR CATEGORÍA [!]\n");
+            	System.out.println("[!] Resumen de Usuarios: ");
+            	contarUsuariosPorCategoria(usuarios);
+            	menuPrincipal();
+                break;
+            case 4:
+            	System.out.println("[!]Modificar Usuario: ");
+                modificarUsuario();
+                break;
+            case 5:
+            	eliminarUsuario();
+                break;
+            case 6:
+                System.out.println("Gracias, hasta pronto.");
+                System.exit(0);
+                break;
+            default:
+                System.out.println("[ERROR] Opción inválida. Por favor, seleccione una opción del menú de 1 - 6.");
+                break;            
         }
+	        
+		}while(!capturador.matches("^[1-6]$")); //SÓLO ACEPTA NÚMERO DE 1 AL 6
+ 
 	}
-	
+
 	//MENÚ SELECCIÓN DE PERFIL
 	public static void menuPerfilUsuario() {
 		String capturador = "";
@@ -199,6 +210,9 @@ public class M4APBRO4 {
 				total++;
 			}
 		}
+		if(total == 0){
+			primerInicio=true;
+		}
 		return total;
 	}
 	
@@ -207,8 +221,8 @@ public class M4APBRO4 {
 		String capturador = "";
 		//RUT: PETICION Y VALIDACION
 			do {
-				System.out.println("[+] Favor ingrese RUT: [OBLIGATORIO]");
-				capturador = scanner.nextLine().trim();
+				System.out.println("[+] Favor ingrese RUT:\n[!] Sin puntos y con guión [OBLIGATORIO]");
+				capturador = scanner.nextLine().trim().toUpperCase();
 				
 				if(capturador.length() == 0) {
 				}else if(!capturador.matches(RegExRut)) {
@@ -219,11 +233,11 @@ public class M4APBRO4 {
 				}else {
 					//NO EXISTE USUARIO PUEDE GUARDAR
 					//PROCESO DE GUARDADO DE DATOS EN EL ARRAY
-					usuarios[filaLibre][2] = capturador;
+					usuarios[fila][2] = capturador;
 				}
 			}while(capturador.length() == 0
 					|| !capturador.matches(RegExRut)
-					|| (existeRut(capturador, usuarios) && usuarios[filaLibre][2] != capturador)
+					|| (existeRut(capturador, usuarios) && usuarios[fila][2] != capturador)
 					);
 			
 		//NOMBRE: PETICION Y GUARDADO
@@ -235,7 +249,7 @@ public class M4APBRO4 {
 						System.out.println("[ERROR] Nombre Obligatorio, favor reintente.");
 					}else {
 						//NOMBRE VÁLIDO -> GUARDAR
-						usuarios[filaLibre][0] = capturador;
+						usuarios[fila][0] = capturador;
 					}
 				}while(capturador.length()==0);
 				
@@ -247,7 +261,7 @@ public class M4APBRO4 {
 						System.out.println("[ERROR] Ingrese una fecha válida.");
 					}else {
 						//FECHA VÁLIDA -> GUARDAR
-						usuarios[filaLibre][1] = capturador;
+						usuarios[fila][1] = capturador;
 					}
 				}while(!capturador.matches(regExFecha));
 	}
@@ -263,7 +277,7 @@ public class M4APBRO4 {
 				System.out.println("[ERROR] Dirección No puede estar vacío, favor reintente.");
 			}else {
 				//DIRECCION VALIDA -> GUARDAR
-				usuarios[filaLibre][3] = capturador;
+				usuarios[fila][3] = capturador;
 			}
 		}while(capturador.length() == 0);
 
@@ -275,10 +289,10 @@ public class M4APBRO4 {
 			if(capturador.length() == 0) {
 				System.out.println("[ERROR] Teléfono No puede estar vacío, favor reintente.");
 			}else if(!capturador.matches(regExTelefono)){
-				System.out.println("[ERROR] Formato ingresado no es válido favor reintente.");
+				System.out.println("[ERROR] Formato ingresado no es válido favor reintente. [Sólo Números]");
 			}else {
 				//TELEFONO VALIDO -> GUARDAR
-				usuarios[filaLibre][4] = capturador;
+				usuarios[fila][4] = capturador;
 			}
 		}while(capturador.length() == 0 || !capturador.matches(regExTelefono));
 		
@@ -290,7 +304,7 @@ public class M4APBRO4 {
 				System.out.println("[ERROR] Sólo se permiten caracteres Numéricos.");
 			}else {
 				//CANTIDAD EMPLEADOS VALIDO -> GUARDAR
-				usuarios[filaLibre][5] = capturador;
+				usuarios[fila][5] = capturador;
 			}
 		}while(!capturador.matches(regExNumerica));
 	}
@@ -306,7 +320,7 @@ public class M4APBRO4 {
 				System.out.println("[ERROR] Sólo se permiten carácteres Numéricos.");
 			}else {
 				//EXPERIENCIA VALIDA -> GUARDAR
-				usuarios[filaLibre][6] = capturador;	
+				usuarios[fila][6] = capturador;	
 			}
 		}while(!capturador.matches(regExNumerica));
 		
@@ -318,7 +332,7 @@ public class M4APBRO4 {
 			if(capturador.length() == 0) {
 				System.out.println("[ERROR] Departamento No puede estar vacío, favor reintente.");
 			}else {}
-			usuarios[filaLibre][7] = capturador;
+			usuarios[fila][7] = capturador;
 		}while(capturador.length() == 0);
 	}
 	
@@ -333,7 +347,7 @@ public class M4APBRO4 {
 				System.out.println("[ERROR] Función no puede estar vacío, favor reintente");
 			}else {
 				//FUNCION VALIDADA -> GUARDAR
-				usuarios[filaLibre][8] = capturador;
+				usuarios[fila][8] = capturador;
 			}
 		}while(capturador.length() == 0);
 
@@ -341,14 +355,14 @@ public class M4APBRO4 {
 		System.out.println("[+] Favor Ingrese Nombre Superior : ");
 		capturador = scanner.nextLine().trim();
 		//NOMBRE SUPERIOR -> GUARDAR
-		usuarios[filaLibre][9] = capturador;
+		usuarios[fila][9] = capturador;
 
 	}
 	
 	//AUTOR: ANDRÉS CONTRERAS	
 	public static void mostrarUsuarios(String[][] usuarios) {
 		for (String[] usuario : usuarios) { //Creacion de variable auxiliar
-			if (usuario[2] != null) { // Se buscan los usuarios utilizando la variable rut
+			if (usuario[2] != null) { // Se buscan los usuarios utilizando la posicion del dato rut en el array
 				imprimirUsuario(usuario);
 			}
 		}
@@ -380,7 +394,7 @@ public class M4APBRO4 {
 		for (String campo : usuario) {
 			if (campo != null) // Remueve los espacios vacios.
 				//System.out.print(""+cabecera[indiceCabecera] + campo + " ");
-				System.out.print(campo + " ");
+				System.out.print(campo + " || ");
 				//indiceCabecera++;
 				//contadorUsuario++;
 			}
@@ -409,11 +423,11 @@ public class M4APBRO4 {
 	    System.out.println("\tAdministrativos: " + cantAdministrativos);
 	}
 	
-	//AUTORA: VALENTINA
+	//AUTORA: VALENTINA SALDÍAS
     public static void eliminarUsuario(){
     String rutEliminar;
     System.out.println("SISTEMA DE USUARIOS:\n\t[!] ELIMINAR USUARIO [!]\n");
-    scanner.nextLine(); //LIBERA EL BUFFER PARA SOLUCIONAR EL ERROR DEL OBJETO SCANNER
+    //scanner.nextLine(); //LIBERA EL BUFFER PARA SOLUCIONAR EL ERROR DEL OBJETO SCANNER
     
     	do {
     		//PEDIR RUT
@@ -442,17 +456,18 @@ public class M4APBRO4 {
     
     //FUNCION FALTANTE MODIFIAR USUARIO
     public static void modificarUsuario() {
-    	System.out.println("YO MODIFICO UN USUARIO");
+    	System.out.println("[FUNCIÓN FALTANTE]YO MODIFICO UN USUARIO");
+    	menuPrincipal();
     }
     
-    //AUTORA: VALENTINA
+    //AUTORA: VALENTINA SALDÍAS
     private static void eliminarPosicion(String[][]usuarios, String rutEliminar) {
     	String capturador = "";
     	int posicionEliminar = 0;
     	
-    	System.out.println("[AVISO] SE VA A BORRAR EL RUT: " + rutEliminar);
+    	System.out.println("[AVISO] PROCESO DE ELIMINACIÓN DEL USUARIO CON RUT: " + rutEliminar +"\n[AVISO] ESTA ACCIÓN NO SE PUEDE REVERTIR\n");
     	do {
-    		System.out.println("[+] ¿Está seguro de Eliminar el Usuario? [SI/NO]\n[AVISO] ESTA ACCIÓN NO SE PUEDE DESHACER");
+    		System.out.println("[+] ¿Está seguro de Eliminar el Usuario? [SI/NO]\n");
     		capturador = scanner.nextLine().trim().toLowerCase();
     		if(!capturador.matches(regSiNo)) {
     			System.out.println("[ERROR] Debe responder [SI] o [NO]\n");
@@ -463,12 +478,8 @@ public class M4APBRO4 {
     			//USUARIO CONFIRMA LA ELIMINACION
     			String[][] arrDestino = new String[100][10]; //DECLARO UN ARRAY TEMPORAL EXACTAMENTE IGUAL AL ORIGINAL
     			
-    			for (int i = 0; i < usuarios.length ; i++ ) {
-    				if (rutEliminar.equals(usuarios[i][2])) {
-    					posicionEliminar = i;
-    					break;
-    				}
-    			}
+    			posicionEliminar = posicionRUT(rutEliminar, usuarios); //BUSCA LA POSICION DEL REGISTRO PARA ELIMINAR
+
     	    	//MUESTRA EN PANTALLA EL NOMBRE DEL USUARIO A ELIMINAR ANTES DE ELIMINARLO COMPLETAMENTE
     	    	System.out.println("[!] SE HA ELIMINADO EL USUARIO: " + usuarios[posicionEliminar][0]);
     	    	
