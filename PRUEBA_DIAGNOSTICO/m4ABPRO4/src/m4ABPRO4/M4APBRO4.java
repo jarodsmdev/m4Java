@@ -116,10 +116,11 @@ public class M4APBRO4 {
 	                //modificarUsuario();
 	                break;
 	            case 5:
-	                //eliminarUsuario();
+	            	eliminarUsuario();
 	                break;
 	            case 6:
 	                System.out.println("Gracias, hasta pronto.");
+	                System.exit(0);
 	                break;
 	            default:
 	                System.out.println("[ERROR] Opción inválida. Por favor, seleccione una opción del menú de 1 - 6.");
@@ -160,9 +161,9 @@ public class M4APBRO4 {
 	}
 	
 	//BUSCA EL RUT Y RETORNA TRUE O FALSE, RECIBE RUT COMO ARGUMENTO
-	public static boolean existeRegistro(String rut, String[][]listadoUsuario) {
+	public static boolean existeRut(String rut, String[][]listadoUsuario) {
 		for(int i = 0; i < listadoUsuario.length ; i++) {
-	        if(rut.equals(listadoUsuario[i][2])) {
+	        if(rut.equalsIgnoreCase(listadoUsuario[i][2])) {
 	            return true;
 	        }
 	    }
@@ -195,7 +196,7 @@ public class M4APBRO4 {
 				if(capturador.length() == 0) {
 				}else if(!capturador.matches(RegExRut)) {
 					System.out.println("[ERROR] Formato ingresado no es válido, sólo se permiten dígitos de 6 a 8 un guión y dígito verificador");
-				}else if(existeRegistro(capturador, usuarios)) {
+				}else if(existeRut(capturador, usuarios)) {
 					//EXISTE USUARIO NO PUEDE CONTINUAR
 					System.out.println("[ERROR]: RUT ingresado ya existe en la base de datos");
 				}else {
@@ -205,7 +206,7 @@ public class M4APBRO4 {
 				}
 			}while(capturador.length() == 0
 					|| !capturador.matches(RegExRut)
-					|| (existeRegistro(capturador, usuarios) && usuarios[filaLibre][2] != capturador)
+					|| (existeRut(capturador, usuarios) && usuarios[filaLibre][2] != capturador)
 					);
 			
 		//NOMBRE: PETICION Y GUARDADO
@@ -334,7 +335,7 @@ public class M4APBRO4 {
 				imprimirUsuario(usuario);
 			}
 		}
-		//REGRESA EL MENÚ PRINCIPAL
+		//REGRESA AL MENÚ PRINCIPAL
 		menuPrincipal();
 	}
 	
@@ -345,4 +346,75 @@ public class M4APBRO4 {
 		}
 		System.out.println();
 	}
+	
+	//AUTORA: VALENTINA
+    public static void eliminarUsuario(){
+    String rutEliminar;
+    scanner.nextLine(); //LIBERA EL BUFFER PARA SOLUCIONAR EL ERROR DEL OBJETO SCANNER
+    
+    	do {
+    		//PEDIR RUT
+    		System.out.println("[+] Ingrese el RUT del Usuario que desea Eliminar: ");
+    		rutEliminar = scanner.nextLine().trim();
+    		//VALIDA INGRESO RUT/VACIO/SI EXISTE,ETC
+    		if(rutEliminar.length() == 0) {
+			}else if(!rutEliminar.matches(RegExRut)) {
+				System.out.println("[ERROR] Formato ingresado no es válido, sólo se permiten dígitos de 6 a 8 un guión y dígito verificador");
+			}else if(!existeRut(rutEliminar, usuarios)) {
+				//EXISTE USUARIO NO PUEDE CONTINUAR
+				System.out.println("[ERROR]: RUT ingresado No existe en la base de datos");
+			}else {
+    			//RUT VALIDO > REALIZAR LOGICA DE BORRADO DE USUARIO
+    			eliminarPosicion(usuarios, rutEliminar);
+    			menuPrincipal();
+			}
+    	}while(rutEliminar.length() == 0
+				|| !rutEliminar.matches(RegExRut)
+				|| (!existeRut(rutEliminar, usuarios)));
+    	}
+    
+    //AUTORA: VALENTINA
+    private static void eliminarPosicion(String[][]usuarios, String rutEliminar) {
+    	int posicionEliminar = 0;
+    	
+    	System.out.println("[AVISO] VOY A BORRAR EL RUT " + rutEliminar);
+		String[][] arrDestino = new String[100][10]; //DECLARO UN ARRAY TEMPORAL EXACTAMENTE IGUAL AL ORIGINAL
+		
+		for (int i = 0; i < usuarios.length ; i++ ) {
+			if (rutEliminar.equals(usuarios[i][2])) {
+				posicionEliminar = i;
+				break;
+			}
+		}
+		System.out.println("POSICION A ELIMINAR: " + posicionEliminar);
+		
+		// Copiar cada fila a su nueva posición en la matriz de destino, excepto la fila que se desea omitir
+		for (int i = 0; i < usuarios.length; i++) {
+		    if (i == posicionEliminar) {
+		        // Dejar la fila en blanco asignando un nuevo array vacío
+		        arrDestino[i] = new String[usuarios[i].length];
+		    } else {
+		        // Copiar la fila a su nueva posición en la matriz de destino
+		        System.arraycopy(usuarios[i], 0, arrDestino[i], 0, usuarios[i].length);
+		    }
+		}
+		
+		// Copiar los datos del array destino de vuelta al array original sin la fila 5
+		for (int i = 0; i < usuarios.length; i++) {
+		    if (i == posicionEliminar) {
+		        // Dejar la fila en blanco
+		        usuarios[i] = new String[usuarios[i].length];
+		    } else {
+		        // Copiar la fila desde la matriz destino a su nueva posición en la matriz original
+		        System.arraycopy(arrDestino[i], 0, usuarios[i], 0, usuarios[i].length);
+		    }
+		}
+    }
 }
+    	
+  	
+    	
+//        int elementosResiduo = arr.length - ( posicion + 1 );
+//        System.arraycopy(arr, 0, arrDestino, 0, posicion);
+//        System.arraycopy(arr, posicion + 1, arrDestino, posicion, elementosResiduo);
+//        System.out.println("Elementos -- "  + Arrays.toString(arrDestino));
