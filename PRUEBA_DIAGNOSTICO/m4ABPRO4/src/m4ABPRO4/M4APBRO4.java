@@ -15,7 +15,8 @@ public class M4APBRO4 {
 	//EXPRESIONES REGULARES
 	static String regExNumerica = "^[0-9]+$"; //SÓLO ACEPTA CARACTERES NUMÉRICOS
 	static String RegExRut = "^\\d{1,8}-[0-9K]$"; //CAMBIAR A 6 EL 1 EN PRODUCCCION DEBUG****;
-	static String regExTelefono = "^\\d{3}[\\d+()]*$";
+	static String regExTelefono = "\\d{3,}";
+	//static String regExTelefono = "^\\d{3}[\\d+()]*$"; //3 DÍGITOS ADICIONALMENTE EL SIGNO +
 	//static String regExTelefono = "^\\+?[0-9]{1,3}[-\\s]?\\(?\\d{3}\\)?[-\\s]?\\d{3}[-\\s]?\\d{4}$";
 	static String regExFecha = "^(0?[1-9]|[12][0-9]|3[01])\\/(0?[1-9]|1[0-2])\\/((?:19|20)[0-9]{2}|18[0-9]{2})|\\b29\\/02\\/((?:19|20)(?:04|08|[2468][048]|[13579][26])|(?:2000))$";
 	static String regSiNo = "^(si|no)$";
@@ -23,33 +24,20 @@ public class M4APBRO4 {
 	static int filaLibre;
 	static boolean primerInicio = true;
 
-//	static String nombre;  //0
-//	static String fechaNacimiento; //1
-//	static String rut; //2
-//	static String direccion; //3
-//	static String telefono; //4
-//	static String cantEmpleados; //5
-//	static String experiencia; //6
-//	static String departamento; //7
-//	static String funcion; //8
-//	static String nombresuperior; //9
-
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		//DATOS DE PRUEBA
-		usuarios[0] = new String[]{"Juan", "01/01/1990", "12345678-9", "Calle 1 #123", "+56912345678", "10", "5 años", "Ventas", "Vendedor", "Pedro"};
-		usuarios[1] = new String[]{"María", "02/02/1995", "98765432-1", "Calle 2 #456", "+56987654321", "5", "2 años", "Marketing", "Analista", "Sofía"};
-		usuarios[2] = new String[]{"Pedro", "03/03/1985", "1-9", "Calle 3 #789", "+56911111111", "20", "10 años", "Finanzas", "Contador", "Carlos"};
-		
-		menuPrincipal();
-		
+		//usuarios[0] = new String[]{"Juan", "01/01/1990", "12345678-9", "Calle 1 #123", "+56912345678", "10", "5 años", "Ventas", "Vendedor", "TERRIBLE JEFE"};
+		//usuarios[1] = new String[]{"María", "02/02/1995", "98765432-1", "Calle 2 #456", "+56987654321", "5", "2 años", "Marketing", "Analista", "Sofía"};
+		//usuarios[2] = new String[]{"Pedro", "03/03/1985", "1-9", "Calle 3 #789", "+56911111111", "20", "10 años", "Finanzas", "Contador", "Carlos"};
+		menuPrincipal();		
 	}
 	
 	//REGISTRA USUARIOS EN EL ARRAY OBLIGATORIO 1 DE CADA UNO, 3 USUARIOS EN TOTAL
 	public static void registrarUsuario(String[][]listadoUsuario) {
 		if(primerInicio) {
-			System.out.println("[!] ¡SE HA DETECTADO QUE ESTE ES EL PRIMER INICIO!: DEBEMOS INICIAR CON 3 PEFILES DE USUARIOS PARA CONTINUAR");
+			System.out.println("[!] ¡SE HA DETECTADO QUE ESTE ES EL PRIMER INICIO!:\nDEBEMOS INICIAR CON 3 PEFILES DE USUARIOS PARA CONTINUAR\n");
 			System.out.println("[!] PRIMER PERFIL DE USUARIO A CREAR DEBE SER TIPO CLIENTE\n");
 			scanner.nextLine();
 			filaLibre = posicionRegistroVacio(usuarios);
@@ -82,6 +70,10 @@ public class M4APBRO4 {
 	
 	//AUTORA: PRISCILA CARRILLO
 	public static void menuPrincipal() {
+		if(primerInicio) {
+			System.out.println("SISTEMA DE USUARIOS\n");
+			registrarUsuario(usuarios);
+		}
 		int opcion = 0;
         
        	System.out.println("-------------------------------------------------------");
@@ -103,18 +95,21 @@ public class M4APBRO4 {
         
 	        switch(opcion) {     //Se usa switch para llamar a la función//
 	            case 1:
-	            	 System.out.println("Registrando usuario...");
+	            	 System.out.println("[!] Registrar usuario...");
 	            	registrarUsuario(usuarios);
 	                break;
 	            case 2:
-	            	System.out.println("Mostrando " + totalUsuarios(usuarios) + " usuarios en Total\n");
+	            	System.out.println("[!] Mostrando " + totalUsuarios(usuarios) + " usuarios en Total\n");
 	                mostrarUsuarios(usuarios);
 	                break;
 	            case 3:
-	                //contarUsuariosPorCategoria();
+	            	System.out.println("[!] Resumen de Usuarios: ");
+	            	contarUsuariosPorCategoria(usuarios);
+	            	menuPrincipal();
 	                break;
 	            case 4:
-	                //modificarUsuario();
+	            	System.out.println("[!]Modificar Usuario: ");
+	                modificarUsuario();
 	                break;
 	            case 5:
 	            	eliminarUsuario();
@@ -170,6 +165,16 @@ public class M4APBRO4 {
 	    }
 	    return false;
 	}
+
+	//RETORNA LA POSICION DEL RUT
+	public static int posicionRUT(String rut, String[][]listadoUsuario) {
+		for (int i = 0; i < listadoUsuario.length ; i++ ) {
+			if (rut.equals(listadoUsuario[i][2])) {
+				return i;
+			}
+		}
+		return -1;
+	}
 	
 	//RETORNA EL PRIMER REGISTRO VACÍO EN EL ARRAY
 	public static int posicionRegistroVacio(String[][]listadoUsuario) {
@@ -196,7 +201,6 @@ public class M4APBRO4 {
 		}
 		return total;
 	}
-	
 	
 	//FUNCION PERMITE ALMACENAR LOS DATOS COMUNES A TODOS LOS PERFILES
 	public static void guardarDatosComunes(String[][]usuarios) {
@@ -354,11 +358,55 @@ public class M4APBRO4 {
 	
 	//AUTOR: ANDRÉS CONTRERAS
 	public static void imprimirUsuario(String[] usuario) {
+		
+		//int indiceCabecera = 0;
+		//int contadorUsuario = 1;
+		
+		String[] cabecera = new String[10];
+		
+		cabecera[0] = "Nombre: ";
+		cabecera[1] = "Fecha Nacimiento: ";
+		cabecera[2] = "RUT: ";
+		cabecera[3] = "Dirección: ";
+		cabecera[4] = "Teléfono: ";
+		cabecera[5] = "Cantidad Empleados: ";
+		cabecera[6] = "Años Experiencia: ";
+		cabecera[7] = "Departamento: ";
+		cabecera[8] = "Función: ";
+		cabecera[9] = "Nombre Superior: ";
+
+		//System.out.println("Usuario " + contadorUsuario + ":");
+		
 		for (String campo : usuario) {
-			if (campo != null) // Remueve los espacios vacios. 
-			System.out.print(campo + " ");
-		}
+			if (campo != null) // Remueve los espacios vacios.
+				//System.out.print(""+cabecera[indiceCabecera] + campo + " ");
+				System.out.print(campo + " ");
+				//indiceCabecera++;
+				//contadorUsuario++;
+			}
 		System.out.println();
+	}
+	
+	//AUTOR: ANDRÉS CONTRERAS
+	public static void contarUsuariosPorCategoria(String[][] usuarios) {
+		int cantClientes = 0;
+	    int cantProfesionales = 0;
+	    int cantAdministrativos = 0;
+
+	    for (int i = 0; i < usuarios.length; i++) {
+	    	
+			if (usuarios[i][2] != null && usuarios[i][3] != null) {
+				cantClientes++;
+			} else if (usuarios[i][2] != null && usuarios[i][7] != null) {
+				cantProfesionales++;
+			} else if (usuarios[i][2] != null && usuarios[i][8] != null) {
+				cantAdministrativos++;
+			}
+	    }
+	    System.out.println("Cantidad de usuarios por categoría:\n");
+	    System.out.println("\tClientes: " + cantClientes);
+	    System.out.println("\tProfesionales: " + cantProfesionales);
+	    System.out.println("\tAdministrativos: " + cantAdministrativos);
 	}
 	
 	//AUTORA: VALENTINA
@@ -392,6 +440,11 @@ public class M4APBRO4 {
     			);
     	}
     
+    //FUNCION FALTANTE MODIFIAR USUARIO
+    public static void modificarUsuario() {
+    	System.out.println("YO MODIFICO UN USUARIO");
+    }
+    
     //AUTORA: VALENTINA
     private static void eliminarPosicion(String[][]usuarios, String rutEliminar) {
     	String capturador = "";
@@ -422,8 +475,7 @@ public class M4APBRO4 {
     			// COPIA CADA FILA OMITIENDO LA QUE SE DESEA ELIMINAR
     			for (int i = 0; i < usuarios.length; i++) {
     			    if (i == posicionEliminar) {
-    			        // Dejar la fila en blanco asignando un nuevo array vacío
-    			        //arrDestino[i] = new String[usuarios[i].length];
+  
     			    } else {
     			        // COPIA LA FILA A SU NUEVA POSICION
     			        System.arraycopy(usuarios[i], 0, arrDestino[i], 0, usuarios[i].length);
@@ -442,7 +494,7 @@ public class M4APBRO4 {
     			}
     		}
     	}while(!capturador.matches(regSiNo));
-
+    	
     }
 }
     	
