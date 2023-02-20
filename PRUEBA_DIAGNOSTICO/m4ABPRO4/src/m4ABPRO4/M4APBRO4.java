@@ -14,26 +14,16 @@ public class M4APBRO4 {
 	static String regExNumerica = "^[0-9]+$"; // SÓLO ACEPTA CARACTERES NUMÉRICOS
 	static String RegExRut = "^\\d{1,8}-[0-9Kk]$"; // CAMBIAR A 6 EL 1 EN PRODUCCCION DEBUG****;
 	static String regExTelefono = "\\d{6,}";
-	// static String regExTelefono = "^\\d{3}[\\d+()]*$"; //3 DÍGITOS ADICIONALMENTE
-	// EL SIGNO +
-	// static String regExTelefono =
-	// "^\\+?[0-9]{1,3}[-\\s]?\\(?\\d{3}\\)?[-\\s]?\\d{3}[-\\s]?\\d{4}$";
 	static String regExFecha = "^(0?[1-9]|[12][0-9]|3[01])\\/(0?[1-9]|1[0-2])\\/((?:19|20)[0-9]{2}|18[0-9]{2})|\\b29\\/02\\/((?:19|20)(?:04|08|[2468][048]|[13579][26])|(?:2000))$";
 	static String regSiNo = "^(si|no)$";
 
 	// VARIABLES GLOBALES
 	static int fila;
-	static boolean primerInicio = false;
+	static boolean primerInicio = true;
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		// DATOS DE PRUEBA
-		usuarios[0] = new String[] { "Juan", "01/01/1990", "12345678-9", "Calle 1 #123", "+56912345678", "10", "5 años",
-				"Ventas", "Vendedor", "TERRIBLE JEFE" };
-		usuarios[1] = new String[] { "María", "02/02/1995", "98765432-1", "Calle 2 #456", "+56987654321", "5", "2 años",
-				"Marketing", "Analista", "Sofía" };
-		usuarios[2] = new String[] { "Pedro", "03/03/1985", "1-9", "Calle 3 #789", "+56911111111", "20", "10 años",
-				"Finanzas", "Contador", "Carlos" };
+		
 		menuPrincipal();
 	}
 
@@ -41,8 +31,7 @@ public class M4APBRO4 {
 	public static void registrarUsuario(String[][] listadoUsuario) {
 		if (primerInicio) {
 
-			System.out.println(
-					"[!] ¡SE HA DETECTADO QUE ESTE ES EL PRIMER INICIO!:\nDEBEMOS INICIAR CON 3 PEFILES DE USUARIOS PARA CONTINUAR\n");
+			System.out.println("[!] ¡SE HA DETECTADO QUE ESTE ES EL PRIMER INICIO!:\nDEBEMOS INICIAR CON 3 PEFILES DE USUARIOS PARA CONTINUAR\n");
 			System.out.println("[!] PRIMER PERFIL DE USUARIO A CREAR DEBE SER TIPO CLIENTE\n");
 			// scanner.nextLine();
 			fila = posicionRegistroVacio(usuarios);
@@ -66,7 +55,7 @@ public class M4APBRO4 {
 			menuPrincipal();
 		} else {
 			System.out.println("SISTEMA DE USUARIOS\n\t[!] REGISTRAR USUARIO [!]\n");
-			// scanner.nextLine();
+			// scanner.nextLine(); //LIBERA EL BUFFER POR ERROR DE LA CONSOLA
 			fila = posicionRegistroVacio(usuarios);
 			guardarDatosComunes(usuarios);
 			menuPerfilUsuario();
@@ -202,8 +191,6 @@ public class M4APBRO4 {
 				posicionVacio = -1;
 			}
 		}
-		// System.out.println("HE ENCONTRADO LA POSICION " + posicionVacio + " DEL ARRAY
-		// DISPONIBLE"); //DEBUG***
 		return posicionVacio;
 	}
 
@@ -231,14 +218,12 @@ public class M4APBRO4 {
 
 			if (capturador.length() == 0) {
 			} else if (!capturador.matches(RegExRut)) {
-				System.out.println(
-						"[ERROR] Formato ingresado no es válido, sólo se permiten dígitos de 6 a 8 un guión y dígito verificador");
+				System.out.println("[ERROR] Formato ingresado no es válido, sólo se permiten dígitos de 6 a 8 un guión y dígito verificador");
 			} else if (existeRut(capturador, usuarios)) {
 				// EXISTE USUARIO NO PUEDE CONTINUAR
 				System.out.println("[ERROR]: RUT ingresado ya existe en la base de datos");
 			} else {
 				// NO EXISTE USUARIO PUEDE GUARDAR
-				// PROCESO DE GUARDADO DE DATOS EN EL ARRAY
 				usuarios[fila][2] = capturador;
 			}
 		} while (capturador.length() == 0 || !capturador.matches(RegExRut)
@@ -257,17 +242,6 @@ public class M4APBRO4 {
 			}
 		} while (capturador.length() == 0);
 
-		// FECHA NACIMIENTO: PETICION Y GUARDADO
-//				do {
-//					System.out.println("[+] Favor Ingrese Fecha Nacimiento : [DD/MM/AAAA]");
-//					capturador = scanner.nextLine().trim();
-//					if(!capturador.matches(regExFecha)) {
-//						System.out.println("[ERROR] Ingrese una fecha válida.");
-//					}else {
-//						//FECHA VÁLIDA -> GUARDAR
-//						usuarios[fila][1] = capturador;
-//					}
-//				}while(!capturador.matches(regExFecha));
 
 		//FECHA DE NACIMIENTO [OPCIONAL]
 		do {
@@ -316,12 +290,6 @@ public class M4APBRO4 {
 			}
 		} while (capturador.length() == 0 || !capturador.matches(regExTelefono));
 
-//		System.out.println("[+] Favor Ingrese Teléfono : ");
-//		capturador = scanner.nextLine().trim();
-//		if(capturador.length() > 0) {
-//			//TELEFONO VALIDO -> GUARDAR
-//			usuarios[fila][4] = capturador;
-//		}
 
 		// CANT EMPLEADOS: PETICION Y GUARDADO
 		do {
@@ -359,8 +327,8 @@ public class M4APBRO4 {
 			if (capturador.length() == 0) {
 				System.out.println("[ERROR] Departamento No puede estar vacío, favor reintente.");
 			} else {
+				usuarios[fila][7] = capturador;
 			}
-			usuarios[fila][7] = capturador;
 		} while (capturador.length() == 0);
 	}
 
@@ -403,7 +371,7 @@ public class M4APBRO4 {
 
 		for (String campo : usuario) {
 			if (campo != null) // Remueve los espacios vacios.
-				System.out.print(campo + " || ");
+				System.out.print(campo + " ");
 		}
 		System.out.println();
 	}
@@ -435,12 +403,10 @@ public class M4APBRO4 {
 		String rutEliminar;
 		System.out.println("SISTEMA DE USUARIOS:\n\t[!] ELIMINAR USUARIO [!]\n");
 		// scanner.nextLine(); //LIBERA EL BUFFER PARA SOLUCIONAR EL ERROR DEL OBJETO
-		// SCANNER
 
 		do {
 			// PEDIR RUT
-			System.out.println(
-					"[+] Ingrese el RUT del Usuario que desea Eliminar: \nIngrese [SALIR] para volver al menú Principal");
+			System.out.println("[+] Ingrese el RUT del Usuario que desea Eliminar: \nIngrese [SALIR] para volver al menú Principal");
 			rutEliminar = scanner.nextLine().trim();
 			// VALIDA INGRESO RUT/VACIO/SI EXISTE,ETC
 			if (rutEliminar.length() == 0) {
@@ -448,8 +414,7 @@ public class M4APBRO4 {
 				System.out.println("[!] Volviendo al Menú Principal");
 				menuPrincipal();
 			} else if (!rutEliminar.matches(RegExRut)) {
-				System.out.println(
-						"[ERROR] Formato ingresado no es válido, sólo se permiten dígitos de 6 a 8 un guión y dígito verificador\n");
+				System.out.println("[ERROR] Formato ingresado no es válido, sólo se permiten dígitos de 6 a 8 un guión y dígito verificador\n");
 			} else if (!existeRut(rutEliminar, usuarios)) {
 				// EXISTE USUARIO NO PUEDE CONTINUAR
 				System.out.println("[ERROR]: RUT ingresado No existe en la base de datos\n");
@@ -458,7 +423,8 @@ public class M4APBRO4 {
 				eliminarPosicion(usuarios, rutEliminar);
 				menuPrincipal();
 			}
-		} while (rutEliminar.length() == 0 || !rutEliminar.matches(RegExRut)
+		} while (rutEliminar.length() == 0
+				|| !rutEliminar.matches(RegExRut)
 				|| (!existeRut(rutEliminar, usuarios) && !rutEliminar.equals("SALIR")));
 	}
 
@@ -471,6 +437,7 @@ public class M4APBRO4 {
 			System.out.print("[+] Digite el RUT del Usuario a modificar: ");
 			capRutUsuario = scanner.next();
 			int fila = posicionRUT(capRutUsuario, listadoUsuarios);
+			
 			if (existeRut(capRutUsuario, listadoUsuarios) == false) {
 				System.out.println("\n[ERROR] Error el RUT no se encuentra");
 				// System.out.print("[+] Desea usted intentar con otro RUT?[s/n:] ");
@@ -479,26 +446,27 @@ public class M4APBRO4 {
 				System.out.print("[!] Direccion actual: ( " + usuarios[fila][3] + " ) /n Direccion Nueva: ");
 				String dato = scanner.nextLine();
 				dato = scanner.nextLine();
+				
 				if (!dato.equals("")) {
 					usuarios[fila][3] = dato; // GUARDANDO LA VARIABLE DATO DENTRO DE LA MATRIZ DE USUARIOS
 				}
 				System.out.print("[!] Telefono actual: ( " + usuarios[fila][4] + " ) /n Telefono Nuevo: ");
 				dato = scanner.nextLine();
+				
 				if (!dato.equals("")) {
 					usuarios[fila][4] = dato; // GUARDANDO LA VARIABLE DATO DENTRO DE LA MATRIZ DE USUARIOS
 				}
-				System.out.print("[!] Cantidad de Empleados actual : ( " + usuarios[fila][5]
-						+ " ) /n Nueva Cantidad de Empleados: ");
+				System.out.print("[!] Cantidad de Empleados actual : ( " + usuarios[fila][5] + " ) /n Nueva Cantidad de Empleados: ");
 				dato = scanner.nextLine();
 				usuarios[fila][5] = dato; // GUARDANDO LA VARIABLE DATO DENTRO DE LA MATRIZ DE USUARIOS
 			} else if (usuarios[fila][2] != null && usuarios[fila][7] != null) { // profesionales
-				System.out.print("[!] Años de Experiencia actuales: ( " + usuarios[fila][6]
-						+ " )/n Años de Experiencia Nuevo: ");
+				System.out.print("[!] Años de Experiencia actuales: ( " + usuarios[fila][6] + " )/n Años de Experiencia Nuevo: ");
 				String dato = scanner.nextLine();
 				dato = scanner.nextLine();
 				usuarios[fila][6] = dato; // GUARDANDO LA VARIABLE DATO DENTRO DE LA MATRIZ DE USUARIOS
 				System.out.print("[!] Departamento ( " + usuarios[fila][7] + " )/n Nuevo Departamento: ");
 				dato = scanner.nextLine();
+				
 				if (!dato.equals("")) {
 					usuarios[fila][7] = dato; // GUARDANDO LA VARIABLE DATO DENTRO DE LA MATRIZ DE USUARIOS
 				}
