@@ -28,9 +28,12 @@ public class M4APBRO4 {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		// DATOS DE PRUEBA
-		 usuarios[0] = new String[]{"Juan", "01/01/1990", "12345678-9", "Calle 1 #123", "+56912345678", "10", "5 años", "Ventas", "Vendedor", "TERRIBLE JEFE"};
-		 usuarios[1] = new String[]{"María", "02/02/1995", "98765432-1", "Calle 2 #456", "+56987654321", "5", "2 años", "Marketing", "Analista", "Sofía"};
-		 usuarios[2] = new String[]{"Pedro", "03/03/1985", "1-9", "Calle 3 #789", "+56911111111", "20", "10 años", "Finanzas", "Contador", "Carlos"};
+		usuarios[0] = new String[] { "Juan", "01/01/1990", "12345678-9", "Calle 1 #123", "+56912345678", "10", "5 años",
+				"Ventas", "Vendedor", "TERRIBLE JEFE" };
+		usuarios[1] = new String[] { "María", "02/02/1995", "98765432-1", "Calle 2 #456", "+56987654321", "5", "2 años",
+				"Marketing", "Analista", "Sofía" };
+		usuarios[2] = new String[] { "Pedro", "03/03/1985", "1-9", "Calle 3 #789", "+56911111111", "20", "10 años",
+				"Finanzas", "Contador", "Carlos" };
 		menuPrincipal();
 	}
 
@@ -244,7 +247,7 @@ public class M4APBRO4 {
 		// NOMBRE: PETICION Y GUARDADO
 		do {
 			System.out.println("[+] Favor Ingrese Nombre : [OBLIGATORIO]");
-			capturador = scanner.nextLine().trim();
+			capturador = scanner.nextLine().trim().toUpperCase();
 
 			if (capturador.length() == 0) {
 				System.out.println("[ERROR] Nombre Obligatorio, favor reintente.");
@@ -266,19 +269,22 @@ public class M4APBRO4 {
 //					}
 //				}while(!capturador.matches(regExFecha));
 
-		System.out.println("[+] Favor Ingrese Fecha Nacimiento : [DD/MM/AAAA]");
-		capturador = scanner.nextLine().trim();
-		if (capturador.length() > 0) {
-			while (!capturador.matches(regExFecha)) {
-				if (!capturador.matches(regExFecha)) {
-					System.out.println("[ERROR] Ingrese una fecha válida.");
-				} else {
-					usuarios[fila][1] = capturador;
-				}
-			}
-		}
+		//FECHA DE NACIMIENTO [OPCIONAL]
+		do {
+			System.out.println("[+] Favor Ingrese Fecha Nacimiento : [DD/MM/AAAA]");
 
+			capturador = scanner.nextLine().trim();
+			if (!capturador.matches(regExFecha) && capturador.length() > 0) {
+				System.out.println("[ERROR] Ingrese una fecha válida.");
+				//FECHA DE NACIMIENTO NO SE GUARDA
+			} else {
+				//FECHA DE NACIMIENTO VALIDADA -> GUARDAR
+				usuarios[fila][1] = capturador;
+			}
+		}while(!capturador.matches(regExFecha) && capturador.length() > 0);
+		
 	}
+	
 
 	// ALMACENA LOS DATOS NECESARIOS PARA EL PERFIL CLIENTE
 	public static void guardarCliente() {
@@ -286,7 +292,7 @@ public class M4APBRO4 {
 		// DIRECCION: PETICION Y GUARDADO
 		do {
 			System.out.println("[+] Favor Ingrese Dirección : [OBLIGATORIO]");
-			capturador = scanner.nextLine().trim();
+			capturador = scanner.nextLine().trim().toUpperCase();
 			if (capturador.length() == 0) {
 				System.out.println("[ERROR] Dirección No puede estar vacío, favor reintente.");
 			} else {
@@ -348,7 +354,7 @@ public class M4APBRO4 {
 		// DEPARTAMENTO: PETICION Y GUARDADO
 		do {
 			System.out.println("[+] Favor Ingrese Departamento : [OBLIGATORIO]");
-			capturador = scanner.nextLine();
+			capturador = scanner.nextLine().toUpperCase();
 			// DEPARTAMENTO VALIDADO -> GUARDAR
 			if (capturador.length() == 0) {
 				System.out.println("[ERROR] Departamento No puede estar vacío, favor reintente.");
@@ -361,10 +367,10 @@ public class M4APBRO4 {
 	// ALMACENA LOS DATOS NECESARIOS PARA EL PERFIL ADMINISTRATIVO
 	public static void guardarAdministrativo() {
 		String capturador;
-		// FUNCION: PETICION Y GUARDADO
+		// FUNCION DEL USUARIO: PETICION Y GUARDADO
 		do {
 			System.out.println("[+] Favor Ingrese Función : [OBLIGATORIO]");
-			capturador = scanner.nextLine();
+			capturador = scanner.nextLine().trim().toUpperCase();
 			if (capturador.length() == 0) {
 				System.out.println("[ERROR] Función no puede estar vacío, favor reintente");
 			} else {
@@ -375,7 +381,7 @@ public class M4APBRO4 {
 
 		// NOMBRE SUPERIOR: PETICION Y GUARDADO
 		System.out.println("[+] Favor Ingrese Nombre Superior : ");
-		capturador = scanner.nextLine().trim();
+		capturador = scanner.nextLine().trim().toUpperCase();
 		// NOMBRE SUPERIOR -> GUARDAR
 		usuarios[fila][9] = capturador;
 
@@ -396,7 +402,7 @@ public class M4APBRO4 {
 	public static void imprimirUsuario(String[] usuario) {
 
 		for (String campo : usuario) {
-			if (campo != null) // Remueve los espacios vacios.				
+			if (campo != null) // Remueve los espacios vacios.
 				System.out.print(campo + " || ");
 		}
 		System.out.println();
@@ -442,7 +448,8 @@ public class M4APBRO4 {
 				System.out.println("[!] Volviendo al Menú Principal");
 				menuPrincipal();
 			} else if (!rutEliminar.matches(RegExRut)) {
-				System.out.println("[ERROR] Formato ingresado no es válido, sólo se permiten dígitos de 6 a 8 un guión y dígito verificador\n");
+				System.out.println(
+						"[ERROR] Formato ingresado no es válido, sólo se permiten dígitos de 6 a 8 un guión y dígito verificador\n");
 			} else if (!existeRut(rutEliminar, usuarios)) {
 				// EXISTE USUARIO NO PUEDE CONTINUAR
 				System.out.println("[ERROR]: RUT ingresado No existe en la base de datos\n");
@@ -456,65 +463,68 @@ public class M4APBRO4 {
 	}
 
 	// FUNCION MODIFICAR USUARIO
-	private static void modificarUsuarios(String[][]listadoUsuarios) {
-        System.out.println("- - - - - MODIFICAR USUARIO - - - - - ");
-        char opcion = 's';
-        String capRutUsuario;
-        do {
-            System.out.print("[+] Digite el RUT del Usuario a modificar: ");
-            capRutUsuario = scanner.next();
-            int fila  = posicionRUT(capRutUsuario, listadoUsuarios);
-            if (existeRut(capRutUsuario, listadoUsuarios) == false) {
-                System.out.println("\n[ERROR] Error el RUT no se encuentra");
-                //System.out.print("[+] Desea usted intentar con otro RUT?[s/n:] ");
-                //opcion = scanner.next().charAt(0);
-            }
-            else if (usuarios[fila][2] != null && usuarios[fila][3] != null) { //clientes
-            	System.out.print("[!] Direccion actual: ( " + usuarios[fila][3] + " ) /n Direccion Nueva: ");
-                String dato = scanner.nextLine();
-                dato = scanner.nextLine();
-                if (!dato.equals("")) {
-                    usuarios[fila][3] = dato; //GUARDANDO LA VARIABLE DATO DENTRO DE LA MATRIZ DE USUARIOS
-                }
-                System.out.print("[!] Telefono actual: ( " + usuarios[fila][4] + " ) /n Telefono Nuevo: ");
-                dato = scanner.nextLine();
-                if (!dato.equals("")) {
-                    usuarios[fila][4] = dato; //GUARDANDO LA VARIABLE DATO DENTRO DE LA MATRIZ DE USUARIOS
-                }
-                System.out.print("[!] Cantidad de Empleados actual : ( " + usuarios[fila][5] + " ) /n Nueva Cantidad de Empleados: ");
-                dato = scanner.nextLine();
-                    usuarios[fila][5] = dato; //GUARDANDO LA VARIABLE DATO DENTRO DE LA MATRIZ DE USUARIOS
-			} else if (usuarios[fila][2] != null && usuarios[fila][7] != null) { //profesionales
-				System.out.print("[!] Años de Experiencia actuales: ( " + usuarios[fila][6] + " )/n Años de Experiencia Nuevo: ");
-                String dato = scanner.nextLine();
-                dato = scanner.nextLine();
-                    usuarios[fila][6] = dato; //GUARDANDO LA VARIABLE DATO DENTRO DE LA MATRIZ DE USUARIOS
-                System.out.print("[!] Departamento ( " + usuarios[fila][7] + " )/n Nuevo Departamento: ");
-                dato = scanner.nextLine();
-                if (!dato.equals("")) {
-                    usuarios[fila][7] = dato; //GUARDANDO LA VARIABLE DATO DENTRO DE LA MATRIZ DE USUARIOS
-                }
-			} else if (usuarios[fila][2] != null && usuarios[fila][8] != null) { //administrativos
+	private static void modificarUsuarios(String[][] listadoUsuarios) {
+		System.out.println("- - - - - MODIFICAR USUARIO - - - - - ");
+		char opcion = 's';
+		String capRutUsuario;
+		do {
+			System.out.print("[+] Digite el RUT del Usuario a modificar: ");
+			capRutUsuario = scanner.next();
+			int fila = posicionRUT(capRutUsuario, listadoUsuarios);
+			if (existeRut(capRutUsuario, listadoUsuarios) == false) {
+				System.out.println("\n[ERROR] Error el RUT no se encuentra");
+				// System.out.print("[+] Desea usted intentar con otro RUT?[s/n:] ");
+				// opcion = scanner.next().charAt(0);
+			} else if (usuarios[fila][2] != null && usuarios[fila][3] != null) { // clientes
+				System.out.print("[!] Direccion actual: ( " + usuarios[fila][3] + " ) /n Direccion Nueva: ");
+				String dato = scanner.nextLine();
+				dato = scanner.nextLine();
+				if (!dato.equals("")) {
+					usuarios[fila][3] = dato; // GUARDANDO LA VARIABLE DATO DENTRO DE LA MATRIZ DE USUARIOS
+				}
+				System.out.print("[!] Telefono actual: ( " + usuarios[fila][4] + " ) /n Telefono Nuevo: ");
+				dato = scanner.nextLine();
+				if (!dato.equals("")) {
+					usuarios[fila][4] = dato; // GUARDANDO LA VARIABLE DATO DENTRO DE LA MATRIZ DE USUARIOS
+				}
+				System.out.print("[!] Cantidad de Empleados actual : ( " + usuarios[fila][5]
+						+ " ) /n Nueva Cantidad de Empleados: ");
+				dato = scanner.nextLine();
+				usuarios[fila][5] = dato; // GUARDANDO LA VARIABLE DATO DENTRO DE LA MATRIZ DE USUARIOS
+			} else if (usuarios[fila][2] != null && usuarios[fila][7] != null) { // profesionales
+				System.out.print("[!] Años de Experiencia actuales: ( " + usuarios[fila][6]
+						+ " )/n Años de Experiencia Nuevo: ");
+				String dato = scanner.nextLine();
+				dato = scanner.nextLine();
+				usuarios[fila][6] = dato; // GUARDANDO LA VARIABLE DATO DENTRO DE LA MATRIZ DE USUARIOS
+				System.out.print("[!] Departamento ( " + usuarios[fila][7] + " )/n Nuevo Departamento: ");
+				dato = scanner.nextLine();
+				if (!dato.equals("")) {
+					usuarios[fila][7] = dato; // GUARDANDO LA VARIABLE DATO DENTRO DE LA MATRIZ DE USUARIOS
+				}
+			} else if (usuarios[fila][2] != null && usuarios[fila][8] != null) { // administrativos
 				System.out.print("[!] Función actual: ( " + usuarios[fila][8] + " )/n Funcion Nueva: ");
-                String dato = scanner.nextLine();
-                dato = scanner.nextLine();
-                if (!dato.equals("")) {
-                    usuarios[fila][8] = dato; //GUARDANDO LA VARIABLE DATO DENTRO DE LA MATRIZ DE USUARIOS
-                }
-                System.out.print("[!] Nombre Superior actual: ( " + usuarios[fila][9] + " )/n Nombre Superior nuevo: ");
-                dato = scanner.nextLine();
-                    usuarios[fila][9] = dato; //GUARDANDO LA VARIABLE DATO DENTRO DE LA MATRIZ DE USUARIOS
+				String dato = scanner.nextLine();
+				dato = scanner.nextLine();
+				if (!dato.equals("")) {
+					usuarios[fila][8] = dato; // GUARDANDO LA VARIABLE DATO DENTRO DE LA MATRIZ DE USUARIOS
+				}
+				System.out.print("[!] Nombre Superior actual: ( " + usuarios[fila][9] + " )/n Nombre Superior nuevo: ");
+				dato = scanner.nextLine();
+				usuarios[fila][9] = dato; // GUARDANDO LA VARIABLE DATO DENTRO DE LA MATRIZ DE USUARIOS
 			}
-                System.out.print("[+] Desea usted modificar otro usuario?[s/n]: ");
-                opcion = scanner.next().charAt(0);
-                
-                if (opcion == 'N' || opcion =='n') {
-                	scanner.nextLine();
-                	menuPrincipal();
-                }
-        	} while (opcion == 'S' || opcion == 's');//este do-while está en condicion verdadera esto hace que se siga repitendo, HAY QUE BUSCARLE LA CONDICION FALSA PARA QUE YA NO SE REPITA
-    
-    }
+			System.out.print("[+] Desea usted modificar otro usuario?[s/n]: ");
+			opcion = scanner.next().charAt(0);
+
+			if (opcion == 'N' || opcion == 'n') {
+				scanner.nextLine();
+				menuPrincipal();
+			}
+		} while (opcion == 'S' || opcion == 's');// este do-while está en condicion verdadera esto hace que se siga
+													// repitendo, HAY QUE BUSCARLE LA CONDICION FALSA PARA QUE YA NO SE
+													// REPITA
+
+	}
 
 	// AUTORA: VALENTINA SALDÍAS
 	private static void eliminarPosicion(String[][] usuarios, String rutEliminar) {
