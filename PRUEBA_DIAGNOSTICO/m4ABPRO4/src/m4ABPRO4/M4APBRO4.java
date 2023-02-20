@@ -13,7 +13,7 @@ public class M4APBRO4 {
 	// EXPRESIONES REGULARES
 	static String regExNumerica = "^[0-9]+$"; // SÓLO ACEPTA CARACTERES NUMÉRICOS
 	static String RegExRut = "^\\d{1,8}-[0-9Kk]$"; // CAMBIAR A 6 EL 1 EN PRODUCCCION DEBUG****;
-	static String regExTelefono = "\\d{6,}";
+	static String regExTelefono = "\\d{3,}";
 	static String regExFecha = "^(0?[1-9]|[12][0-9]|3[01])\\/(0?[1-9]|1[0-2])\\/((?:19|20)[0-9]{2}|18[0-9]{2})|\\b29\\/02\\/((?:19|20)(?:04|08|[2468][048]|[13579][26])|(?:2000))$";
 	static String regSiNo = "^(si|no)$";
 
@@ -105,12 +105,12 @@ public class M4APBRO4 {
 				break;
 			case 3:
 				System.out.println("SISTEMA DE USUARIOS\n\t[!] RESUMEN POR CATEGORÍA [!]\n");
-				System.out.println("[!] Resumen de Usuarios: ");
+				//System.out.println("[!] Resumen de Usuarios: ");
 				contarUsuariosPorCategoria(usuarios);
 				menuPrincipal();
 				break;
 			case 4:
-				System.out.println("[!]Modificar Usuario: ");
+				//System.out.println("[!]Modificar Usuario: ");
 				modificarUsuarios(usuarios);
 				break;
 			case 5:
@@ -281,9 +281,9 @@ public class M4APBRO4 {
 			System.out.println("[+] Favor Ingrese Teléfono : [OBLIGATORIO]");
 			capturador = scanner.nextLine().trim();
 			if (capturador.length() == 0) {
-				System.out.println("[ERROR] Teléfono No puede estar vacío, favor reintente.");
+				System.out.println("[ERROR] Teléfono No puede estar vacío, favor reintente. [MÍNIMO 3 DÍGITOS]");
 			} else if (!capturador.matches(regExTelefono)) {
-				System.out.println("[ERROR] Formato ingresado no es válido favor reintente. [Sólo Números]");
+				System.out.println("[ERROR] Formato ingresado no es válido favor reintente. [SÓLO NÚMEROS]");
 			} else {
 				// TELEFONO VALIDO -> GUARDAR
 				usuarios[fila][4] = capturador;
@@ -357,10 +357,11 @@ public class M4APBRO4 {
 
 	// AUTOR: ANDRÉS CONTRERAS
 	public static void mostrarUsuarios(String[][] usuarios) {
+	
 		for (String[] usuario : usuarios) { // Creacion de variable auxiliar
 			if (usuario[2] != null) { // Se buscan los usuarios utilizando la posicion del dato rut en el array
 				imprimirUsuario(usuario);
-			}
+			} 
 		}
 		// REGRESA AL MENÚ PRINCIPAL
 		menuPrincipal();
@@ -370,8 +371,9 @@ public class M4APBRO4 {
 	public static void imprimirUsuario(String[] usuario) {
 
 		for (String campo : usuario) {
-			if (campo != null) // Remueve los espacios vacios.
-				System.out.print(campo + " ");
+			if (campo != null && !campo.isEmpty()) // Remueve los espacios vacios.
+				
+				System.out.print(campo + " | ");
 		}
 		System.out.println();
 	}
