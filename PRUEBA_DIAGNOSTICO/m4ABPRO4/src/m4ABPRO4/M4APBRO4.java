@@ -430,7 +430,7 @@ public class M4APBRO4 {
 				|| (!existeRut(rutEliminar, usuarios) && !rutEliminar.equals("SALIR")));
 	}
 
-	// FUNCION MODIFICAR USUARIO
+	// AUTORA: VALENTINA SALDÍAS
 	private static void modificarUsuarios(String[][] listadoUsuarios) {
 		System.out.println("- - - - - MODIFICAR USUARIO - - - - - ");
 		char opcion = 's';
@@ -445,41 +445,41 @@ public class M4APBRO4 {
 				// System.out.print("[+] Desea usted intentar con otro RUT?[s/n:] ");
 				// opcion = scanner.next().charAt(0);
 			} else if (usuarios[fila][2] != null && usuarios[fila][3] != null) { // clientes
-				System.out.print("[!] Direccion actual: ( " + usuarios[fila][3] + " ) \nDireccion Nueva: ");
+				System.out.print("[!] Direccion actual: ( " + usuarios[fila][3] + " ) \n[+] Direccion Nueva: ");
 				String dato = scanner.nextLine();
 				dato = scanner.nextLine();
 				
 				if (!dato.equals("")) {
 					usuarios[fila][3] = dato; // GUARDANDO LA VARIABLE DATO DENTRO DE LA MATRIZ DE USUARIOS
 				}
-				System.out.print("[!] Telefono actual: ( " + usuarios[fila][4] + " ) \nTelefono Nuevo: ");
+				System.out.print("[!] Telefono actual: ( " + usuarios[fila][4] + " ) \n[+] Telefono Nuevo: ");
 				dato = scanner.nextLine();
 				
 				if (!dato.equals("")) {
 					usuarios[fila][4] = dato; // GUARDANDO LA VARIABLE DATO DENTRO DE LA MATRIZ DE USUARIOS
 				}
-				System.out.print("[!] Cantidad de Empleados actual : ( " + usuarios[fila][5] + " ) \n Nueva Cantidad de Empleados: ");
+				System.out.print("[!] Cantidad de Empleados actual : ( " + usuarios[fila][5] + " ) \n[+] Nueva Cantidad de Empleados: ");
 				dato = scanner.nextLine();
 				usuarios[fila][5] = dato; // GUARDANDO LA VARIABLE DATO DENTRO DE LA MATRIZ DE USUARIOS
 			} else if (usuarios[fila][2] != null && usuarios[fila][7] != null) { // profesionales
-				System.out.print("[!] Años de Experiencia actuales: ( " + usuarios[fila][6] + " )\n Años de Experiencia Nuevo: ");
+				System.out.print("[!] Años de Experiencia actuales: ( " + usuarios[fila][6] + " )\n[+] Años de Experiencia Nuevo: ");
 				String dato = scanner.nextLine();
 				dato = scanner.nextLine();
 				usuarios[fila][6] = dato; // GUARDANDO LA VARIABLE DATO DENTRO DE LA MATRIZ DE USUARIOS
-				System.out.print("[!] Departamento ( " + usuarios[fila][7] + " )\n Nuevo Departamento: ");
+				System.out.print("[!] Departamento ( " + usuarios[fila][7] + " )\n[+] Nuevo Departamento: ");
 				dato = scanner.nextLine();
 				
 				if (!dato.equals("")) {
 					usuarios[fila][7] = dato; // GUARDANDO LA VARIABLE DATO DENTRO DE LA MATRIZ DE USUARIOS
 				}
 			} else if (usuarios[fila][2] != null && usuarios[fila][8] != null) { // administrativos
-				System.out.print("[!] Función actual: ( " + usuarios[fila][8] + " )\nFuncion Nueva: ");
+				System.out.print("[!] Función actual: ( " + usuarios[fila][8] + " )\n[+] Función Nueva: ");
 				String dato = scanner.nextLine();
 				dato = scanner.nextLine();
 				if (!dato.equals("")) {
 					usuarios[fila][8] = dato; // GUARDANDO LA VARIABLE DATO DENTRO DE LA MATRIZ DE USUARIOS
 				}
-				System.out.print("[!] Nombre Superior actual: ( " + usuarios[fila][9] + " )\nNombre Superior nuevo: ");
+				System.out.print("[!] Nombre Superior actual: ( " + usuarios[fila][9] + " )\n[+] Nombre Superior nuevo: ");
 				dato = scanner.nextLine();
 				usuarios[fila][9] = dato; // GUARDANDO LA VARIABLE DATO DENTRO DE LA MATRIZ DE USUARIOS
 			}
@@ -517,8 +517,7 @@ public class M4APBRO4 {
 
 				posicionEliminar = posicionRUT(rutEliminar, usuarios); // BUSCA LA POSICION DEL REGISTRO PARA ELIMINAR
 
-				// MUESTRA EN PANTALLA EL NOMBRE DEL USUARIO A ELIMINAR ANTES DE ELIMINARLO
-				// COMPLETAMENTE
+				// MUESTRA EN PANTALLA EL NOMBRE DEL USUARIO A ELIMINAR ANTES DE ELIMINARLO COMPLETAMENTE
 				System.out.println("[!] SE HA ELIMINADO EL USUARIO: " + usuarios[posicionEliminar][0]);
 
 				// COPIA CADA FILA OMITIENDO LA QUE SE DESEA ELIMINAR
