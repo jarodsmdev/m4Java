@@ -1,5 +1,6 @@
 /**
- * @author Leonel, Andres, Priscila, Kevin, Valentina
+ * @author Leonel Briones, Andrés Contreras, 
+ * Priscila Carrillo, Kevin Moreno, Valentina Saldías
  * @version 21/02/2023
  */
 
@@ -56,6 +57,11 @@ public class Cliente {
 	public int getrut() { 
 		return this.rut;
 	}
+	
+	/**
+	 * 
+	 * @param rut
+	 */
 	public void setrut(int rut) {
 		this.rut = rut;
 	}
@@ -64,18 +70,32 @@ public class Cliente {
 		return this.nombres;
 	}
 	
+	/**
+	 * 
+	 * @param nombres
+	 */
 	public void setNombres(String nombres) {
 		this.nombres = nombres;
 	}
 	public String getApellidos() {
 		return this.apellidos;
 	}
+	
+	/**
+	 * 
+	 * @param apellidos
+	 */
 	public void setApellidos(String apellidos) {
 		this.apellidos=apellidos;
 	}
 	public String getTelefono() {
 		return this.telefono;
 	}
+	
+	/**
+	 * 
+	 * @param telefono
+	 */
 	public void setTelefono(String telefono) {
 		this.telefono=telefono;
 	}
@@ -84,6 +104,10 @@ public class Cliente {
 		return this.afp;
 	}
 	
+	/**
+	 * 
+	 * @param afp
+	 */
 	public void setAfp(String afp) {
 		this.afp = afp;
 	}
@@ -91,6 +115,11 @@ public class Cliente {
 	public char getSistemaSalud () {
 		return sistemaSalud;
 	}
+	
+	/**
+	 * 
+	 * @param sistemaSalud
+	 */
 	public void setSistemaSalud (char sistemaSalud) {
 		this.sistemaSalud = sistemaSalud;
 	}
@@ -99,6 +128,10 @@ public class Cliente {
 		return this.direccion;
 	}
 	
+	/**
+	 * 
+	 * @param direccion
+	 */
 	public void setDireccion (String direccion) {
 		this.direccion = direccion;
 	}
@@ -107,6 +140,10 @@ public class Cliente {
 		return this.comuna;
 	}
 	
+	/**
+	 * 
+	 * @param comuna
+	 */
 	public void setComuna (String comuna) {
 		this.comuna = comuna;
 	}
@@ -115,13 +152,21 @@ public class Cliente {
 		return this.edad;
 	}
 	
+	/**
+	 * 
+	 * @param edad
+	 */
 	public void setEdad(int edad) {
 		this.edad = edad;
 	}
 	
-	
+	@Override
 	public String toString() {
-		return "Cliente [rut=" + rut + ", nombres=" + nombres + ", apellidos=" + 		apellidos + ", telefono=" + telefono + ", afp=" + afp + ", sistemaSalud=" + sistemaSalud + ", direccion=" + direccion + ", comuna=" + comuna + ", edad=" + edad + "]";
+		return "Cliente: \nrut: " + rut + ", \nnombres: " + nombres +
+				", \napellidos: " + apellidos + ", \ntelefono: " + telefono +
+				", \nafp: " + afp + ", \nsistemaSalud: " + sistemaSalud +
+				", \ndireccion: " + direccion + ", \ncomuna: " + comuna +
+				", \nedad: " + edad;
 	}
 
 }
