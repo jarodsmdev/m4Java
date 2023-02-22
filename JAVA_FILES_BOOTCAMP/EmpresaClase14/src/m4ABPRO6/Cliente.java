@@ -12,9 +12,12 @@ public class Cliente {
 	private String direccion;
 	private String comuna;
 	private int edad;
+
 	
 	//MÉTODO CONSTRUCTORES
-	public Cliente() {}
+	public Cliente() {
+
+	}
 	
 	public Cliente(int rut, String nombres, String apellidos, String telefono, String afp, char sistemaSalud, String direccion, String comuna, int edad) {
 		this.rut = rut;
@@ -23,6 +26,7 @@ public class Cliente {
 		this.telefono = telefono;
 		this.afp = afp;
 		this.sistemaSalud = sistemaSalud;
+
 	}
 
 	@Override
