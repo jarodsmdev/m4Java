@@ -26,11 +26,12 @@ public class Capacitacion {
 
 	@Override
 	public String toString() {
-		return "Capacitacion: \nIdentificador=" + identificador + ", 'nRUT=" + rut + ", 'nDia=" + dia + ",\nHora=" + hora
-				+ ", \nLugar=" + lugar + ", \nDuración=" + duracion + ", \nCantidad Asistentes=" + cantidadAsistentes;
+		return "\nCapacitacion: \nIdentificador: " + identificador + ", \nRUT: " + rut + ", \nDia: " + dia + ",\nHora: " + hora
+				+ ", \nLugar: " + lugar + ", \nDuración: " + duracion + ", \nCantidad Asistentes: " + cantidadAsistentes;
 	}
 
 	//MÉTODOS ACCESORES Y MUTADORES
+
 	public int getIdentificador() {return identificador;}
 
 	public void setIdentificador(int identificador) {this.identificador = identificador;}
@@ -60,8 +61,6 @@ public class Capacitacion {
 	public void setCantidadAsistentes(int cantidadAsistentes) {this.cantidadAsistentes = cantidadAsistentes;}
 	
 	public String mostrarDetalle() {
-		String mensaje;
-		mensaje = "La capacitación será en " + lugar + " a las " + hora + " de día " + dia + ", y durará " + duracion + " minutos.";
-		return mensaje;
+		return "La capacitación será en " + lugar + " a las " + hora + " de día " + dia + ", y durará " + duracion + " minutos.";
 	}
 }

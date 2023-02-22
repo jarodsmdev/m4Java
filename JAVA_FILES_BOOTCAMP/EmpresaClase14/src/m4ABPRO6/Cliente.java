@@ -33,7 +33,7 @@ public class Cliente {
 
 	@Override
 	public String toString() {
-		return "Cliente: \nRUT: " + rut + ", \nNombres: " + nombres + ", \nApellidos: " + apellidos + ",\nTelefono: " + telefono + ", \nAFP: " + obtenerSistemaSalud() + ", \nSistema Salud: " + sistemaSalud + ", \nDireccion: " + direccion + ", \nComuna: " + comuna	+ ", \nEdad=" + edad;
+		return "\nCliente: \nRUT: " + rut + ", \nNombres: " + nombres + ", \nApellidos: " + apellidos + ",\nTelefono: " + telefono + ", \nAFP: " + obtenerSistemaSalud() + ", \nSistema Salud: " + sistemaSalud + ", \nDirección: " + direccion + ", \nComuna: " + comuna	+ ", \nEdad: " + edad;
 	}
 	
 	//MÉTODOS ACCESORES Y MUTADORES
