@@ -26,12 +26,14 @@ public class Cliente {
 		this.telefono = telefono;
 		this.afp = afp;
 		this.sistemaSalud = sistemaSalud;
-
+		this.direccion = direccion;
+		this.comuna = comuna;
+		this.edad = edad;
 	}
 
 	@Override
 	public String toString() {
-		return "Cliente: \nRUT: " + rut + ", \nNombres: " + nombres + ", \nApellidos: " + apellidos + ",\nTelefono: " + telefono + ", \nAFP: " + afp + ", \nSistema Salud: " + sistemaSalud + ", \nDireccion: " + direccion + ", \nComuna: " + comuna	+ ", \nEdad=" + edad;
+		return "Cliente: \nRUT: " + rut + ", \nNombres: " + nombres + ", \nApellidos: " + apellidos + ",\nTelefono: " + telefono + ", \nAFP: " + obtenerSistemaSalud() + ", \nSistema Salud: " + sistemaSalud + ", \nDireccion: " + direccion + ", \nComuna: " + comuna	+ ", \nEdad=" + edad;
 	}
 	
 	//MÉTODOS ACCESORES Y MUTADORES

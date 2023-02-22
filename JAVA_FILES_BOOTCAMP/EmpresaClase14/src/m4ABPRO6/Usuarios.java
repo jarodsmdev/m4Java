@@ -14,6 +14,7 @@ public class Usuarios {
 	private Cliente cliente;
 
 	public Usuarios() {
+		cliente = new Cliente();
 	}
 
 	/** metodo constructor vacio */
@@ -72,5 +73,6 @@ public class Usuarios {
 	public String toString() {
 		return "\nUsuario:\n" + nombreUsuario + "\n" + fechaNacimiento + "\n";
 	}
+	
 
 }
