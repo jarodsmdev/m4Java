@@ -12,7 +12,7 @@ public class Capacitacion {
 	private String lugar;
 	private int duracion;
 	private int cantidadAsistentes;
-	private ArrayList<Cliente> listaclientes = new ArrayList<Cliente>();
+	private ArrayList<Usuarios> listaUsuarios = new ArrayList<Usuarios>();
 	
 	//MÉTODOS CONSTRUCTORES
 	public Capacitacion() {}
@@ -60,8 +60,8 @@ public class Capacitacion {
 	public void setCantidadAsistentes(int cantidadAsistentes) {this.cantidadAsistentes = cantidadAsistentes;}
 	
 	//Relación de agragacion con clientes 
-	public ArrayList<Cliente> getClientes(){
-		return listaclientes;
+	public ArrayList<Usuarios> getClientes(){
+		return listaUsuarios;
 	}
 	
 	public String mostrarDetalle() {
