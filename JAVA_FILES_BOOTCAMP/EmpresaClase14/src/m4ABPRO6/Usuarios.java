@@ -1,4 +1,4 @@
-package m4ABPRO6;
+package m4ABPRO5;
 
 /**
  * @author Leonel Briones, Priscila Carrillo,
@@ -64,14 +64,14 @@ public class Usuarios {
 		return cliente;
 	}
 
-	public void mostrarEdad() {
-		System.out.println("El usuario tiene: " + cliente.getEdad() + " años.");
+	public String mostrarEdad() {
+		return "El usuario tiene: " + cliente.getEdad() + " años.";
 
 	}
 
 	@Override
 	public String toString() {
-		return "\nUsuario:\n" + nombreUsuario + "\n" + fechaNacimiento + "\n";
+		return "\nUsuario:\n" + nombreUsuario + "\n" + fechaNacimiento + "\n" + mostrarEdad();
 	}
 	
 
