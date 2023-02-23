@@ -74,5 +74,4 @@ public class Usuarios {
 		return "\nUsuario:\n" + nombreUsuario + "\n" + fechaNacimiento + "\n" + mostrarEdad();
 	}
 	
-
 }
