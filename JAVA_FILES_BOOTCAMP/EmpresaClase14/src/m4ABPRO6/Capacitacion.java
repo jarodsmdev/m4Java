@@ -12,19 +12,19 @@ public class Capacitacion {
 	private String lugar;
 	private int duracion;
 	private int cantidadAsistentes;
-	private ArrayList<Cliente> listaclientes = new ArrayList<Cliente>();
+	private ArrayList<Usuarios> listaUsuarios = new ArrayList<Usuarios>();
 	
 	//MÉTODOS CONSTRUCTORES
 	public Capacitacion() {}
 	
-	public Capacitacion(int identificador, String dia, String hora, String lugar, int duracion, int cantidadAsistentes) {
+	public Capacitacion(int identificador, String dia, String hora, String lugar, int duracion) {
 		this.identificador = identificador;
 		//this.rut = rut;
 		this.dia = dia;
 		this.hora = hora;
 		this.lugar = lugar;
 		this.duracion = duracion;
-		this.cantidadAsistentes = cantidadAsistentes;
+		this.cantidadAsistentes = listaUsuarios.size();
 	}
 
 	@Override
@@ -56,12 +56,19 @@ public class Capacitacion {
 	public void setDuracion(int duracion) {this.duracion = duracion;}
 
 	public int getCantidadAsistentes() {return cantidadAsistentes;}
-
-	public void setCantidadAsistentes(int cantidadAsistentes) {this.cantidadAsistentes = cantidadAsistentes;}
 	
-	//Relación de agragacion con clientes 
-	public ArrayList<Cliente> getClientes(){
-		return listaclientes;
+	public void agregarAsistentes(Usuarios usuario) {
+		getUsuarios().add(usuario);
+		cantidadAsistentes = listaUsuarios.size();
+	}
+
+	public void setCantidadAsistentes(int cantidadAsistentes) {
+		this.cantidadAsistentes = cantidadAsistentes;
+	}
+	
+	//Relación de agregación con clientes 
+	public ArrayList<Usuarios> getUsuarios(){
+		return listaUsuarios;
 	}
 	
 	public String mostrarDetalle() {

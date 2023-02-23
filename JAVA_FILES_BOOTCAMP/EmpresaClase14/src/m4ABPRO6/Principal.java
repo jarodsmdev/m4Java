@@ -61,21 +61,19 @@ public class Principal {
 	capacitacion1.setHora("09:30");
 	capacitacion1.setLugar("Casa de Damián");
 	capacitacion1.setDuracion(90);
-	capacitacion1.setCantidadAsistentes(8);
+	//capacitacion1.setCantidadAsistentes(8);
 	
-	//AGREGANDO CLIENTE1 AL ARRAY DE CAPACITACION1
-	capacitacion1.getClientes().add(cliente1);
-	
-	
+	//AGREGANDO USUARIO1 AL ARRAY DE CAPACITACION1
+	capacitacion1.agregarAsistentes(usuario1);
+
 	//DECLARACIÓN E INICIALIZACIÓN DEL OBJETO CAPACITACIÓN MEDIANTE CONSTRUCTOR CON PARÁMETROS
-	Capacitacion capacitacion2 = new Capacitacion(2, "lunes", "16:30", "Hotel O'Higgins", 30, 5);
-	//AGREGANDO CLIENTE2 A CAPACITACION2
-	capacitacion2.getClientes().add(cliente2);
+	Capacitacion capacitacion2 = new Capacitacion(2, "lunes", "16:30", "Hotel O'Higgins", 30);
+	//AGREGANDO USUARIO2 A CAPACITACION2
+	capacitacion2.agregarAsistentes(usuario1);
 	
 	//INVOCACIÓN DE MÉTODO toString() PARA CADA OBJETO CAPACITACION
 	System.out.println(capacitacion1.toString() + "\n" + capacitacion2.toString());
 	
-
 
 	//MODIFICACIÓN DE ATRIBUTOS
 	usuario1.setFechaNacimiento("29/02/2000");
@@ -84,12 +82,61 @@ public class Principal {
 	
 	System.out.println("\n------");
 	
-	//DESPLEGANDO DATOS
-	System.out.println(usuario1.getFechaNacimiento());
-	System.out.println(cliente1.getAfp());
-	System.out.println(capacitacion1.getDia());
+	//DESPLEGANDO DATOS USUARIO1
+	System.out.println("\n***Usuarios:***\n");
+	System.out.println("USUARIO: " + usuario1.getNombreUsuario());
+	System.out.println("FECHA NACIMIENTO: " + usuario1.getFechaNacimiento());
+	System.out.println("ASOCIADO A CLIENTE: " + usuario1.getCliente().obtenerNombre());
+	System.out.println("---");
+	//DESPLEGANDO DATOS USUARIO2
+	System.out.println("USUARIO: " + usuario2.getNombreUsuario());
+	System.out.println("FECHA NACIMIENTO: " + usuario2.getFechaNacimiento());
+	System.out.println("ASOCIADO A CLIENTE: " +usuario2.getCliente().obtenerNombre());
 	
-	
+	//DESPLEGANDO DATOS CLIENTE 1	
+	System.out.println(cliente1.getRut() +"\n"+ cliente1.getNombres() +"\n"+ cliente1.getApellidos() +"\n"+
+					      cliente1.getTelefono() +"\n"+ cliente1.getAfp() +"\n"+ cliente1.obtenerSistemaSalud() +"\n"+
+				          cliente1.getDireccion() +"\n"+ cliente1.getComuna() +"\n"+ cliente1.getEdad());
+	System.out.println("\n");
+		
+	//DESPLEGANDO DATOS CLIENTE 2
+	System.out.println(cliente2.getRut() +"\n"+ cliente2.getNombres() +"\n"+ cliente2.getApellidos() +"\n"+
+				          cliente2.getTelefono() +"\n"+ cliente2.getAfp() +"\n"+ cliente2.obtenerSistemaSalud() +"\n"+
+				          cliente2.getDireccion() +"\n"+ cliente2.getComuna() +"\n"+ cliente2.getEdad());
+
+	System.out.println("\n-----\n");
+	//metodos accesores Capacitacion
+
+		System.out.println("ID: " + capacitacion1.getIdentificador());
+		System.out.println("CANTIDAD ASISTENTES: " + capacitacion1.getCantidadAsistentes());
+		System.out.println("DÍA: " + capacitacion1.getDia());
+		System.out.println("DURACIÓN: " + capacitacion1.getDuracion());
+		System.out.println("HORA: " +capacitacion1.getHora());
+		System.out.println("LUGAR: " + capacitacion1.getLugar());
+		//System.out.println(capacitacion1.toString());
+		
+		System.out.println("\nUsuarios asociados a capacitacion 1: ");
+		for (int i = 0; i < capacitacion1.getUsuarios().size(); i++) {
+			
+			System.out.println(capacitacion1.getUsuarios().get(i));
+		}
+		
+		System.out.println("\n-----\n");
+		//metodos accesores Capacitacion 2
+
+		System.out.println("ID: " + capacitacion2.getIdentificador());
+		System.out.println("CANTIDAD ASISTENTES: " + capacitacion2.getCantidadAsistentes());
+		System.out.println("DÍA: " + capacitacion2.getDia());
+		System.out.println("DURACIÓN: " + capacitacion2.getDuracion());
+		System.out.println("HORA: " + capacitacion2.getHora());
+		System.out.println("LUGAR: " + capacitacion2.getLugar());
+		//System.out.println(capacitacion2.toString());
+		
+		System.out.println("\nClientes asociados a capacitacion 2: ");
+		for (int i = 0; i < capacitacion2.getUsuarios().size(); i++) {
+			
+			System.out.println(capacitacion2.getUsuarios().get(i));
+		}
 	
 	
 	
