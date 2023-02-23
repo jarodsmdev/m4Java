@@ -56,19 +56,27 @@ public class Principal {
 	Capacitacion capacitacion1 = new Capacitacion();
 	//INICIALIZACIÓN DEL OBJETO capacitacion1 MEDIANTE MÉTODOS MUTADORES
 	capacitacion1.setIdentificador(1);
-	capacitacion1.setRut(123123);
+	//capacitacion1.setRut(123123);
 	capacitacion1.setDia("martes");
 	capacitacion1.setHora("09:30");
 	capacitacion1.setLugar("Casa de Damián");
 	capacitacion1.setDuracion(90);
 	capacitacion1.setCantidadAsistentes(8);
+	
+	//AGREGANDO CLIENTE1 AL ARRAY DE CAPACITACION1
+	capacitacion1.getClientes().add(cliente1);
+	
+	
 	//DECLARACIÓN E INICIALIZACIÓN DEL OBJETO CAPACITACIÓN MEDIANTE CONSTRUCTOR CON PARÁMETROS
-	Capacitacion capacitacion2 = new Capacitacion(2, 123123, "lunes", "16:30", "Hotel O'Higgins", 30, 5);
+	Capacitacion capacitacion2 = new Capacitacion(2, "lunes", "16:30", "Hotel O'Higgins", 30, 5);
+	//AGREGANDO CLIENTE2 A CAPACITACION2
+	capacitacion2.getClientes().add(cliente2);
 	
 	//INVOCACIÓN DE MÉTODO toString() PARA CADA OBJETO CAPACITACION
 	System.out.println(capacitacion1.toString() + "\n" + capacitacion2.toString());
-
 	
+
+
 	//MODIFICACIÓN DE ATRIBUTOS
 	usuario1.setFechaNacimiento("29/02/2000");
 	cliente1.setAfp("AFP UNO");
@@ -81,24 +89,16 @@ public class Principal {
 	System.out.println(cliente1.getAfp());
 	System.out.println(capacitacion1.getDia());
 	
-	// Crear un objeto Capacitacion
-	Capacitacion capacitacion3 = new Capacitacion(1, 123456789, "Lunes", "09:00", "Sala de reuniones", 2, 10);
-
-	// Crear un objeto Cliente
-//	Cliente miCliente = new Cliente("Juan Perez", "juan.perez@ejemplo.com", "12345678");
-
-	// Agregar el objeto Cliente al ArrayList "clientes" de la Capacitacion
+	//DESPLEGANDO DATOS CLIENTE 1	
+	System.out.println(cliente1.getRut() +"\n"+ cliente1.getNombres() +"\n"+ cliente1.getApellidos() +"\n"+
+				      cliente1.getTelefono() +"\n"+ cliente1.getAfp() +"\n"+ cliente1.obtenerSistemaSalud() +"\n"+
+			          cliente1.getDireccion() +"\n"+ cliente1.getComuna() +"\n"+ cliente1.getEdad());
+	System.out.println("\n");
 	
-	capacitacion1.obtenerClientes().add(cliente1);
-	capacitacion1.obtenerClientes().add(cliente2);
-//	
-	System.out.println(capacitacion1.obtenerClientes());
-	
-//	Cliente miCliente = capacitacion1.obtenerClientes().get(1);
-//	miCliente.setNombres("pepe");
-	cliente1.setNombres("pepe");
-	System.out.println(capacitacion1.obtenerClientes());
-	System.out.println(cliente1);
+	//DESPLEGANDO DATOS CLIENTE 2
+	System.out.println(cliente2.getRut() +"\n"+ cliente2.getNombres() +"\n"+ cliente2.getApellidos() +"\n"+
+			          cliente2.getTelefono() +"\n"+ cliente2.getAfp() +"\n"+ cliente2.obtenerSistemaSalud() +"\n"+
+			          cliente2.getDireccion() +"\n"+ cliente2.getComuna() +"\n"+ cliente2.getEdad());
 	
 	}
 }

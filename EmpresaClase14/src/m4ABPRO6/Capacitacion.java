@@ -6,20 +6,20 @@ public class Capacitacion {
 	
 	//ATRIBUTOS
 	private int identificador;
-	private int rut;
+	//private int rut;
 	private String dia;
 	private String hora;
 	private String lugar;
 	private int duracion;
 	private int cantidadAsistentes;
-	private ArrayList<Cliente> clientes = new ArrayList<Cliente>();
+	private ArrayList<Cliente> listaclientes = new ArrayList<Cliente>();
 	
 	//MÉTODOS CONSTRUCTORES
 	public Capacitacion() {}
 	
-	public Capacitacion(int identificador, int rut, String dia, String hora, String lugar, int duracion, int cantidadAsistentes) {
+	public Capacitacion(int identificador, String dia, String hora, String lugar, int duracion, int cantidadAsistentes) {
 		this.identificador = identificador;
-		this.rut = rut;
+		//this.rut = rut;
 		this.dia = dia;
 		this.hora = hora;
 		this.lugar = lugar;
@@ -29,8 +29,8 @@ public class Capacitacion {
 
 	@Override
 	public String toString() {
-		return "\nCapacitacion: \nIdentificador: " + identificador + ", \nRUT: " + rut + ", \nDia: " + dia + ",\nHora: " + hora
-				+ ", \nLugar: " + lugar + ", \nDuración: " + duracion + ", \nCantidad Asistentes: " + cantidadAsistentes;
+		return "\nCapacitacion: \nIdentificador: " + identificador + ", \nDia: " + dia + ",\nHora: " + hora
+				+ ", \nLugar: " + lugar + ", \nDuración: " + duracion + ", \nCantidad Asistentes: " + cantidadAsistentes + "\n" + mostrarDetalle();
 	}
 
 	//MÉTODOS ACCESORES Y MUTADORES
@@ -38,10 +38,6 @@ public class Capacitacion {
 	public int getIdentificador() {return identificador;}
 
 	public void setIdentificador(int identificador) {this.identificador = identificador;}
-
-	public int getRut() {return rut;}
-
-	public void setRut(int rut) {this.rut = rut;}
 
 	public String getDia() {return dia;}
 
@@ -63,13 +59,12 @@ public class Capacitacion {
 
 	public void setCantidadAsistentes(int cantidadAsistentes) {this.cantidadAsistentes = cantidadAsistentes;}
 	
-	public ArrayList<Cliente> obtenerClientes() {
-		return clientes;
+	//Relación de agragacion con clientes 
+	public ArrayList<Cliente> getClientes(){
+		return listaclientes;
 	}
 	
 	public String mostrarDetalle() {
 		return "La capacitación será en " + lugar + " a las " + hora + " de día " + dia + ", y durará " + duracion + " minutos.";
 	}
-	
-	
 }
