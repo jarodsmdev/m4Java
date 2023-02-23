@@ -56,17 +56,25 @@ public class Principal {
 	Capacitacion capacitacion1 = new Capacitacion();
 	//INICIALIZACIÓN DEL OBJETO capacitacion1 MEDIANTE MÉTODOS MUTADORES
 	capacitacion1.setIdentificador(1);
-	capacitacion1.setRut(123123);
+	//capacitacion1.setRut(123123);
 	capacitacion1.setDia("martes");
 	capacitacion1.setHora("09:30");
 	capacitacion1.setLugar("Casa de Damián");
 	capacitacion1.setDuracion(90);
 	capacitacion1.setCantidadAsistentes(8);
+	
+	//AGREGANDO CLIENTE1 AL ARRAY DE CAPACITACION1
+	capacitacion1.getClientes().add(cliente1);
+	
+	
 	//DECLARACIÓN E INICIALIZACIÓN DEL OBJETO CAPACITACIÓN MEDIANTE CONSTRUCTOR CON PARÁMETROS
-	Capacitacion capacitacion2 = new Capacitacion(2, 123123, "lunes", "16:30", "Hotel O'Higgins", 30, 5);
+	Capacitacion capacitacion2 = new Capacitacion(2, "lunes", "16:30", "Hotel O'Higgins", 30, 5);
+	//AGREGANDO CLIENTE2 A CAPACITACION2
+	capacitacion2.getClientes().add(cliente2);
 	
 	//INVOCACIÓN DE MÉTODO toString() PARA CADA OBJETO CAPACITACION
 	System.out.println(capacitacion1.toString() + "\n" + capacitacion2.toString());
+	
 
 
 	//MODIFICACIÓN DE ATRIBUTOS
