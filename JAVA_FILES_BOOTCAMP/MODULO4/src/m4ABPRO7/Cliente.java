@@ -14,7 +14,8 @@ public class Cliente {
 	private String direccion;
 	private String comuna;
 	private int edad;
-	ArrayList<Capacitacion>capacitaciones = new ArrayList<Capacitacion>();
+	private int cantCapacitaciones = 0;
+	ArrayList<Capacitacion>listaCapacitaciones = new ArrayList<Capacitacion>();
 	ArrayList<Accidente> accidentes = new ArrayList<Accidente>();
 	ArrayList<VisitaTerreno> visitasTerreno = new ArrayList<VisitaTerreno>();
 
@@ -26,7 +27,7 @@ public class Cliente {
 	
 	//MÉTODO CONSTRUCTOR PARAMETRIZADO
 	public Cliente(int rut, String nombres, String apellidos, String telefono, String afp, char sistemaSalud,
-			String direccion, String comuna, int edad, ArrayList<Capacitacion> capacitaciones,
+			String direccion, String comuna, int edad, ArrayList<Capacitacion> listaCapacitaciones,
 			ArrayList<Accidente> accidentes, ArrayList<VisitaTerreno> visitaTerrenos) {
 		this.rut = rut;
 		this.nombres = nombres;
@@ -37,19 +38,21 @@ public class Cliente {
 		this.direccion = direccion;
 		this.comuna = comuna;
 		this.edad = edad;
-		this.capacitaciones = capacitaciones;
+		this.listaCapacitaciones = listaCapacitaciones;
 		this.accidentes = accidentes;
 		this.visitasTerreno = visitaTerrenos;
 	}
+
+
+
 
 	@Override
 	public String toString() {
 		return "Cliente [rut=" + rut + ", nombres=" + nombres + ", apellidos=" + apellidos + ", telefono=" + telefono
 				+ ", afp=" + afp + ", sistemaSalud=" + sistemaSalud + ", direccion=" + direccion + ", comuna=" + comuna
-				+ ", edad=" + edad + ", capacitaciones=" + capacitaciones + ", accidente=" + accidentes
-				+ ", visitaTerreno=" + visitasTerreno + "]";
+				+ ", edad=" + edad + ", cantCapacitaciones=" + cantCapacitaciones + ", listaCapacitaciones="
+				+ listaCapacitaciones + ", accidentes=" + accidentes + ", visitasTerreno=" + visitasTerreno + "]";
 	}
-
 
 	//MÉTODOS ACCESORES Y MUTADORES
 	public int getRut() {return rut;}
@@ -87,6 +90,13 @@ public class Cliente {
 	
 	public void setEdad(int edad) {this.edad = edad;}
 	
+	public void setCantCapacitaciones(int cantCapacitaciones) {
+		this.cantCapacitaciones = cantCapacitaciones;
+	}
+	public int getCantCapacitaciones(int cantCapacitaciones) {
+		return cantCapacitaciones;
+	}
+	
 	//
 	public String obtenerNombre() {
 		return nombres + " " + apellidos;
@@ -97,5 +107,12 @@ public class Cliente {
 			return "FONASA";
 		}
 		return "ISAPRE";
+	}
+	public void agregarCapacitaciones(Capacitacion nuevaCapacitacion) {
+		if (true) {
+			listaCapacitaciones.add(nuevaCapacitacion);
+			cantCapacitaciones++;
+		}
+		System.out.println("El cliente ha tomado " + listaCapacitaciones.size() + " capacitaciones.");
 	}
 }

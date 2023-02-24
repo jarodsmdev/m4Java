@@ -39,8 +39,6 @@ public class Usuario {
 		this.nombreUsuario = nombreUsuario;
 	}
 
-
-
 	/**
 	 * 
 	 * @param fechaNacimiento

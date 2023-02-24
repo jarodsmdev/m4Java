@@ -1,7 +1,5 @@
 package m4ABPRO7;
 
-import java.util.ArrayList;
-
 public class Principal {
 
 	public static void main(String[] args) {
@@ -9,7 +7,7 @@ public class Principal {
 		
 //DECLARACIÓN E INCIALIZACIÓN DE OBJETOS CLIENTE
 	//MEDIANTE CONSTRUCTOR VACÍO
-	Usuario usuario1 = new Usuario (); 
+	Usuarios usuario1 = new Usuarios (); 
 	//INICALIZANDO OBJETO USANDO MÉTODOS MUTADORES
 		usuario1.setNombreUsuario("LaVioleta");
 		usuario1.setFechaNacimiento("19/04/1987");
@@ -24,19 +22,16 @@ public class Principal {
 		usuario1.getCliente().setEdad(40);
 	
 	//MEDIANTE CONSTRUCTOR PASANDO PARÁMETROS
-	//Usuario usuario2 = new Usuario ("El peter", "23/02/1997", 1233,"Pedro","Lira","1234","AFP CINCO",'1',"Más acá 404","Valparaíso",25);
+	Usuarios usuario2 = new Usuarios ("El peter", "23/02/1997", 1233,"Pedro","Lira","1234","AFP CINCO",'1',"Más acá 404","Valparaíso",25);
 	
 	//INVOCACIÓN DE MÉTODO toString() PARA CADA OBJETO USUARIO
 	System.out.println(usuario1.toString() + "\n" + usuario2.toString());
 
 	System.out.println("------");
 	
-	ArrayList<Capacitacion> capacitacion1 = new ArrayList<Capacitacion>();
-	ArrayList<Accidente> accidentes1 = new ArrayList<Accidente>();
-	ArrayList<VisitaTerreno> visitasTerreno1 = new ArrayList<VisitaTerreno>();
 //DECLARACIÓN E INICIALIZACIÓN DE OBJETOS CLIENTE
 	//MEDIANTE CONSTRUCTOR VACÍO
-	Cliente cliente1 = new Cliente(visitasTerreno1);
+	Cliente cliente1 = new Cliente();
 	//INICIALIZACIÓN DEL OBJETO cliente1 MEDIANTE MÉTODOS MUTADORES
 		cliente1.setRut(123123);
 		cliente1.setNombres("Juanito");
@@ -47,10 +42,9 @@ public class Principal {
 		cliente1.setDireccion("Calle Limache #142");
 		cliente1.setComuna("Valparaíso");
 		cliente1.setEdad(50);
-		
 	
 	//MEDIANTE CONSTRUCTOR CON PARÁMETROS
-	Cliente cliente2 = new Cliente(1234, "Elvis", "Tek", "1234567", "AFP modelo", '1', "Quillota #123", "Quillota", 36, capacitacion1,accidentes1,visitasTerreno1);
+	Cliente cliente2 = new Cliente(1234,"Elvis","Tek", "1234567","AFP modelo",'1',"Quillota 123", "Valparaíso",36);
 	
 	//INVOCACIÓN DE MÉTODO toString() PARA CADA OBJETO CLIENTE
 	System.out.println(cliente1.toString() + "\n" + cliente2.toString());
@@ -59,7 +53,7 @@ public class Principal {
 	
 //DECLARACIÓN E INICIALIZACIÓN DE OBJETOS CAPACITACION
 	//MEDIANTE CONSTRUCTOR VACÍO
-	//Capacitacion capacitacion1 = new Capacitacion();
+	Capacitacion capacitacion1 = new Capacitacion();
 	//INICIALIZACIÓN DEL OBJETO capacitacion1 MEDIANTE MÉTODOS MUTADORES
 	capacitacion1.setIdentificador(1);
 	//capacitacion1.setRut(123123);
@@ -123,6 +117,7 @@ public class Principal {
 		
 		System.out.println("\nUsuarios asociados a capacitacion 1: ");
 		for (int i = 0; i < capacitacion1.getUsuarios().size(); i++) {
+			
 			System.out.println(capacitacion1.getUsuarios().get(i));
 		}
 		
@@ -139,10 +134,14 @@ public class Principal {
 		
 		System.out.println("\nClientes asociados a capacitacion 2: ");
 		for (int i = 0; i < capacitacion2.getUsuarios().size(); i++) {
-			System.out.println(capacitacion2.getUsuarios().get(i));
+			
+			System.out.println(capacitacion2.getUsuarios().get(i) );
 		}
 	
-	
+//		usuario1.getCliente().agregarCapacitaciones(capacitacion2);
+//		usuario1.getCliente().agregarCapacitaciones(capacitacion2);
+//		usuario1.getCliente().agregarCapacitaciones(capacitacion1);
+		System.out.println(usuario1.getCliente().toString());
 	
 	}
 }

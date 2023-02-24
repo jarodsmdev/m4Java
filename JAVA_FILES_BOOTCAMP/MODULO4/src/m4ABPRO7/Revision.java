@@ -53,16 +53,17 @@ public class Revision {
 		return estado;
 	}
 	
-	public String mostrarEstado(char estado) {
+	public String mostrarEstado() {
 		String mensaje;
+		
 		switch (estado) {
-		case 1:
+		case '1':
 			mensaje = "Sin problemas";
 			break;
-		case 2:
+		case '2':
 			mensaje = "Con observaciones";
 			break;
-		case 3:
+		case '3':
 			mensaje = "no aprueba";
 			break;
 		default:
@@ -75,7 +76,7 @@ public class Revision {
 	@Override
 	public String toString() {
 		return "Revision [idRevision=" + idRevision + ", nombreRevision=" + nombreRevision + ", detallesRevisar="
-				+ detallesRevisar + ", estado=" + estado + "]";
+				+ detallesRevisar + ", estado=" + mostrarEstado() + "]";
 	}
 	
 	
