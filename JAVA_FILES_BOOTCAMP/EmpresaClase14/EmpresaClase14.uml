@@ -4,7 +4,7 @@
     <eAnnotations xmi:id="_dIVDILRPEe2w4LjrQN7M_g" source="http://ns.yatta.de/umllab">
       <contents xmi:type="ecore:EAnnotation" xmi:id="_dIVDIbRPEe2w4LjrQN7M_g" source="codegen">
         <details xmi:id="_dIVqMLRPEe2w4LjrQN7M_g" key="codegenDirectory" value="/EmpresaClase14/src"/>
-        <details xmi:id="_hB4uoLRPEe2w4LjrQN7M_g" key="AssociatedSourceCode" value="/EmpresaClase14/src/m4ABPRO6/Cliente.java;126982772/1;/EmpresaClase14/src/m4ABPRO6/Accidente.java;388488126/1;/EmpresaClase14/src/m4ABPRO6/Capacitacion.java;1163843299/1;/EmpresaClase14/src/m4ABPRO6/Principal.java;3507642330/1;/EmpresaClase14/src/m4ABPRO6/Revision.java;3720905443/1;/EmpresaClase14/src/m4ABPRO6/Usuarios.java;3203854407/1;/EmpresaClase14/src/m4ABPRO6/VisitaTerreno.java;3511820094/1;"/>
+        <details xmi:id="_hB4uoLRPEe2w4LjrQN7M_g" key="AssociatedSourceCode" value="/EmpresaClase14/src/m4ABPRO6/Cliente.java;126982772/1;/EmpresaClase14/src/m4ABPRO6/Accidente.java;388488126/1;/EmpresaClase14/src/m4ABPRO6/Capacitacion.java;1163843299/1;/EmpresaClase14/src/m4ABPRO6/Principal.java;4081737072/1;/EmpresaClase14/src/m4ABPRO6/Revision.java;3720905443/1;/EmpresaClase14/src/m4ABPRO6/Usuarios.java;3203854407/1;/EmpresaClase14/src/m4ABPRO6/VisitaTerreno.java;3511820094/1;"/>
       </contents>
     </eAnnotations>
     <elementImport xmi:id="_dYJn0LRPEe2w4LjrQN7M_g">
@@ -808,9 +808,9 @@ Andrés Contreras, Kevin Moreno, Valentina Saldías&#xD;
 			System.out.println(capacitacion2.getUsuarios().get(i) );&#xD;
 		}&#xD;
 	&#xD;
-		usuario1.getCliente().agregarCapacitaciones(capacitacion2);&#xD;
-		usuario1.getCliente().agregarCapacitaciones(capacitacion2);&#xD;
-		usuario1.getCliente().agregarCapacitaciones(capacitacion1);&#xD;
+//		usuario1.getCliente().agregarCapacitaciones(capacitacion2);&#xD;
+//		usuario1.getCliente().agregarCapacitaciones(capacitacion2);&#xD;
+//		usuario1.getCliente().agregarCapacitaciones(capacitacion1);&#xD;
 		System.out.println(usuario1.getCliente().toString());&#xD;
 	&#xD;
 	</body>

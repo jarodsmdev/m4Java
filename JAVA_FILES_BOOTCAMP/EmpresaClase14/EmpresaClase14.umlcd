@@ -1142,14 +1142,6 @@
       </outParameters>
     </operations>
   </nodes>
-  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_kUP3QLRPEe2w4LjrQN7M_g" name="ArrayList" associationsIn="_hEQtMLRPEe2w4LjrQN7M_g _hEG8MLRPEe2w4LjrQN7M_g">
-    <modelElement href="EmpresaClase14.uml#_dafKILRPEe2w4LjrQN7M_g"/>
-    <visualProperties xmi:id="_kUP3QbRPEe2w4LjrQN7M_g" position="2436.0,-311.0" size="-1.0,-1.0"/>
-    <stereotypes xmi:id="_kUP3QrRPEe2w4LjrQN7M_g" name="Reference">
-      <modelElement href="EmpresaClase14.uml#_dafxMLRPEe2w4LjrQN7M_g"/>
-    </stereotypes>
-    <visibility xmi:id="_kUP3Q7RPEe2w4LjrQN7M_g" label="+"/>
-  </nodes>
   <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_hEU-oLRPEe2w4LjrQN7M_g" name="Capacitacion" associationsOut="_hEQtMLRPEe2w4LjrQN7M_g">
     <modelElement href="EmpresaClase14.uml#_dZedgLRPEe2w4LjrQN7M_g"/>
     <visualProperties xmi:id="_hEU-obRPEe2w4LjrQN7M_g" position="2198.0,-54.0" size="-1.0,-1.0"/>
@@ -1605,5 +1597,13 @@
         </type>
       </parameters>
     </operations>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_kUP3QLRPEe2w4LjrQN7M_g" name="ArrayList" associationsIn="_hEQtMLRPEe2w4LjrQN7M_g _hEG8MLRPEe2w4LjrQN7M_g">
+    <modelElement href="EmpresaClase14.uml#_dafKILRPEe2w4LjrQN7M_g"/>
+    <visualProperties xmi:id="_kUP3QbRPEe2w4LjrQN7M_g" position="2436.0,-311.0" size="-1.0,-1.0"/>
+    <stereotypes xmi:id="_kUP3QrRPEe2w4LjrQN7M_g" name="Reference">
+      <modelElement href="EmpresaClase14.uml#_dafxMLRPEe2w4LjrQN7M_g"/>
+    </stereotypes>
+    <visibility xmi:id="_kUP3Q7RPEe2w4LjrQN7M_g" label="+"/>
   </nodes>
 </com.yattasolutions.uml.diagrams.classifier:ClassDiagram>
