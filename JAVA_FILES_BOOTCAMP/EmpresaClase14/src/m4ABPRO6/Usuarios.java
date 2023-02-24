@@ -69,6 +69,8 @@ public class Usuarios {
 
 	}
 
+
+	
 	@Override
 	public String toString() {
 		return "\nUsuario:\n" + nombreUsuario + "\n" + fechaNacimiento + "\n" + mostrarEdad();

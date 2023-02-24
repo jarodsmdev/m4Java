@@ -1,4 +1,7 @@
 package m4ABPRO6;
+import java.util.Set;
+
+import java.util.ArrayList;
 
 public class Cliente {
 	
@@ -12,7 +15,8 @@ public class Cliente {
 	private String direccion;
 	private String comuna;
 	private int edad;
-
+	private int cantCapacitaciones = 0; 
+	private ArrayList<Capacitacion> listaCapacitaciones = new ArrayList<Capacitacion>();
 	
 	//MÉTODO CONSTRUCTORES
 	public Cliente() {
@@ -29,11 +33,12 @@ public class Cliente {
 		this.direccion = direccion;
 		this.comuna = comuna;
 		this.edad = edad;
+		this.cantCapacitaciones = listaCapacitaciones.size();
 	}
 
 	@Override
 	public String toString() {
-		return "\nCliente: \nRUT: " + rut + ", \nNombres: " + nombres + ", \nApellidos: " + apellidos + ",\nTelefono: " + telefono + ", \nAFP: " + obtenerSistemaSalud() + ", \nSistema Salud: " + sistemaSalud + ", \nDirección: " + direccion + ", \nComuna: " + comuna	+ ", \nEdad: " + edad;
+		return "\nCliente: \nRUT: " + rut + ", \nNombres: " + nombres + ", \nApellidos: " + apellidos + ",\nTelefono: " + telefono + ", \nAFP: " + obtenerSistemaSalud() + ", \nSistema Salud: " + sistemaSalud + ", \nDirección: " + direccion + ", \nComuna: " + comuna	+ ", \nEdad: " + edad + ", \nCantidad de Capacitaciones: " + cantCapacitaciones;
 	}
 	
 	//MÉTODOS ACCESORES Y MUTADORES
@@ -49,8 +54,7 @@ public class Cliente {
 	
 	public void setApellidos(String apellidos) {this.apellidos = apellidos;}
 	
-	public String getTelefono() { return telefono;};
-	
+	public String getTelefono() { return telefono;}	
 	public void setTelefono(String telefono) {this.telefono = telefono;}
 	
 	public String getAfp() {return afp;}
@@ -73,6 +77,12 @@ public class Cliente {
 	
 	public void setEdad(int edad) {this.edad = edad;}
 	
+	public void setCantCapacitaciones(int cantCapacitaciones) {
+		this.cantCapacitaciones = cantCapacitaciones;
+	}
+	public int getCantCapacitaciones(int cantCapacitaciones) {
+		return cantCapacitaciones;
+	}
 	//
 	public String obtenerNombre() {
 		return nombres + " " + apellidos;
@@ -84,4 +94,12 @@ public class Cliente {
 		}
 		return "ISAPRE";
 	}
+	public void agregarCapacitaciones(Capacitacion nuevaCapacitacion) {
+		if (true) {
+			listaCapacitaciones.add(nuevaCapacitacion);
+			cantCapacitaciones++;
+		}
+		System.out.println("El cliente ha tomado " + listaCapacitaciones.size() + " capacitaciones.");
+	}
+
 }

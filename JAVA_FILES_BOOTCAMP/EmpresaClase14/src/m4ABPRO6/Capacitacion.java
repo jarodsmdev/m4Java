@@ -74,4 +74,5 @@ public class Capacitacion {
 	public String mostrarDetalle() {
 		return "La capacitación será en " + lugar + " a las " + hora + " de día " + dia + ", y durará " + duracion + " minutos.";
 	}
+	
 }
