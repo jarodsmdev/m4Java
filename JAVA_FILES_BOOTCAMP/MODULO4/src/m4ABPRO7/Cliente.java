@@ -26,9 +26,7 @@ public class Cliente {
 	}
 	
 	//MÉTODO CONSTRUCTOR PARAMETRIZADO
-	public Cliente(int rut, String nombres, String apellidos, String telefono, String afp, char sistemaSalud,
-			String direccion, String comuna, int edad, ArrayList<Capacitacion> listaCapacitaciones,
-			ArrayList<Accidente> accidentes, ArrayList<VisitaTerreno> visitaTerrenos) {
+	public Cliente(int rut, String nombres, String apellidos, String telefono, String afp, char sistemaSalud, String direccion, String comuna, int edad, ArrayList<Capacitacion> listaCapacitaciones, ArrayList<Accidente> accidentes, ArrayList<VisitaTerreno> visitaTerrenos) {
 		this.rut = rut;
 		this.nombres = nombres;
 		this.apellidos = apellidos;
