@@ -1,4 +1,4 @@
-package m4ABPRO8;
+package m4ABPRO8_REPASO;
 
 public class Cliente extends Usuario {
 	//ATRIBUTOS

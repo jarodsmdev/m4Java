@@ -1,4 +1,4 @@
-package m4ABPRO8;
+package m4ABPRO8_REPASO;
 
 public class Administrativo extends Usuario{
 	private String area;

@@ -1,4 +1,4 @@
-package m4ABPRO8;
+package m4ABPRO8_REPASO;
 
 public class Profesional extends Usuario{
 	private String titulo;
@@ -25,4 +25,10 @@ public class Profesional extends Usuario{
 		super.analizarUsuario();
 		System.out.println("Profesional titulo=" + titulo + ", fechaIngreso=" + fechaIngreso);
 	}
+
+
+
+
+	
+
 }
