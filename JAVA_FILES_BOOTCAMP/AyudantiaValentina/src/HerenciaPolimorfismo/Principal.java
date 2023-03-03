@@ -20,18 +20,18 @@ public class Principal {
 		Animal animal11 = new Oviparo();
 		Animal animal12 = new Oviparo();
 		
-		Animal perro = new Viviparo();
-		Animal gato = new Viviparo();
-		Animal lagartija = new Viviparo();
-		Animal caballo = new Viviparo();
-		Animal gato2 = new Viviparo();
-		Animal lagartija2 = new Viviparo();
+		Animal perro = new Viviparo(true, "PELUDO", 4, "CANINA", "COME DE TODO");
+		Animal gato = new Viviparo(true, "PELUDO", 4, "FELINA", "COME PEZ");
+		Animal oveja = new Viviparo(true, "PELUDA", 4, "NO SE", "COME PASTO");
+		Animal caballo = new Viviparo(true, "PELAJE CORTO", 4, "EQUINA", "COME PASTO");
+		Animal cabra = new Viviparo(true, "PELUDA", 4, "NO SÉ", "COME PASTO");
+		Animal vacas = new Viviparo(true, "PELAJE CORTO", 4, "¿VACUNA?", "COME PASTO");
 		
-		Animal pez = new Oviparo();
-		Animal pulpo = new Oviparo();
-		Animal ave = new Oviparo();
-		Animal pez2 = new Oviparo();
-		Animal ave2 = new Oviparo();
+		Animal pez = new Oviparo(1, "PEZ", "NO SÉ", true, "ACUÁTICO" );
+		Animal pulpo = new Oviparo(8, "NO SÉ", "NO SÉ",false, "ACUÁTICO" );
+		Animal pollo = new Oviparo(2, "AVE", "MAÍZ", true, "TERRESTRE");
+		Animal cocodrilo = new Oviparo(5, "REPTIL", "CARNE", true, "ACUÁTICO");
+		Animal pinguino = new Oviparo(4, "PINGÜINO", "PECES", true, "ACUÁTICO/TERRESTRE");
 		Animal pulpo2= new Oviparo();
 		
 
