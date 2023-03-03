@@ -3,9 +3,12 @@ package m4POOdiagnostico;
 public class Kromi extends Carro {
     int agnioFabricacion;
     String marca;
+    
 
     //CONSTRUCTOR PREDETERMINADO
-    public Kromi(){}
+    public Kromi(){
+    	
+    }
 
     public int getAgnio(){
         return agnioFabricacion;

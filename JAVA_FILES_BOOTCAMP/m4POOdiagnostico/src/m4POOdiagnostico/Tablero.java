@@ -4,12 +4,27 @@ import java.util.ArrayList;
 
 public class Tablero {
     char [][] matrix = new char[15][15];
-    Carro[] listaCarro = new Carro[18];
+    Carro[] listaCarro = new Carro[17];
     //ArrayList <Carro> listaCarro = new ArrayList<Carro>();
     ArrayList <Huevo> listaHuevo = new ArrayList<Huevo>();
 
     public void crearCarro(){
-        Carro kromi1 = new Kromi();
+    	//DEFINIMOS CANTIDAD DE CARROS
+    	int kromis = 3;
+    	int caguanos = 5;
+    	int trupallas = 10;
+    	int indicePosicion = 0;
+    	
+    	for(int i = 0; i < kromis; i++) {
+    		Carro kromi = new Kromi();
+    		listaCarro[indicePosicion] = kromi;
+    		i++;
+    	}
+    	
+    	for(int i = 0; i < caguanos; i++) {
+    		Carro caguano = new Caguano();
+    		
+    	}
         Carro kromi2 = new Kromi();
         Carro kromi3 = new Kromi();
 
@@ -29,6 +44,8 @@ public class Tablero {
         Carro trupalla8 = new Trupalla();
         Carro trupalla9 = new Trupalla();
         Carro trupalla10 = new Trupalla();
+        
+      
     }
 
     public void lanzarHuevo(int coorX, int coorY){
