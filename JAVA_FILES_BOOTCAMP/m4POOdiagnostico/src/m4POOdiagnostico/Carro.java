@@ -5,6 +5,7 @@ import java.util.ArrayList;
 public class Carro {
     int cantOcupantes;
     String fechaIngreso;
+    int espacio;
     ArrayList<int[][]> coordenadas;
 
     //CONSTRUCTOR
