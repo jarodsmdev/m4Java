@@ -8,6 +8,9 @@ public class Tablero {
     //ArrayList <Carro> listaCarro = new ArrayList<Carro>();
     ArrayList <Huevo> listaHuevo = new ArrayList<Huevo>();
 
+    /**
+     * CREA LOS OBJETOS Y LOS AÑADE AL ARRAY ListaCarro()
+     */
     public void crearCarro(){
     	//DEFINIMOS CANTIDAD DE CARROS
     	int kromis = 3;
@@ -15,37 +18,25 @@ public class Tablero {
     	int trupallas = 10;
     	int indicePosicion = 0;
     	
+    	//CREA OBJETOS KROMI Y LO AÑADE AL ARRAY
     	for(int i = 0; i < kromis; i++) {
     		Carro kromi = new Kromi();
     		listaCarro[indicePosicion] = kromi;
     		i++;
     	}
-    	
+    	//CREA OBJETOS CAGUANO Y LO AÑADE AL ARRAY
     	for(int i = 0; i < caguanos; i++) {
     		Carro caguano = new Caguano();
-    		
+    		listaCarro[indicePosicion] = caguano;
+    		i++;
     	}
-        Carro kromi2 = new Kromi();
-        Carro kromi3 = new Kromi();
-
-        Carro caguano1 = new Caguano();
-        Carro caguano2 = new Caguano();
-        Carro caguano3 = new Caguano();
-        Carro caguano4 = new Caguano();
-        Carro caguano5 = new Caguano();
-    
-        Carro trupalla1 = new Trupalla();
-        Carro trupalla2 = new Trupalla();
-        Carro trupalla3 = new Trupalla();
-        Carro trupalla4 = new Trupalla();
-        Carro trupalla5 = new Trupalla();
-        Carro trupalla6 = new Trupalla();
-        Carro trupalla7 = new Trupalla();
-        Carro trupalla8 = new Trupalla();
-        Carro trupalla9 = new Trupalla();
-        Carro trupalla10 = new Trupalla();
-        
-      
+    	//CREA OBJETOS TRUPALLA Y LO AÑADE AL ARRAY
+    	for(int i = 0; i < trupallas; i++) {
+    		Carro trupalla = new Trupalla();
+    		listaCarro[indicePosicion] = trupalla;
+    		i++;
+    	}
+    	      
     }
 
     public void lanzarHuevo(int coorX, int coorY){
