@@ -35,8 +35,17 @@ public class Ubicacion extends Carro {
 	        
 	        
 	        
-	        imprimirMapa();
 	    }
+	  public static void posicionRandom() {
+		  for (int i = 1; i <= 17; ) {
+	            int x = (int)(Math.random() * 15);
+	            int y = (int)(Math.random() * 15);
+
+	            if((x >= 0 && x < numFilas) && (y >= 0 && y < numCols) && (plano[x][y] == " "))
+	            {
+	            	ponerCarros();
+	            }
+	  }
 
 
-}
+}}

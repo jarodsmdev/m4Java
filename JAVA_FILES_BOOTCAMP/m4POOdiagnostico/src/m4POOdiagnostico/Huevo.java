@@ -1,5 +1,6 @@
 package m4POOdiagnostico;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Huevo extends Tablero{
@@ -21,6 +22,8 @@ public class Huevo extends Tablero{
     public void setColumna(int coorY){
         columna = coorY;
     }
+    
+    static ArrayList<Integer>puntajeObtenido = new ArrayList<Integer>();
 
     
     public static void lanzarHuevo(){
@@ -33,22 +36,31 @@ public class Huevo extends Tablero{
             System.out.print("Ingresa la coordenada Y: ");
             y = input.nextInt();
 
-            if ((x >= 0 && x < numRows) && (y >= 0 && y < numCols)) //valid guess
+            if ((x >= 0 && x < 15) && (y >= 0 && y < 15)) //intento valido
             {
-                if (matrix[x][y] == 'x') //if computer ship is already there; computer loses ship
+                if (matrix[x][y] == 'T') //si es que le pega a un Trupalla
                 {
-                    System.out.println("Boom! Le achuntaste a un barco");
-                    grid[x][y] = '!'; //Hit mark
-                    --BattleShips.computerShips;
+                    System.out.println("Boom! Le achuntaste a un Trupalla");
+                    matrix[x][y] = 'H'; //Hit mark
+                    puntajeObtenido.add(1);
+                }
+                else if(matrix[x][y] == 'C') {
+                	System.out.println("BOOM! le diste a un Caguano");
+                	matrix[x][y] = 'H';
+                	puntajeObtenido.add(2);
+                }
+                else if(matrix[x][y] == 'K') {
+                	System.out.println("POW! le diste a una Kromi");
+                	puntajeObtenido.add(3);
                 }
                 }
-                else if (grid[x][y] == " ") {
+                else if (matrix[x][y] == ' ' || matrix[x][y] == 'H') {
                     System.out.println("Sorry, no golpeaste nada");
-                    grid[x][y] = "-";
+                    matrix[x][y] = '~';
                 }
-                else if ((x < 0 || x >= numRows) || (y < 0 || y >= numCols))  //invalid guess
+                else if ((x < 0 || x >= 15) || (y < 0 || y >= 15))  //intento invalido
                 	System.out.println("No puedes poner coordenadas que no se encuentran dentro del tablero");
             }
-        while((x < 0 || x >= numRows) || (y < 0 || y >= numCols));  //keep re-prompting till valid guess
+        while((x < 0 || x >= 15) || (y < 0 || y >= 15));  //keep re-prompting till valid guess
     }
 }

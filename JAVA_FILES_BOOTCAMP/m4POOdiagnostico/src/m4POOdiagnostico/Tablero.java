@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class Tablero {
     static char [][] matrix = new char[15][15];
-    Carro[] listaCarro = new Carro[17];
+    static Carro[] listaCarro = new Carro[17];
     //ArrayList <Carro> listaCarro = new ArrayList<Carro>();
     ArrayList <Huevo> listaHuevo = new ArrayList<Huevo>();
 
