@@ -3,7 +3,7 @@ package m4POOdiagnostico;
 import java.util.ArrayList;
 
 public class Tablero {
-    char [][] matrix = new char[15][15];
+    static char [][] matrix = new char[15][15];
     Carro[] listaCarro = new Carro[17];
     //ArrayList <Carro> listaCarro = new ArrayList<Carro>();
     ArrayList <Huevo> listaHuevo = new ArrayList<Huevo>();

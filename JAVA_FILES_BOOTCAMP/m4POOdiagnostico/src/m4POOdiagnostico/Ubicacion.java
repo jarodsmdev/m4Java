@@ -21,16 +21,20 @@ public class Ubicacion extends Carro {
 	        //se asignan lugares random a los barcos 
 	        
 	        for (int i = 1; i <= 17; ) {
-	            int x = (int)(Math.random() * 10);
-	            int y = (int)(Math.random() * 10);
+	            int x = (int)(Math.random() * 15);
+	            int y = (int)(Math.random() * 15);
 
 	            if((x >= 0 && x < numFilas) && (y >= 0 && y < numCols) && (plano[x][y] == " "))
 	            {
-	                plano[x][y] =   "x";
+	                plano[x][y] =   "T";
 	                System.out.println(i + " Trupalla insertado correctamente");
 	                i++;
 	            }
 	        }
+	        
+	        
+	        
+	        
 	        imprimirMapa();
 	    }
 
