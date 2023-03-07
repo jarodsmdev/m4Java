@@ -1,6 +1,9 @@
 package m4POOdiagnostico;
 
-public class Huevo {
+import java.util.ArrayList;
+
+
+public class Huevo extends Tablero{
     int fila;
     int columna;
     int puntaje;
@@ -19,5 +22,9 @@ public class Huevo {
     public void setColumna(int coorY){
         columna = coorY;
     }
+    
 
+
+    
+    
 }

@@ -6,10 +6,14 @@ public class Kromi extends Carro {
     
 
     //CONSTRUCTOR PREDETERMINADO
-    public Kromi(){
-    	
-    }
-
+    public Kromi(){}
+    
+    public Kromi(int cantOcupantes, String fechaIngreso, int agnioFabricacion, String marca) {
+    	super(cantOcupantes, fechaIngreso);
+    	this.agnioFabricacion = agnioFabricacion;
+    	this.marca = marca;
+    };
+    
     public int getAgnio(){
         return agnioFabricacion;
     }
@@ -21,5 +25,8 @@ public class Kromi extends Carro {
     }
     public void setMarca(String marca){
         this.marca = marca;
+    }
+    public String toString() {
+    	return "\nKromi" + "\n Año de Fabricación: " + agnioFabricacion + "Marca: " + marca;
     }
 }
