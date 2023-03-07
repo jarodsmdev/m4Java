@@ -164,28 +164,33 @@ public class Tablero {
                     matrix[x][y] = 'H'; //Hit mark
                     puntajeObtenido.add(1);
                     mostrarPlano();
-                }
-                else if(matrix[x][y] == 'C') {
+                    
+                }else if(matrix[x][y] == 'C') {
                 	System.out.println("BOOM! le diste a un Caguano");
                 	matrix[x][y] = 'H';
                 	puntajeObtenido.add(2);
                 	mostrarPlano();
-                }
-                else if(matrix[x][y] == 'K') {
+                }else if(matrix[x][y] == 'K') {
                 	System.out.println("POW! le diste a una Kromi");
                 	matrix[x][y] = 'H';
                 	puntajeObtenido.add(3);
                 	mostrarPlano();
-                }
-                }
-                else if (matrix[x][y] == ' ' || matrix[x][y] == 'H') {
+                }else if (matrix[x][y] == ' ' || matrix[x][y] == 'H') {
                     System.out.println("Sorry, no golpeaste nada");
                     matrix[x][y] = '~';
-                }
-                else if ((x < 0 || x >= 15) || (y < 0 || y >= 15))  //intento invalido
+                    mostrarPlano();
+                }else if ((x < 0 || x >= 15) || (y < 0 || y >= 15))  //intento invalido
                 	System.out.println("No puedes poner coordenadas que no se encuentran dentro del tablero");
-            }
+                }}
         while((x < 0 || x >= 15) || (y < 0 || y >= 15));  //keep re-prompting till valid guess
+    }
+    
+    public void puntaje() {
+        int suma = 0;
+        for (int i = 0; i < puntajeObtenido.size(); i++) {
+            suma += puntajeObtenido.get(i);
+        }
+        System.out.println("El puntaje total obtenido es: " + suma);
     }
     
     public void menu() {
@@ -200,7 +205,6 @@ public class Tablero {
 			System.out.println("4. Calcular puntaje");
 			System.out.println("5. Salir");
 			System.out.print("Elige una opción: ");
-			//opciones = input.nextInt();
 			
 	        try {
 	            opciones = input.nextInt();
@@ -222,9 +226,11 @@ public class Tablero {
 				break;
 			case 4:
 				System.out.println("Calcular Puntaje");
+				puntaje();
 				break;
 			case 5:
 				System.out.println("Fin del juego");
+				puntaje();
 				break;
 			default:
 				System.out.println("Opción no válida");
