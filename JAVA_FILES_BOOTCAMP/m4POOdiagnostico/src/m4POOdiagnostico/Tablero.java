@@ -163,15 +163,19 @@ public class Tablero {
                     System.out.println("Boom! Le achuntaste a un Trupalla");
                     matrix[x][y] = 'H'; //Hit mark
                     puntajeObtenido.add(1);
+                    mostrarPlano();
                 }
                 else if(matrix[x][y] == 'C') {
                 	System.out.println("BOOM! le diste a un Caguano");
                 	matrix[x][y] = 'H';
                 	puntajeObtenido.add(2);
+                	mostrarPlano();
                 }
                 else if(matrix[x][y] == 'K') {
                 	System.out.println("POW! le diste a una Kromi");
+                	matrix[x][y] = 'H';
                 	puntajeObtenido.add(3);
+                	mostrarPlano();
                 }
                 }
                 else if (matrix[x][y] == ' ' || matrix[x][y] == 'H') {
