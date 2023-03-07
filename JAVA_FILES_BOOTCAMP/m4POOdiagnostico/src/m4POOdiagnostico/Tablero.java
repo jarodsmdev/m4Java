@@ -5,7 +5,7 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Tablero {
-    protected char [][] matrix;
+    private char [][] matrix;
     private Carro[] listaCarro = new Carro[18];
     private ArrayList<Integer>puntajeObtenido ;
     //ArrayList <Carro> listaCarro = new ArrayList<Carro>();
@@ -169,34 +169,71 @@ public class Tablero {
                 if (matrix[x][y] == 'T') //si es que le pega a un Trupalla
                 {
                     System.out.println("Boom! Le achuntaste a un Trupalla");
-                    matrix[x][y] = 'H'; //Hit mark
+                    matrix[x][y] = 'H'; //marca que lo golpeo
                     puntajeObtenido.add(1); 
                     System.out.println("+1 punto"); //DEBUG
                     mostrarPlano();
-                    
-                }else if(matrix[x][y] == 'C') {
+                }
+                else if(matrix[x][y] == 'C') {
                 	System.out.println("BOOM! le diste a un Caguano");
                 	matrix[x][y] = 'H';
                 	puntajeObtenido.add(2);
                 	System.out.println("+2 puntos"); //DEBUG
-                	if ((matrix[x][y] == 'H' && matrix[x][y+1] == 'H') || (matrix[x][y] =='H' && matrix[x][y-1] == 'H')) {
-                		System.out.println("Felicidades! Hundiste un Caguano");
-                		puntajeObtenido.add(7);
-                		System.out.println("+7 puntos"); //DEBUG
+                		if ((y == 0) && (matrix[x][y] == 'H' && matrix[x][y+1] == 'H')) // verifica si esta en el extremo izquiero, y si esque se hundio o no el caguano
+                		{	
+                			System.out.println("Felicidades! Hundiste un Caguano");
+                			puntajeObtenido.add(7);
+                			System.out.println("+7 puntos"); //DEBUG
+                		}
+                		else if((y == 14) && (matrix[x][y] =='H' && matrix[x][y-1] == 'H')) // verifica que esta en el extremo derecho y si esque se hundio un caguano
+                		{
+                			System.out.println("Felicidades! Hundiste un Caguano");
+                			puntajeObtenido.add(7);
+                			System.out.println("+7 puntos"); //DEBUG
+                		}
+                		else if((y >= 1 || y <= 13) && (matrix[x][y] == 'H' && matrix[x][y+1] == 'H') || (matrix[x][y] =='H' && matrix[x][y-1] == 'H')) //verifica que no este en los extremos y si esque el caguano se hundio o no 
+                		{
+                			System.out.println("Felicidades! Hundiste un Caguano");
+                			puntajeObtenido.add(7);
+                			System.out.println("+7 puntos"); //DEBUG
+                			
+                		}
+                		else{
+                			mostrarPlano(); 
                 	}
-                	mostrarPlano();
+                		
                 }else if(matrix[x][y] == 'K') {
                 	System.out.println("POW! le diste a una Kromi");
                 	matrix[x][y] = 'H';
                 	puntajeObtenido.add(3);
-                	if((matrix[x][y] == 'H' && matrix[x+1][y] == 'H' && matrix[x+2][y] == 'H') || 
-                		(matrix[x][y] == 'H' && matrix[x-1][y] == 'H' && matrix[x-2][y] == 'H') || 
-                		(matrix[x][y] == 'H' && matrix[x+1][y] == 'H' && matrix[x-1][y] == 'H') ) {
+                	if((x == 0) && (matrix[x][y] == 'H' && matrix[x+1][y] == 'H' && matrix[x+2][y] == 'H')) //verifica que esta en el extremo superior, y si esque la kromi se hundio o no
+                	{
                 		System.out.println("Felicidades! Hundiste una Kromi");
                 		puntajeObtenido.add(10);
-                		System.out.println("+10 puntos"); //DEBUG
+                		System.out.println("+10 puntos I"); //DEBUG
+                		mostrarPlano();
                 	}
-                	mostrarPlano();
+                	else if ((x == 14) && (matrix[x][y] == 'H' && matrix[x-1][y] == 'H' && matrix[x-2][y] == 'H') ) {
+                		System.out.println("Felicidades! Hundiste una Kromi");
+                		puntajeObtenido.add(10);
+                		System.out.println("+10 puntos II"); //DEBUG
+                		mostrarPlano();
+                	}
+                	else if((x >= 2 && x <=12) && ((matrix[x][y] == 'H' && matrix[x+1][y] == 'H' && matrix[x+2][y] == 'H') || (matrix[x][y] == 'H' && matrix[x-1][y] == 'H' && matrix[x-2][y] == 'H') )) {
+                		System.out.println("Felicidades! Hundiste una Kromi");
+                		puntajeObtenido.add(10);
+                		System.out.println("+10 puntos IV"); //DEBUG
+                		mostrarPlano();
+                		if ((x >= 1 || x <=13) && (matrix[x][y] == 'H' && matrix[x+1][y] == 'H' && matrix[x-1][y] == 'H') ) {
+                			System.out.println("Felicidades! Hundiste una Kromi");
+                			puntajeObtenido.add(10);
+                			System.out.println("+10 puntos III"); //DEBUG
+                			mostrarPlano();
+                		}
+                	}
+                	else { 
+                		mostrarPlano();
+                	}
                 }else if (matrix[x][y] == ' ' || matrix[x][y] == 'H') {
                     System.out.println("Sorry, no golpeaste nada");
                     matrix[x][y] = '~';
