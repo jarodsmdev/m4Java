@@ -2,17 +2,20 @@ package m4POOdiagnostico;
 
 import java.util.ArrayList;
 import java.util.InputMismatchException;
+import java.util.Random;
 import java.util.Scanner;
 
 public class Tablero {
     private char [][] matrix;
-    private Carro[] listaCarro = new Carro[18];
+    //private Carro[] listaCarro = new Carro[18];
     private ArrayList<Integer>puntajeObtenido ;
-    //ArrayList <Carro> listaCarro = new ArrayList<Carro>();
+    ArrayList <Carro> listaCarro = new ArrayList<Carro>();
     ArrayList <Huevo> listaHuevo = new ArrayList<Huevo>();
 
     
     public Tablero() {
+    	//
+    	
     	//ARRAY PUNTAJE
         puntajeObtenido = new ArrayList<Integer>();
     	//INICIALIZAR EL TABLERO VACÍO
@@ -36,22 +39,25 @@ public class Tablero {
     	
     	//CREA OBJETOS KROMI Y LO AÑADE AL ARRAY
     	for(int i = 0; i < kromis; i++) {
-    		Carro kromi = new Kromi();
-    		listaCarro[indicePosicion] = kromi;
+    		
+    		//listaCarro[indicePosicion] = kromi;
+
     		ubicarKromi();
     		indicePosicion++;
     	}
     	//CREA OBJETOS CAGUANO Y LO AÑADE AL ARRAY
     	for(int i = 0; i < caguanos; i++) {
     		Carro caguano = new Caguano();
-    		listaCarro[indicePosicion] = caguano;
+    		//listaCarro[indicePosicion] = caguano;
+    		listaCarro.add(caguano);
     		ubicarCaguano();
     		indicePosicion++;
     	}
     	//CREA OBJETOS TRUPALLA Y LO AÑADE AL ARRAY
     	for(int i = 0; i < trupallas; i++) {
     		Carro trupalla = new Trupalla();
-    		listaCarro[indicePosicion] = trupalla;
+    		//listaCarro[indicePosicion] = trupalla;
+    		listaCarro.add(trupalla);
     		ubicarTrupalla();
     		indicePosicion++;
     	}      
@@ -61,11 +67,13 @@ public class Tablero {
     	//3 METROS Y VERTICAL
     	int x = (int)(Math.random() * 13);
     	int y = (int)(Math.random() * 15);
+    	int [][] punto = new int[3][2];
     	
     	if(matrix[x][y] == ' ' && matrix[x+1][y] == ' ' && matrix[x+2][y] == ' ') {
     		matrix[x][y] = 'K';
     		matrix[x+1][y] = 'K';
     		matrix[x+2][y] = 'K';
+    		
     	}else {
     		while(true) {
     	    	x = (int)(Math.random() * 13);
@@ -78,6 +86,22 @@ public class Tablero {
                 }
     		}
     	}
+    	punto[0][0] = x;
+		punto[0][1] = y;
+		
+		punto[1][0] = x+1;
+		punto[1][1] = y;
+		
+		punto[2][0] = x+2;
+		punto[2][1] = y;
+		
+		Carro kromi = new Kromi();
+		listaCarro.add(kromi);
+		ArrayList<int[][]> listaCoordenadas = new ArrayList<>();
+		listaCoordenadas.add(punto);
+		kromi.setCoordenadas(listaCoordenadas);
+		kromi.setCantOcupantes(getRandom(15, 0));
+		kromi.setFechaIngreso("14/01/1999");
     }
     
     public void ubicarCaguano() {
@@ -126,7 +150,8 @@ public class Tablero {
     	System.out.print("  ");
         for(int i = 0; i < matrix.length; i++)
         	if(i<=9) {
-        		System.out.print(i+ " ");
+        		System.out.print(String.format("%2d", i));
+        		
         	}else {
         		System.out.print(i);
         	}
@@ -135,16 +160,17 @@ public class Tablero {
     	 for(int i = 0; i < matrix.length; i++) {
     		 for(int j = 0; j < matrix[i].length; j++) {
     			 if (j == 0) {
-    				System.out.print(i +"|"+ matrix[i][j] + "|");    					
-    			 }else if (j == matrix[i].length - 1) {
-                     System.out.print(matrix[i][j] + "|");
-    			 }else {
-                     System.out.print(matrix[i][j] + "|");
-    			 }
+    	                System.out.print(String.format("%2d", i) + "|" + matrix[i][j] + "|");
+    	            } else if (j == matrix[i].length - 1) {
+    	                System.out.print(matrix[i][j] + "|");
+    	            } else {
+    	                System.out.print(matrix[i][j] + "|");
+    	            }
              }
              System.out.println();
     		 }
     }
+    
     
     public void lanzarHuevo(){
         System.out.println("\nEs tu turno de lanzar huevos");
@@ -153,8 +179,16 @@ public class Tablero {
             Scanner input = new Scanner(System.in);
             System.out.print("Ingresa la coordenada X: ");
             x = input.nextInt();
+            if(x < 0 || x > 14 ) {
+            	System.out.println("Ingresa una coordenada X que este dentro del tablero");
+            }
+            else {
             System.out.print("Ingresa la coordenada Y: ");
             y = input.nextInt();
+	            if(y < 0 || y > 14) {
+	            	System.out.println("Ingresa una coordenada Y que este dentro del tablero");
+	            }
+            }
 
             if ((x >= 0 && x < 15) && (y >= 0 && y < 15)) //intento valido
             {
@@ -162,22 +196,37 @@ public class Tablero {
                 {
                     System.out.println("Boom! Le achuntaste a un Trupalla");
                     matrix[x][y] = 'H'; //Hit mark
-                    puntajeObtenido.add(1);
+                    puntajeObtenido.add(1); 
+                    System.out.println("+1 punto"); //DEBUG
                     mostrarPlano();
                     
                 }else if(matrix[x][y] == 'C') {
                 	System.out.println("BOOM! le diste a un Caguano");
                 	matrix[x][y] = 'H';
                 	puntajeObtenido.add(2);
+                	System.out.println("+2 puntos"); //DEBUG
+                	if ((matrix[x][y] == 'H' && matrix[x][y+1] == 'H') || (matrix[x][y] =='H' && matrix[x][y-1] == 'H')) {
+                		System.out.println("Felicidades! Hundiste un Caguano");
+                		puntajeObtenido.add(7);
+                		System.out.println("+7 puntos"); //DEBUG
+                	}
                 	mostrarPlano();
                 }else if(matrix[x][y] == 'K') {
                 	System.out.println("POW! le diste a una Kromi");
                 	matrix[x][y] = 'H';
                 	puntajeObtenido.add(3);
+                	if((matrix[x][y] == 'H' && matrix[x+1][y] == 'H' && matrix[x+2][y] == 'H') || 
+                		(matrix[x][y] == 'H' && matrix[x-1][y] == 'H' && matrix[x-2][y] == 'H') || 
+                		(matrix[x][y] == 'H' && matrix[x+1][y] == 'H' && matrix[x-1][y] == 'H') ) {
+                		System.out.println("Felicidades! Hundiste una Kromi");
+                		puntajeObtenido.add(10);
+                		System.out.println("+10 puntos"); //DEBUG
+                	}
                 	mostrarPlano();
                 }else if (matrix[x][y] == ' ' || matrix[x][y] == 'H') {
                     System.out.println("Sorry, no golpeaste nada");
-                    matrix[x][y] = '~';
+                    //matrix[x][y] = '~';
+                    matrix[x][y] = 'H';
                     mostrarPlano();
                 }else if ((x < 0 || x >= 15) || (y < 0 || y >= 15))  //intento invalido
                 	System.out.println("No puedes poner coordenadas que no se encuentran dentro del tablero");
@@ -219,10 +268,25 @@ public class Tablero {
 				break;
 			case 2:
 				System.out.println("Lanzar Huevo");
-				lanzarHuevo();
+			    int contadorHuevos = 0;
+			    while (true) {
+			        lanzarHuevo();
+			        contadorHuevos++;
+			        System.out.print("¿Deseas lanzar otro huevo? (s/n): ");
+			        String respuesta = input.next();
+			        if (respuesta.trim().equalsIgnoreCase("s")) {
+			            continue;
+			        } else if (respuesta.trim().equalsIgnoreCase("n")) {
+			            System.out.println("Se lanzaron " + contadorHuevos + " huevos.");
+			            break;
+			        } else {
+			            System.out.println("Respuesta inválida. Por favor ingrese 's' o 'n'.");
+			        }
+			    }
 				break;
 			case 3:
 				System.out.println("Mostrar Tablero");
+		
 				break;
 			case 4:
 				System.out.println("Calcular Puntaje");
@@ -240,5 +304,8 @@ public class Tablero {
 
 	
 	}
-
+	public static int getRandom(int max, int min) {
+		Random num = new Random();
+		return num.nextInt(max+min);
+	}
 }

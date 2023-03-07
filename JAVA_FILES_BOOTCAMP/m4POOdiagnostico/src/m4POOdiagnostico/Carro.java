@@ -3,10 +3,9 @@ package m4POOdiagnostico;
 import java.util.ArrayList;
 
 public class Carro {
-    int cantOcupantes;
-    String fechaIngreso;
-    int espacio;
-    ArrayList<int[][]> coordenadas;
+    private int cantOcupantes;
+    private String fechaIngreso;
+    private ArrayList<int[][]> coordenadas;
 
     //CONSTRUCTOR
     public Carro(){}
