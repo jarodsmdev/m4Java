@@ -3,6 +3,7 @@ package m4POOdiagnostico;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+
 public class Huevo extends Tablero{
     int fila;
     int columna;
@@ -26,7 +27,7 @@ public class Huevo extends Tablero{
     static ArrayList<Integer>puntajeObtenido = new ArrayList<Integer>();
 
     
-    public static void lanzarHuevo(){
+    public void lanzarHuevo(){
         System.out.println("\nEs tu turno de lanzar huevos");
         int x = -1, y = -1;
         do {

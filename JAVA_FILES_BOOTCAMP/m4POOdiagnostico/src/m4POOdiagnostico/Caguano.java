@@ -10,6 +10,12 @@ public class Caguano extends Carro{
 
 public Caguano(){};
 
+public Caguano(int cantOcupantes, String fechaIngreso, int alcanceTiro, String colorConfeti) {
+	super(cantOcupantes, fechaIngreso);
+	this.alcanceTiro = alcanceTiro;
+	this.colorConfeti = colorConfeti;
+};
+
 public int getAlcanceTiro(){
     return alcanceTiro;
 }
