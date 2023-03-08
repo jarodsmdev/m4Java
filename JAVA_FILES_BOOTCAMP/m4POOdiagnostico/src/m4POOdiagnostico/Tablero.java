@@ -6,7 +6,7 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class Tablero {
-    private char [][] matrix;
+    private String [][] matrix;
     //private Carro[] listaCarro = new Carro[18];
     private ArrayList<Integer>puntajeObtenido ;
     ArrayList <Carro> listaCarro = new ArrayList<Carro>();
@@ -19,10 +19,10 @@ public class Tablero {
     	//ARRAY PUNTAJE
         puntajeObtenido = new ArrayList<Integer>();
     	//INICIALIZAR EL TABLERO VACÍO
-    	matrix = new char[15][15];
+    	matrix = new String[15][15];
     	 for(int i = 0; i < matrix.length; i++) {
              for(int j = 0; j < matrix[i].length; j++) {
-                 matrix[i][j] = ' ';
+                 matrix[i][j] = " ";
              }
          }
     }
@@ -63,19 +63,19 @@ public class Tablero {
     	int y = (int)(Math.random() * 15);
     	int [][] punto = new int[3][2];
     	
-    	if(matrix[x][y] == ' ' && matrix[x+1][y] == ' ' && matrix[x+2][y] == ' ') {
-    		matrix[x][y] = 'K';
-    		matrix[x+1][y] = 'K';
-    		matrix[x+2][y] = 'K';
+    	if(matrix[x][y] == " " && matrix[x+1][y] == " " && matrix[x+2][y] == " ") {
+    		matrix[x][y] = "K";
+    		matrix[x+1][y] = "K";
+    		matrix[x+2][y] = "K";
     		
     	}else {
     		while(true) {
     	    	x = (int)(Math.random() * 13);
     	    	y = (int)(Math.random() * 15);
-    	    	if (matrix[x+1][y] == ' ' && matrix[x+2][y] == ' ') {
-                    matrix[x][y] = 'K';
-                    matrix[x+1][y] = 'K';
-                    matrix[x+2][y] = 'K';
+    	    	if (matrix[x+1][y] == " " && matrix[x+2][y] == " ") {
+                    matrix[x][y] = "K";
+                    matrix[x+1][y] = "K";
+                    matrix[x+2][y] = "K";
                     break;  // Salir del ciclo while si se ha colocado el elemento correctamente
                 }
     		}
@@ -104,16 +104,16 @@ public class Tablero {
     	int y = (int)(Math.random() * 14);
     	int [][] punto = new int[2][2];
     	
-    	if(matrix[x][y] == ' ' && matrix[x][y+1] == ' ') {
-    		matrix[x][y] = 'C';
-    		matrix[x][y+1] = 'C';
+    	if(matrix[x][y] == " " && matrix[x][y+1] == " ") {
+    		matrix[x][y] = "C";
+    		matrix[x][y+1] = "C";
     	}else {
     		while(true) {
     	    	x = (int)(Math.random() * 15);
     	    	y = (int)(Math.random() * 14);
-    	    	if (matrix[x][y] == ' ' && matrix[x][y+1] == ' ') {
-                    matrix[x][y] = 'C';
-                    matrix[x][y+1] = 'C';
+    	    	if (matrix[x][y] == " " && matrix[x][y+1] == " ") {
+                    matrix[x][y] = "C";
+                    matrix[x][y+1] = "C";
                     break;  // Salir del ciclo while si se ha colocado el elemento correctamente
                 }
     		}
@@ -139,15 +139,15 @@ public class Tablero {
     	int y = (int)(Math.random() * 15);
     	int [][] punto = new int[1][2];
     	
-    	if(matrix[x][y] == ' ') {
-    		matrix[x][y] = 'T';
+    	if(matrix[x][y] == " ") {
+    		matrix[x][y] = "T";
 
     	}else {
     		while(true) {
     	    	x = (int)(Math.random() * 15);
     	    	y = (int)(Math.random() * 15);
-    	    	if (matrix[x][y] == ' ') {
-                    matrix[x][y] = 'T';
+    	    	if (matrix[x][y] == " ") {
+                    matrix[x][y] = "T";
                     break;  // Salir del ciclo while si se ha colocado el elemento correctamente
                 }
     		}
@@ -164,30 +164,30 @@ public class Tablero {
     
     public void mostrarPlano() {
     	//SUPERIOR DEL PLANO
-    	System.out.print("  ");
-        for(int i = 0; i < matrix.length; i++)
-        	if(i<=9) {
-        		System.out.print(String.format("%2d", i));
-        		
-        	}else {
-        		System.out.print(i);
-        	}
+//      horizontal numeros
+        System.out.print("   ");
+        for (int i = 0; i < matrix.length; i++) {
+            if (i <= 14) {
+                System.out.print(String.format("%2d ", i));
+            } else {
+                System.out.print(i);
+            }
+        }
         System.out.println();
     	//CENTRO DEL PLANO
     	 for(int i = 0; i < matrix.length; i++) {
     		 for(int j = 0; j < matrix[i].length; j++) {
     			 if (j == 0) {
-    	                System.out.print(String.format("%2d", i) + "|" + matrix[i][j] + "|");
+    	                System.out.print(String.format("%2d", i) + "|" + matrix[i][j] + " |");
     	            } else if (j == matrix[i].length - 1) {
-    	                System.out.print(matrix[i][j] + "|");
+    	                System.out.print(matrix[i][j] + " |");
     	            } else {
-    	                System.out.print(matrix[i][j] + "|");
+    	                System.out.print(matrix[i][j] + " |");
     	            }
              }
              System.out.println();
     		 }
     }
-    
     
     public void lanzarHuevo(){
     	String regEx = "^(0|[1-9]|1[0-4])(?<!00)$";
@@ -219,32 +219,32 @@ public class Tablero {
 
             if ((x >= 0 && x < 15) && (y >= 0 && y < 15)) //intento válido
             {
-                if (matrix[x][y] == 'T') //si es que le pega a un Trupalla
+                if (matrix[x][y] == "T") //si es que le pega a un Trupalla
                 {
                     System.out.println("Boom! Le achuntaste a un Trupalla");
-                    matrix[x][y] = 'H'; //marca que lo golpeó
+                    matrix[x][y] = "H"; //marca que lo golpeó
                     puntajeObtenido.add(1); 
                     System.out.println("+1 punto"); //DEBUG
                     mostrarPlano();
                 }
-                else if(matrix[x][y] == 'C') {
+                else if(matrix[x][y] == "C") {
                 	System.out.println("BOOM! le diste a un Caguano");
-                	matrix[x][y] = 'H';
+                	matrix[x][y] = "H";
                 	puntajeObtenido.add(2);
                 	System.out.println("+2 puntos"); //DEBUG
-                		if ((y == 0) && (matrix[x][y] == 'H' && matrix[x][y+1] == 'H')) // verifica si esta en el extremo izquiero, y si esque se hundio o no el caguano
+                		if ((y == 0) && (matrix[x][y] == "H" && matrix[x][y+1] == "H")) // verifica si esta en el extremo izquiero, y si esque se hundio o no el caguano
                 		{	
                 			System.out.println("Felicidades! Hundiste un Caguano");
                 			puntajeObtenido.add(7);
                 			System.out.println("+7 puntos"); //DEBUG
                 		}
-                		else if((y == 14) && (matrix[x][y] =='H' && matrix[x][y-1] == 'H')) // verifica que esta en el extremo derecho y si esque se hundio un caguano
+                		else if((y == 14) && (matrix[x][y] =="H" && matrix[x][y-1] == "H")) // verifica que esta en el extremo derecho y si esque se hundio un caguano
                 		{
                 			System.out.println("Felicidades! Hundiste un Caguano");
                 			puntajeObtenido.add(7);
                 			System.out.println("+7 puntos"); //DEBUG
                 		}
-                		else if((y >= 1 || y <= 13) && (matrix[x][y] == 'H' && matrix[x][y+1] == 'H') || (matrix[x][y] =='H' && matrix[x][y-1] == 'H')) //verifica que no este en los extremos y si esque el caguano se hundio o no 
+                		else if((y >= 1 || y <= 13) && (matrix[x][y] == "H" && matrix[x][y+1] == "H") || (matrix[x][y] =="H" && matrix[x][y-1] == "H")) //verifica que no este en los extremos y si esque el caguano se hundio o no 
                 		{
                 			System.out.println("Felicidades! Hundiste un Caguano");
                 			puntajeObtenido.add(7);
@@ -255,29 +255,29 @@ public class Tablero {
                 			mostrarPlano(); 
                 	}
                 		
-                }else if(matrix[x][y] == 'K') {
+                }else if(matrix[x][y] == "K") {
                 	System.out.println("POW! le diste a una Kromi");
-                	matrix[x][y] = 'H';
+                	matrix[x][y] = "H";
                 	puntajeObtenido.add(3);
-                	if((x == 0) && (matrix[x][y] == 'H' && matrix[x+1][y] == 'H' && matrix[x+2][y] == 'H')) //verifica que esta en el extremo superior, y si esque la kromi se hundio o no
+                	if((x == 0) && (matrix[x][y] == "H" && matrix[x+1][y] == "H" && matrix[x+2][y] == "H")) //verifica que esta en el extremo superior, y si esque la kromi se hundio o no
                 	{
                 		System.out.println("Felicidades! Hundiste una Kromi");
                 		puntajeObtenido.add(10);
                 		System.out.println("+10 puntos I"); //DEBUG
                 		mostrarPlano();
                 	}
-                	else if ((x == 14) && (matrix[x][y] == 'H' && matrix[x-1][y] == 'H' && matrix[x-2][y] == 'H') ) {
+                	else if ((x == 14) && (matrix[x][y] == "H" && matrix[x-1][y] == "H" && matrix[x-2][y] == "H") ) {
                 		System.out.println("Felicidades! Hundiste una Kromi");
                 		puntajeObtenido.add(10);
                 		System.out.println("+10 puntos II"); //DEBUG
                 		mostrarPlano();
                 	}
-                	else if((x >= 2 && x <=12) && ((matrix[x][y] == 'H' && matrix[x+1][y] == 'H' && matrix[x+2][y] == 'H') || (matrix[x][y] == 'H' && matrix[x-1][y] == 'H' && matrix[x-2][y] == 'H') )) {
+                	else if((x >= 2 && x <=12) && ((matrix[x][y] == "H" && matrix[x+1][y] == "H" && matrix[x+2][y] == "H") || (matrix[x][y] == "H" && matrix[x-1][y] == "H" && matrix[x-2][y] == "H") )) {
                 		System.out.println("Felicidades! Hundiste una Kromi");
                 		puntajeObtenido.add(10);
                 		System.out.println("+10 puntos IV"); //DEBUG
                 		mostrarPlano();
-                		if ((x >= 1 || x <=13) && (matrix[x][y] == 'H' && matrix[x+1][y] == 'H' && matrix[x-1][y] == 'H') ) {
+                		if ((x >= 1 || x <=13) && (matrix[x][y] == "H" && matrix[x+1][y] == "H" && matrix[x-1][y] == "H") ) {
                 			System.out.println("Felicidades! Hundiste una Kromi");
                 			puntajeObtenido.add(10);
                 			System.out.println("+10 puntos III"); //DEBUG
@@ -287,9 +287,9 @@ public class Tablero {
                 	else { 
                 		mostrarPlano();
                 	}
-                }else if (matrix[x][y] == ' ' || matrix[x][y] == 'H') {
+                }else if (matrix[x][y] == " " || matrix[x][y] == "H") {
                     System.out.println("Sorry, no golpeaste nada");
-                    matrix[x][y] = 'H';
+                    matrix[x][y] = "H";
                     mostrarPlano();
                 }else if ((x < 0 || x >= 15) || (y < 0 || y >= 15))  //intento inválido
                 	System.out.println("No puedes poner coordenadas que no se encuentran dentro del tablero");
@@ -297,6 +297,7 @@ public class Tablero {
         //while((x < 0 || x >= 15) || (y < 0 || y >= 15));  //keep re-prompting till valid guess
         while(!coorX.matches(regEx) || !coorY.matches(regEx));
     }
+    
     
     public void puntaje() {
         int suma = 0;
@@ -351,7 +352,7 @@ public class Tablero {
 				break;
 			case 3:
 				System.out.println("Mostrar Tablero");
-		
+				mostrarHuevo();
 				break;
 			case 4:
 				System.out.println("Calcular Puntaje");
@@ -369,6 +370,45 @@ public class Tablero {
 
 	
 	}
+    
+    public void mostrarHuevo() {
+
+        //    horizontal numeros
+           System.out.print("  ");
+           for (int i = 0; i < matrix.length; i++) {
+               if (i <= 14) {
+                   System.out.print(String.format("%2d ", i));
+               } else {
+                   System.out.print(i);
+               }
+           }
+           System.out.println();
+
+   //
+
+
+           // vertical numeros
+           for (int i = 0; i < matrix.length; i++) {
+               for (int j = 0; j < matrix[i].length; j++) {
+                   if (matrix[i][j].equals("H")) {
+                       if (j == 0) {
+                           System.out.print(String.format("%2d", i) + "|");
+                       }
+                       System.out.print(matrix[i][j] + " ");
+                   } else {
+                       if (j == 0) {
+                           System.out.print(String.format("%2d", i) + "| ");
+                       } else {
+                           System.out.print("  ");
+                       }
+                   }
+                   System.out.print("|");
+               }
+               System.out.println();
+           }
+
+       }
+    
 	public static int getRandom(int max, int min) {
 		Random num = new Random();
 		return num.nextInt(max+min);
