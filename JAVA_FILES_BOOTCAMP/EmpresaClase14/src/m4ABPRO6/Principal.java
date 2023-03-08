@@ -135,10 +135,13 @@ public class Principal {
 		System.out.println("\nClientes asociados a capacitacion 2: ");
 		for (int i = 0; i < capacitacion2.getUsuarios().size(); i++) {
 			
-			System.out.println(capacitacion2.getUsuarios().get(i));
+			System.out.println(capacitacion2.getUsuarios().get(i) );
 		}
 	
-	
+//		usuario1.getCliente().agregarCapacitaciones(capacitacion2);
+//		usuario1.getCliente().agregarCapacitaciones(capacitacion2);
+//		usuario1.getCliente().agregarCapacitaciones(capacitacion1);
+		System.out.println(usuario1.getCliente().toString());
 	
 	}
 }

@@ -1,0 +1,1609 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.yattasolutions.uml.diagrams.classifier:ClassDiagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.yattasolutions.diagrams="http://ns.yatta-solutions.com/umllab/diagrams/1.1.0" xmlns:com.yattasolutions.uml.diagrams.classifier="http://ns.yatta-solutions.com/umllab/diagrams/classifier/1.1.0" xmi:id="_dCLX0LRPEe2w4LjrQN7M_g">
+  <modelElement href="EmpresaClase14.uml#_dYb7sLRPEe2w4LjrQN7M_g"/>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_hDGPkLRPEe2w4LjrQN7M_g" targetItem="_hDOycLRPEe2w4LjrQN7M_g" sourceItem="_hDFogLRPEe2w4LjrQN7M_g"/>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_hDJ58bRPEe2w4LjrQN7M_g" targetItem="_hDOymLRPEe2w4LjrQN7M_g" sourceItem="_hDJ58LRPEe2w4LjrQN7M_g"/>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_hDKhAbRPEe2w4LjrQN7M_g" targetItem="_hDOysLRPEe2w4LjrQN7M_g" sourceItem="_hDKhALRPEe2w4LjrQN7M_g"/>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_hDKhA7RPEe2w4LjrQN7M_g" targetItem="_hDPZhrRPEe2w4LjrQN7M_g" sourceItem="_hDKhArRPEe2w4LjrQN7M_g"/>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_hDLIEbRPEe2w4LjrQN7M_g" targetItem="_hDPZlLRPEe2w4LjrQN7M_g" sourceItem="_hDLIELRPEe2w4LjrQN7M_g"/>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_hDLIE7RPEe2w4LjrQN7M_g" targetItem="_hDPZorRPEe2w4LjrQN7M_g" sourceItem="_hDLIErRPEe2w4LjrQN7M_g"/>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_hDLvIbRPEe2w4LjrQN7M_g" targetItem="_hDPZsLRPEe2w4LjrQN7M_g" sourceItem="_hDLvILRPEe2w4LjrQN7M_g"/>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_hDMWMbRPEe2w4LjrQN7M_g" targetItem="_hDPZvrRPEe2w4LjrQN7M_g" sourceItem="_hDMWMLRPEe2w4LjrQN7M_g"/>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_hEG8MLRPEe2w4LjrQN7M_g" sourceAnchor="1088.0,62.0" targetAnchor="38.0,54.0" target="_kUP3QLRPEe2w4LjrQN7M_g" source="_hEHjQLRPEe2w4LjrQN7M_g">
+    <modelElement href="EmpresaClase14.uml#_dbnLgLRPEe2w4LjrQN7M_g"/>
+    <bendpoints xmi:id="_318VQLRPEe2w4LjrQN7M_g" sourceX="364" targetY="188"/>
+    <stereotypes xmi:id="_hEG8MbRPEe2w4LjrQN7M_g" name="Reference">
+      <modelElement href="EmpresaClase14.uml#_dbnykLRPEe2w4LjrQN7M_g"/>
+    </stereotypes>
+    <nameVisual xmi:id="_hEG8MrRPEe2w4LjrQN7M_g" text="">
+      <visualProperties xmi:id="_kZN20LRPEe2w4LjrQN7M_g" position="-47.0,-63.0"/>
+    </nameVisual>
+    <sourceRole xmi:id="_hEG8M7RPEe2w4LjrQN7M_g" aggregationKind="NONE" name="">
+      <modelElement href="EmpresaClase14.uml#_dbnLgbRPEe2w4LjrQN7M_g"/>
+      <visualProperties xmi:id="_kZNPwLRPEe2w4LjrQN7M_g" position="22.625,2.0"/>
+      <visibility xmi:id="_hEG8NLRPEe2w4LjrQN7M_g" label="+"/>
+      <cardinality xmi:id="_hEG8NbRPEe2w4LjrQN7M_g" label="1" max="1" min="1"/>
+    </sourceRole>
+    <targetRole xmi:id="_hEG8NrRPEe2w4LjrQN7M_g" aggregationKind="NONE" name="listaCapacitaciones" navigable="true">
+      <modelElement href="EmpresaClase14.uml#_da6n8bRPEe2w4LjrQN7M_g"/>
+      <visualProperties xmi:id="_kZN20bRPEe2w4LjrQN7M_g" position="-145.0,33.74999999999997"/>
+      <visibility xmi:id="_hEG8N7RPEe2w4LjrQN7M_g" label="-"/>
+      <cardinality xmi:id="_hEG8OLRPEe2w4LjrQN7M_g" label="1" max="1" min="1"/>
+    </targetRole>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_hEQtMLRPEe2w4LjrQN7M_g" sourceAnchor="306.0,0.0" targetAnchor="68.0,54.0" target="_kUP3QLRPEe2w4LjrQN7M_g" source="_hEU-oLRPEe2w4LjrQN7M_g">
+    <modelElement href="EmpresaClase14.uml#_dblWULRPEe2w4LjrQN7M_g"/>
+    <visualProperties xmi:id="_kUQeULRPEe2w4LjrQN7M_g" position="2559.0,134.0"/>
+    <stereotypes xmi:id="_hETJcrRPEe2w4LjrQN7M_g" name="Reference">
+      <modelElement href="EmpresaClase14.uml#_dbmkcLRPEe2w4LjrQN7M_g"/>
+    </stereotypes>
+    <nameVisual xmi:id="_hESiYLRPEe2w4LjrQN7M_g" text="">
+      <visualProperties xmi:id="_kZPE8LRPEe2w4LjrQN7M_g" position="2.0,7.399999999999977"/>
+    </nameVisual>
+    <sourceRole xmi:id="_hETJcLRPEe2w4LjrQN7M_g" aggregationKind="NONE" name="">
+      <modelElement href="EmpresaClase14.uml#_dblWUbRPEe2w4LjrQN7M_g"/>
+      <visualProperties xmi:id="_kZOd4LRPEe2w4LjrQN7M_g" position="-18.0,-92.5"/>
+      <visibility xmi:id="_hETwgbRPEe2w4LjrQN7M_g" label="+"/>
+      <cardinality xmi:id="_hETwgLRPEe2w4LjrQN7M_g" label="*" max="-1"/>
+    </sourceRole>
+    <targetRole xmi:id="_hETJcbRPEe2w4LjrQN7M_g" aggregationKind="NONE" name="listaUsuarios" navigable="true">
+      <modelElement href="EmpresaClase14.uml#_da29kLRPEe2w4LjrQN7M_g"/>
+      <visualProperties xmi:id="_kZPE8bRPEe2w4LjrQN7M_g" position="2.0,37.5"/>
+      <visibility xmi:id="_hETwg7RPEe2w4LjrQN7M_g" label="-"/>
+      <cardinality xmi:id="_hETwgrRPEe2w4LjrQN7M_g" label="1" max="1" min="1"/>
+    </targetRole>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_hEbFQLRPEe2w4LjrQN7M_g" sourceAnchor="544.0,0.0" targetAnchor="720.0,185.0" target="_hEeIkLRPEe2w4LjrQN7M_g" source="_hEHjQLRPEe2w4LjrQN7M_g">
+    <modelElement href="EmpresaClase14.uml#_dbfPsLRPEe2w4LjrQN7M_g"/>
+    <nameVisual xmi:id="_hEbsUrRPEe2w4LjrQN7M_g" text="">
+      <visualProperties xmi:id="_hPjXMbRPEe2w4LjrQN7M_g" position="-9.0,-273.0"/>
+    </nameVisual>
+    <sourceRole xmi:id="_hEbsU7RPEe2w4LjrQN7M_g" aggregationKind="NONE" name="cliente" navigable="true">
+      <modelElement href="EmpresaClase14.uml#_da_gcLRPEe2w4LjrQN7M_g"/>
+      <visualProperties xmi:id="_hPjXMLRPEe2w4LjrQN7M_g" position="-38.0,-71.0"/>
+      <visibility xmi:id="_hEc6cbRPEe2w4LjrQN7M_g" label="+"/>
+      <cardinality xmi:id="_hEc6cLRPEe2w4LjrQN7M_g" label="1" max="1" min="1"/>
+    </sourceRole>
+    <targetRole xmi:id="_hEbsVLRPEe2w4LjrQN7M_g" aggregationKind="NONE" name="">
+      <modelElement href="EmpresaClase14.uml#_dbf2wLRPEe2w4LjrQN7M_g"/>
+      <visualProperties xmi:id="_hPj-QLRPEe2w4LjrQN7M_g" position="-16.0,-515.0"/>
+      <visibility xmi:id="_hEdhgLRPEe2w4LjrQN7M_g" label="+"/>
+      <cardinality xmi:id="_hEc6crRPEe2w4LjrQN7M_g" label="1" max="1" min="1"/>
+    </targetRole>
+  </edges>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_hEbsUbRPEe2w4LjrQN7M_g" targetItem="_hEeIkLRPEe2w4LjrQN7M_g" sourceItem="_hEbsULRPEe2w4LjrQN7M_g"/>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_hEsyEbRPEe2w4LjrQN7M_g" targetItem="_hEv1YLRPEe2w4LjrQN7M_g" sourceItem="_hEsyELRPEe2w4LjrQN7M_g"/>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_hEtZIbRPEe2w4LjrQN7M_g" targetItem="_hEv1g7RPEe2w4LjrQN7M_g" sourceItem="_hEtZILRPEe2w4LjrQN7M_g"/>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_hEtZI7RPEe2w4LjrQN7M_g" targetItem="_hEv1mLRPEe2w4LjrQN7M_g" sourceItem="_hEtZIrRPEe2w4LjrQN7M_g"/>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_hEuAMbRPEe2w4LjrQN7M_g" targetItem="_hEv1prRPEe2w4LjrQN7M_g" sourceItem="_hEuAMLRPEe2w4LjrQN7M_g"/>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_hEuAM7RPEe2w4LjrQN7M_g" targetItem="_hEv1tLRPEe2w4LjrQN7M_g" sourceItem="_hEuAMrRPEe2w4LjrQN7M_g"/>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_hEuANbRPEe2w4LjrQN7M_g" targetItem="_hEv1wrRPEe2w4LjrQN7M_g" sourceItem="_hEuANLRPEe2w4LjrQN7M_g"/>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_hEunQbRPEe2w4LjrQN7M_g" targetItem="_hEv10LRPEe2w4LjrQN7M_g" sourceItem="_hEunQLRPEe2w4LjrQN7M_g"/>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_hE4YQbRPEe2w4LjrQN7M_g" targetItem="_hE8CoLRPEe2w4LjrQN7M_g" sourceItem="_hE4YQLRPEe2w4LjrQN7M_g"/>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_hE4_UbRPEe2w4LjrQN7M_g" targetItem="_hE8CvrRPEe2w4LjrQN7M_g" sourceItem="_hE4_ULRPEe2w4LjrQN7M_g"/>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_hE4_U7RPEe2w4LjrQN7M_g" targetItem="_hE8C0LRPEe2w4LjrQN7M_g" sourceItem="_hE4_UrRPEe2w4LjrQN7M_g"/>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_hE5mYbRPEe2w4LjrQN7M_g" targetItem="_hE8C3rRPEe2w4LjrQN7M_g" sourceItem="_hE5mYLRPEe2w4LjrQN7M_g"/>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_hE5mY7RPEe2w4LjrQN7M_g" targetItem="_hE8C7LRPEe2w4LjrQN7M_g" sourceItem="_hE5mYrRPEe2w4LjrQN7M_g"/>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_hE5mZbRPEe2w4LjrQN7M_g" targetItem="_hE8C-rRPEe2w4LjrQN7M_g" sourceItem="_hE5mZLRPEe2w4LjrQN7M_g"/>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_hDFogLRPEe2w4LjrQN7M_g" sourceConnectionVisual="_hDGPkLRPEe2w4LjrQN7M_g" text="@author Leonel Briones, Priscila Carrillo,&#xD;&#xA;Andrés Contreras, Kevin Moreno, Valentina Saldías&#xD;&#xA;@version 24/02/2023" item="_hDOycLRPEe2w4LjrQN7M_g">
+    <modelElement href="EmpresaClase14.uml#_dbdagLRPEe2w4LjrQN7M_g"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_hDJ58LRPEe2w4LjrQN7M_g" sourceConnectionVisual="_hDJ58bRPEe2w4LjrQN7M_g" text="metodo constructor con atributos como parametros" item="_hDOymLRPEe2w4LjrQN7M_g">
+    <modelElement href="EmpresaClase14.uml#_dbdagbRPEe2w4LjrQN7M_g"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_hDKhALRPEe2w4LjrQN7M_g" sourceConnectionVisual="_hDKhAbRPEe2w4LjrQN7M_g" text="@param ID numero accidente" item="_hDOysLRPEe2w4LjrQN7M_g">
+    <modelElement href="EmpresaClase14.uml#_dbdagrRPEe2w4LjrQN7M_g"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_hDKhArRPEe2w4LjrQN7M_g" sourceConnectionVisual="_hDKhA7RPEe2w4LjrQN7M_g" text="@param dia" item="_hDPZhrRPEe2w4LjrQN7M_g">
+    <modelElement href="EmpresaClase14.uml#_dbeBkLRPEe2w4LjrQN7M_g"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_hDLIELRPEe2w4LjrQN7M_g" sourceConnectionVisual="_hDLIEbRPEe2w4LjrQN7M_g" text="@param hora" item="_hDPZlLRPEe2w4LjrQN7M_g">
+    <modelElement href="EmpresaClase14.uml#_dbeBkbRPEe2w4LjrQN7M_g"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_hDLIErRPEe2w4LjrQN7M_g" sourceConnectionVisual="_hDLIE7RPEe2w4LjrQN7M_g" text="@param lugar" item="_hDPZorRPEe2w4LjrQN7M_g">
+    <modelElement href="EmpresaClase14.uml#_dbeBkrRPEe2w4LjrQN7M_g"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_hDLvILRPEe2w4LjrQN7M_g" sourceConnectionVisual="_hDLvIbRPEe2w4LjrQN7M_g" text="@param origen" item="_hDPZsLRPEe2w4LjrQN7M_g">
+    <modelElement href="EmpresaClase14.uml#_dbeBk7RPEe2w4LjrQN7M_g"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_hDMWMLRPEe2w4LjrQN7M_g" sourceConnectionVisual="_hDMWMbRPEe2w4LjrQN7M_g" text="@param consecuencias" item="_hDPZvrRPEe2w4LjrQN7M_g">
+    <modelElement href="EmpresaClase14.uml#_dbeBlLRPEe2w4LjrQN7M_g"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_hEbsULRPEe2w4LjrQN7M_g" sourceConnectionVisual="_hEbsUbRPEe2w4LjrQN7M_g" text="Creacion de la clase USUARIOS" item="_hEeIkLRPEe2w4LjrQN7M_g">
+    <modelElement href="EmpresaClase14.uml#_dbeopbRPEe2w4LjrQN7M_g"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_hEsyELRPEe2w4LjrQN7M_g" sourceConnectionVisual="_hEsyEbRPEe2w4LjrQN7M_g" text="@author Leonel Briones, Priscila Carrillo,&#xD;&#xA;Andrés Contreras, Kevin Moreno, Valentina Saldías&#xD;&#xA;@version 24/02/2023" item="_hEv1YLRPEe2w4LjrQN7M_g">
+    <modelElement href="EmpresaClase14.uml#_dbf2wbRPEe2w4LjrQN7M_g"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_hEtZILRPEe2w4LjrQN7M_g" sourceConnectionVisual="_hEtZIbRPEe2w4LjrQN7M_g" text="metodo constructor con atributos como parametros" item="_hEv1g7RPEe2w4LjrQN7M_g">
+    <modelElement href="EmpresaClase14.uml#_dbgd0LRPEe2w4LjrQN7M_g"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_hEtZIrRPEe2w4LjrQN7M_g" sourceConnectionVisual="_hEtZI7RPEe2w4LjrQN7M_g" text="@param ID visita terreno" item="_hEv1mLRPEe2w4LjrQN7M_g">
+    <modelElement href="EmpresaClase14.uml#_dbgd0bRPEe2w4LjrQN7M_g"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_hEuAMLRPEe2w4LjrQN7M_g" sourceConnectionVisual="_hEuAMbRPEe2w4LjrQN7M_g" text="@param dia" item="_hEv1prRPEe2w4LjrQN7M_g">
+    <modelElement href="EmpresaClase14.uml#_dbgd0rRPEe2w4LjrQN7M_g"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_hEuAMrRPEe2w4LjrQN7M_g" sourceConnectionVisual="_hEuAM7RPEe2w4LjrQN7M_g" text="@param hora" item="_hEv1tLRPEe2w4LjrQN7M_g">
+    <modelElement href="EmpresaClase14.uml#_dbgd07RPEe2w4LjrQN7M_g"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_hEuANLRPEe2w4LjrQN7M_g" sourceConnectionVisual="_hEuANbRPEe2w4LjrQN7M_g" text="@param lugar" item="_hEv1wrRPEe2w4LjrQN7M_g">
+    <modelElement href="EmpresaClase14.uml#_dbgd1LRPEe2w4LjrQN7M_g"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_hEunQLRPEe2w4LjrQN7M_g" sourceConnectionVisual="_hEunQbRPEe2w4LjrQN7M_g" text="@param comentarios" item="_hEv10LRPEe2w4LjrQN7M_g">
+    <modelElement href="EmpresaClase14.uml#_dbgd1bRPEe2w4LjrQN7M_g"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_hE4YQLRPEe2w4LjrQN7M_g" sourceConnectionVisual="_hE4YQbRPEe2w4LjrQN7M_g" text="@author Leonel Briones, Priscila Carrillo,&#xD;&#xA;Andrés Contreras, Kevin Moreno, Valentina Saldías&#xD;&#xA;@version 24/02/2023" item="_hE8CoLRPEe2w4LjrQN7M_g">
+    <modelElement href="EmpresaClase14.uml#_dbeBlbRPEe2w4LjrQN7M_g"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_hE4_ULRPEe2w4LjrQN7M_g" sourceConnectionVisual="_hE4_UbRPEe2w4LjrQN7M_g" text="metodo constructor con los atributos como parametros" item="_hE8CvrRPEe2w4LjrQN7M_g">
+    <modelElement href="EmpresaClase14.uml#_dbeooLRPEe2w4LjrQN7M_g"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_hE4_UrRPEe2w4LjrQN7M_g" sourceConnectionVisual="_hE4_U7RPEe2w4LjrQN7M_g" text="@param ID revision" item="_hE8C0LRPEe2w4LjrQN7M_g">
+    <modelElement href="EmpresaClase14.uml#_dbeoobRPEe2w4LjrQN7M_g"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_hE5mYLRPEe2w4LjrQN7M_g" sourceConnectionVisual="_hE5mYbRPEe2w4LjrQN7M_g" text="@param nombre alusivo a la revision" item="_hE8C3rRPEe2w4LjrQN7M_g">
+    <modelElement href="EmpresaClase14.uml#_dbeoorRPEe2w4LjrQN7M_g"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_hE5mYrRPEe2w4LjrQN7M_g" sourceConnectionVisual="_hE5mY7RPEe2w4LjrQN7M_g" text="@param  detalles para revisar" item="_hE8C7LRPEe2w4LjrQN7M_g">
+    <modelElement href="EmpresaClase14.uml#_dbeoo7RPEe2w4LjrQN7M_g"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_hE5mZLRPEe2w4LjrQN7M_g" sourceConnectionVisual="_hE5mZbRPEe2w4LjrQN7M_g" text="@param  estado 1(sin problemas) 2(con observaciones) 3(no aprueba)" item="_hE8C-rRPEe2w4LjrQN7M_g">
+    <modelElement href="EmpresaClase14.uml#_dbeopLRPEe2w4LjrQN7M_g"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_hDOycLRPEe2w4LjrQN7M_g" comments="_hDFogLRPEe2w4LjrQN7M_g" targetConnectionVisual="_hDGPkLRPEe2w4LjrQN7M_g" name="Accidente">
+    <modelElement href="EmpresaClase14.uml#_dZOl4LRPEe2w4LjrQN7M_g"/>
+    <visualProperties xmi:id="_hDOycbRPEe2w4LjrQN7M_g" position="58.0,35.0" size="-1.0,-1.0"/>
+    <visibility xmi:id="_hDOycrRPEe2w4LjrQN7M_g" label="+"/>
+    <attributes xmi:id="_hDOyc7RPEe2w4LjrQN7M_g" name="idNumeroAccidente">
+      <modelElement href="EmpresaClase14.uml#_daw28LRPEe2w4LjrQN7M_g"/>
+      <stereotypes xmi:id="_hDOydLRPEe2w4LjrQN7M_g" name="LegacyStyledElement">
+        <modelElement href="EmpresaClase14.uml#_dayFELRPEe2w4LjrQN7M_g"/>
+      </stereotypes>
+      <visibility xmi:id="_hDOydbRPEe2w4LjrQN7M_g" label="-"/>
+      <cardinality xmi:id="_hDOydrRPEe2w4LjrQN7M_g" label="1" max="1" min="1"/>
+      <type xmi:id="_hDOyd7RPEe2w4LjrQN7M_g" name="int">
+        <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_hDOyeLRPEe2w4LjrQN7M_g" name="dia">
+      <modelElement href="EmpresaClase14.uml#_dayFEbRPEe2w4LjrQN7M_g"/>
+      <stereotypes xmi:id="_hDOyebRPEe2w4LjrQN7M_g" name="LegacyStyledElement">
+        <modelElement href="EmpresaClase14.uml#_daysILRPEe2w4LjrQN7M_g"/>
+      </stereotypes>
+      <visibility xmi:id="_hDOyerRPEe2w4LjrQN7M_g" label="-"/>
+      <cardinality xmi:id="_hDOye7RPEe2w4LjrQN7M_g" label="1" max="1" min="1"/>
+      <type xmi:id="_hDOyfLRPEe2w4LjrQN7M_g" name="String">
+        <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_hDOyfbRPEe2w4LjrQN7M_g" name="hora">
+      <modelElement href="EmpresaClase14.uml#_daysIbRPEe2w4LjrQN7M_g"/>
+      <stereotypes xmi:id="_hDOyfrRPEe2w4LjrQN7M_g" name="LegacyStyledElement">
+        <modelElement href="EmpresaClase14.uml#_daysIrRPEe2w4LjrQN7M_g"/>
+      </stereotypes>
+      <visibility xmi:id="_hDOyf7RPEe2w4LjrQN7M_g" label="-"/>
+      <cardinality xmi:id="_hDOygLRPEe2w4LjrQN7M_g" label="1" max="1" min="1"/>
+      <type xmi:id="_hDOygbRPEe2w4LjrQN7M_g" name="String">
+        <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_hDOygrRPEe2w4LjrQN7M_g" name="lugar">
+      <modelElement href="EmpresaClase14.uml#_dazTMLRPEe2w4LjrQN7M_g"/>
+      <stereotypes xmi:id="_hDOyg7RPEe2w4LjrQN7M_g" name="LegacyStyledElement">
+        <modelElement href="EmpresaClase14.uml#_dazTMbRPEe2w4LjrQN7M_g"/>
+      </stereotypes>
+      <visibility xmi:id="_hDOyhLRPEe2w4LjrQN7M_g" label="-"/>
+      <cardinality xmi:id="_hDOyhbRPEe2w4LjrQN7M_g" label="1" max="1" min="1"/>
+      <type xmi:id="_hDOyhrRPEe2w4LjrQN7M_g" name="String">
+        <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_hDOyh7RPEe2w4LjrQN7M_g" name="origen">
+      <modelElement href="EmpresaClase14.uml#_dazTMrRPEe2w4LjrQN7M_g"/>
+      <stereotypes xmi:id="_hDOyiLRPEe2w4LjrQN7M_g" name="LegacyStyledElement">
+        <modelElement href="EmpresaClase14.uml#_daz6QLRPEe2w4LjrQN7M_g"/>
+      </stereotypes>
+      <visibility xmi:id="_hDOyibRPEe2w4LjrQN7M_g" label="-"/>
+      <cardinality xmi:id="_hDOyirRPEe2w4LjrQN7M_g" label="1" max="1" min="1"/>
+      <type xmi:id="_hDOyi7RPEe2w4LjrQN7M_g" name="String">
+        <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_hDOyjLRPEe2w4LjrQN7M_g" name="consecuencias">
+      <modelElement href="EmpresaClase14.uml#_daz6QbRPEe2w4LjrQN7M_g"/>
+      <stereotypes xmi:id="_hDOyjbRPEe2w4LjrQN7M_g" name="LegacyStyledElement">
+        <modelElement href="EmpresaClase14.uml#_da0hULRPEe2w4LjrQN7M_g"/>
+      </stereotypes>
+      <visibility xmi:id="_hDOyjrRPEe2w4LjrQN7M_g" label="-"/>
+      <cardinality xmi:id="_hDOyj7RPEe2w4LjrQN7M_g" label="1" max="1" min="1"/>
+      <type xmi:id="_hDOykLRPEe2w4LjrQN7M_g" name="String">
+        <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </type>
+    </attributes>
+    <operations xmi:id="_hDOykbRPEe2w4LjrQN7M_g" name="Accidente">
+      <modelElement href="EmpresaClase14.uml#_dZS3ULRPEe2w4LjrQN7M_g"/>
+      <keywords xmi:id="_hDOykrRPEe2w4LjrQN7M_g" keyword="create"/>
+      <stereotypes xmi:id="_hDOyk7RPEe2w4LjrQN7M_g" name="LegacyStyledElement">
+        <modelElement href="EmpresaClase14.uml#_dZS3U7RPEe2w4LjrQN7M_g"/>
+      </stereotypes>
+      <visibility xmi:id="_hDOylLRPEe2w4LjrQN7M_g" label="+"/>
+      <cardinality xmi:id="_hDOylbRPEe2w4LjrQN7M_g" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_hDOylrRPEe2w4LjrQN7M_g">
+        <modelElement href="EmpresaClase14.uml#_dZUFcLRPEe2w4LjrQN7M_g"/>
+        <type xmi:id="_hDOyl7RPEe2w4LjrQN7M_g" name="Accidente">
+          <modelElement href="EmpresaClase14.uml#_dZOl4LRPEe2w4LjrQN7M_g"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_hDOymLRPEe2w4LjrQN7M_g" comments="_hDJ58LRPEe2w4LjrQN7M_g" targetConnectionVisual="_hDJ58bRPEe2w4LjrQN7M_g" name="Accidente">
+      <modelElement href="EmpresaClase14.uml#_dZVTkLRPEe2w4LjrQN7M_g"/>
+      <keywords xmi:id="_hDOymbRPEe2w4LjrQN7M_g" keyword="create"/>
+      <visibility xmi:id="_hDOymrRPEe2w4LjrQN7M_g" label="+"/>
+      <cardinality xmi:id="_hDOym7RPEe2w4LjrQN7M_g" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_hDOynLRPEe2w4LjrQN7M_g">
+        <modelElement href="EmpresaClase14.uml#_dZV6p7RPEe2w4LjrQN7M_g"/>
+        <type xmi:id="_hDOynbRPEe2w4LjrQN7M_g" name="Accidente">
+          <modelElement href="EmpresaClase14.uml#_dZOl4LRPEe2w4LjrQN7M_g"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_hDOynrRPEe2w4LjrQN7M_g" name="idNumeroAccidente">
+        <modelElement href="EmpresaClase14.uml#_dZVTkbRPEe2w4LjrQN7M_g"/>
+        <cardinality xmi:id="_hDOyn7RPEe2w4LjrQN7M_g" label="1" max="1" min="1"/>
+        <type xmi:id="_hDOyoLRPEe2w4LjrQN7M_g" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_hDOyobRPEe2w4LjrQN7M_g" name="dia">
+        <modelElement href="EmpresaClase14.uml#_dZV6oLRPEe2w4LjrQN7M_g"/>
+        <cardinality xmi:id="_hDOyorRPEe2w4LjrQN7M_g" label="1" max="1" min="1"/>
+        <type xmi:id="_hDOyo7RPEe2w4LjrQN7M_g" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_hDOypLRPEe2w4LjrQN7M_g" name="hora">
+        <modelElement href="EmpresaClase14.uml#_dZV6obRPEe2w4LjrQN7M_g"/>
+        <cardinality xmi:id="_hDOypbRPEe2w4LjrQN7M_g" label="1" max="1" min="1"/>
+        <type xmi:id="_hDOyprRPEe2w4LjrQN7M_g" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_hDOyp7RPEe2w4LjrQN7M_g" name="lugar">
+        <modelElement href="EmpresaClase14.uml#_dZV6orRPEe2w4LjrQN7M_g"/>
+        <cardinality xmi:id="_hDOyqLRPEe2w4LjrQN7M_g" label="1" max="1" min="1"/>
+        <type xmi:id="_hDOyqbRPEe2w4LjrQN7M_g" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_hDOyqrRPEe2w4LjrQN7M_g" name="origen">
+        <modelElement href="EmpresaClase14.uml#_dZV6o7RPEe2w4LjrQN7M_g"/>
+        <cardinality xmi:id="_hDOyq7RPEe2w4LjrQN7M_g" label="1" max="1" min="1"/>
+        <type xmi:id="_hDOyrLRPEe2w4LjrQN7M_g" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_hDOyrbRPEe2w4LjrQN7M_g" name="consecuencias">
+        <modelElement href="EmpresaClase14.uml#_dZV6pLRPEe2w4LjrQN7M_g"/>
+        <cardinality xmi:id="_hDOyrrRPEe2w4LjrQN7M_g" label="1" max="1" min="1"/>
+        <type xmi:id="_hDOyr7RPEe2w4LjrQN7M_g" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_hDOysLRPEe2w4LjrQN7M_g" comments="_hDKhALRPEe2w4LjrQN7M_g" targetConnectionVisual="_hDKhAbRPEe2w4LjrQN7M_g" name="setIdNumeroAccidente">
+      <modelElement href="EmpresaClase14.uml#_dZXIwLRPEe2w4LjrQN7M_g"/>
+      <visibility xmi:id="_hDOysbRPEe2w4LjrQN7M_g" label="+"/>
+      <cardinality xmi:id="_hDOysrRPEe2w4LjrQN7M_g" label="1" max="1" min="1"/>
+      <parameters xmi:id="_hDOys7RPEe2w4LjrQN7M_g" name="idNumeroAccidente">
+        <modelElement href="EmpresaClase14.uml#_dZXIwbRPEe2w4LjrQN7M_g"/>
+        <cardinality xmi:id="_hDOytLRPEe2w4LjrQN7M_g" label="1" max="1" min="1"/>
+        <type xmi:id="_hDOytbRPEe2w4LjrQN7M_g" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_hDOytrRPEe2w4LjrQN7M_g" name="getIdNumeroAccidente">
+      <modelElement href="EmpresaClase14.uml#_dZXv0LRPEe2w4LjrQN7M_g"/>
+      <visibility xmi:id="_hDOyt7RPEe2w4LjrQN7M_g" label="+"/>
+      <cardinality xmi:id="_hDPZgLRPEe2w4LjrQN7M_g" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_hDPZgbRPEe2w4LjrQN7M_g">
+        <modelElement href="EmpresaClase14.uml#_dZXv0rRPEe2w4LjrQN7M_g"/>
+        <type xmi:id="_hDPZgrRPEe2w4LjrQN7M_g" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_hDPZg7RPEe2w4LjrQN7M_g" name="idNumeroAccidente">
+        <modelElement href="EmpresaClase14.uml#_dZXv0bRPEe2w4LjrQN7M_g"/>
+        <cardinality xmi:id="_hDPZhLRPEe2w4LjrQN7M_g" label="1" max="1" min="1"/>
+        <type xmi:id="_hDPZhbRPEe2w4LjrQN7M_g" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_hDPZhrRPEe2w4LjrQN7M_g" comments="_hDKhArRPEe2w4LjrQN7M_g" targetConnectionVisual="_hDKhA7RPEe2w4LjrQN7M_g" name="setDia">
+      <modelElement href="EmpresaClase14.uml#_dZYW4LRPEe2w4LjrQN7M_g"/>
+      <visibility xmi:id="_hDPZh7RPEe2w4LjrQN7M_g" label="+"/>
+      <cardinality xmi:id="_hDPZiLRPEe2w4LjrQN7M_g" label="1" max="1" min="1"/>
+      <parameters xmi:id="_hDPZibRPEe2w4LjrQN7M_g" name="dia">
+        <modelElement href="EmpresaClase14.uml#_dZYW4bRPEe2w4LjrQN7M_g"/>
+        <cardinality xmi:id="_hDPZirRPEe2w4LjrQN7M_g" label="1" max="1" min="1"/>
+        <type xmi:id="_hDPZi7RPEe2w4LjrQN7M_g" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_hDPZjLRPEe2w4LjrQN7M_g" name="getDia">
+      <modelElement href="EmpresaClase14.uml#_dZY98LRPEe2w4LjrQN7M_g"/>
+      <visibility xmi:id="_hDPZjbRPEe2w4LjrQN7M_g" label="+"/>
+      <cardinality xmi:id="_hDPZjrRPEe2w4LjrQN7M_g" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_hDPZj7RPEe2w4LjrQN7M_g">
+        <modelElement href="EmpresaClase14.uml#_dZY98rRPEe2w4LjrQN7M_g"/>
+        <type xmi:id="_hDPZkLRPEe2w4LjrQN7M_g" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_hDPZkbRPEe2w4LjrQN7M_g" name="dia">
+        <modelElement href="EmpresaClase14.uml#_dZY98bRPEe2w4LjrQN7M_g"/>
+        <cardinality xmi:id="_hDPZkrRPEe2w4LjrQN7M_g" label="1" max="1" min="1"/>
+        <type xmi:id="_hDPZk7RPEe2w4LjrQN7M_g" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_hDPZlLRPEe2w4LjrQN7M_g" comments="_hDLIELRPEe2w4LjrQN7M_g" targetConnectionVisual="_hDLIEbRPEe2w4LjrQN7M_g" name="setHora">
+      <modelElement href="EmpresaClase14.uml#_dZY987RPEe2w4LjrQN7M_g"/>
+      <visibility xmi:id="_hDPZlbRPEe2w4LjrQN7M_g" label="+"/>
+      <cardinality xmi:id="_hDPZlrRPEe2w4LjrQN7M_g" label="1" max="1" min="1"/>
+      <parameters xmi:id="_hDPZl7RPEe2w4LjrQN7M_g" name="hora">
+        <modelElement href="EmpresaClase14.uml#_dZY99LRPEe2w4LjrQN7M_g"/>
+        <cardinality xmi:id="_hDPZmLRPEe2w4LjrQN7M_g" label="1" max="1" min="1"/>
+        <type xmi:id="_hDPZmbRPEe2w4LjrQN7M_g" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_hDPZmrRPEe2w4LjrQN7M_g" name="getHora">
+      <modelElement href="EmpresaClase14.uml#_dZZlALRPEe2w4LjrQN7M_g"/>
+      <visibility xmi:id="_hDPZm7RPEe2w4LjrQN7M_g" label="+"/>
+      <cardinality xmi:id="_hDPZnLRPEe2w4LjrQN7M_g" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_hDPZnbRPEe2w4LjrQN7M_g">
+        <modelElement href="EmpresaClase14.uml#_dZZlArRPEe2w4LjrQN7M_g"/>
+        <type xmi:id="_hDPZnrRPEe2w4LjrQN7M_g" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_hDPZn7RPEe2w4LjrQN7M_g" name="hora">
+        <modelElement href="EmpresaClase14.uml#_dZZlAbRPEe2w4LjrQN7M_g"/>
+        <cardinality xmi:id="_hDPZoLRPEe2w4LjrQN7M_g" label="1" max="1" min="1"/>
+        <type xmi:id="_hDPZobRPEe2w4LjrQN7M_g" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_hDPZorRPEe2w4LjrQN7M_g" comments="_hDLIErRPEe2w4LjrQN7M_g" targetConnectionVisual="_hDLIE7RPEe2w4LjrQN7M_g" name="setLugar">
+      <modelElement href="EmpresaClase14.uml#_dZaMELRPEe2w4LjrQN7M_g"/>
+      <visibility xmi:id="_hDPZo7RPEe2w4LjrQN7M_g" label="+"/>
+      <cardinality xmi:id="_hDPZpLRPEe2w4LjrQN7M_g" label="1" max="1" min="1"/>
+      <parameters xmi:id="_hDPZpbRPEe2w4LjrQN7M_g" name="lugar">
+        <modelElement href="EmpresaClase14.uml#_dZaMEbRPEe2w4LjrQN7M_g"/>
+        <cardinality xmi:id="_hDPZprRPEe2w4LjrQN7M_g" label="1" max="1" min="1"/>
+        <type xmi:id="_hDPZp7RPEe2w4LjrQN7M_g" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_hDPZqLRPEe2w4LjrQN7M_g" name="getLugar">
+      <modelElement href="EmpresaClase14.uml#_dZazILRPEe2w4LjrQN7M_g"/>
+      <visibility xmi:id="_hDPZqbRPEe2w4LjrQN7M_g" label="+"/>
+      <cardinality xmi:id="_hDPZqrRPEe2w4LjrQN7M_g" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_hDPZq7RPEe2w4LjrQN7M_g">
+        <modelElement href="EmpresaClase14.uml#_dZazIrRPEe2w4LjrQN7M_g"/>
+        <type xmi:id="_hDPZrLRPEe2w4LjrQN7M_g" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_hDPZrbRPEe2w4LjrQN7M_g" name="lugar">
+        <modelElement href="EmpresaClase14.uml#_dZazIbRPEe2w4LjrQN7M_g"/>
+        <cardinality xmi:id="_hDPZrrRPEe2w4LjrQN7M_g" label="1" max="1" min="1"/>
+        <type xmi:id="_hDPZr7RPEe2w4LjrQN7M_g" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_hDPZsLRPEe2w4LjrQN7M_g" comments="_hDLvILRPEe2w4LjrQN7M_g" targetConnectionVisual="_hDLvIbRPEe2w4LjrQN7M_g" name="setOrigen">
+      <modelElement href="EmpresaClase14.uml#_dZbaMLRPEe2w4LjrQN7M_g"/>
+      <visibility xmi:id="_hDPZsbRPEe2w4LjrQN7M_g" label="+"/>
+      <cardinality xmi:id="_hDPZsrRPEe2w4LjrQN7M_g" label="1" max="1" min="1"/>
+      <parameters xmi:id="_hDPZs7RPEe2w4LjrQN7M_g" name="origen">
+        <modelElement href="EmpresaClase14.uml#_dZbaMbRPEe2w4LjrQN7M_g"/>
+        <cardinality xmi:id="_hDPZtLRPEe2w4LjrQN7M_g" label="1" max="1" min="1"/>
+        <type xmi:id="_hDPZtbRPEe2w4LjrQN7M_g" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_hDPZtrRPEe2w4LjrQN7M_g" name="getOrigen">
+      <modelElement href="EmpresaClase14.uml#_dZbaMrRPEe2w4LjrQN7M_g"/>
+      <visibility xmi:id="_hDPZt7RPEe2w4LjrQN7M_g" label="+"/>
+      <cardinality xmi:id="_hDPZuLRPEe2w4LjrQN7M_g" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_hDPZubRPEe2w4LjrQN7M_g">
+        <modelElement href="EmpresaClase14.uml#_dZcBQLRPEe2w4LjrQN7M_g"/>
+        <type xmi:id="_hDPZurRPEe2w4LjrQN7M_g" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_hDPZu7RPEe2w4LjrQN7M_g" name="origen">
+        <modelElement href="EmpresaClase14.uml#_dZbaM7RPEe2w4LjrQN7M_g"/>
+        <cardinality xmi:id="_hDPZvLRPEe2w4LjrQN7M_g" label="1" max="1" min="1"/>
+        <type xmi:id="_hDPZvbRPEe2w4LjrQN7M_g" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_hDPZvrRPEe2w4LjrQN7M_g" comments="_hDMWMLRPEe2w4LjrQN7M_g" targetConnectionVisual="_hDMWMbRPEe2w4LjrQN7M_g" name="setConsecuencias">
+      <modelElement href="EmpresaClase14.uml#_dZcBQbRPEe2w4LjrQN7M_g"/>
+      <visibility xmi:id="_hDPZv7RPEe2w4LjrQN7M_g" label="+"/>
+      <cardinality xmi:id="_hDPZwLRPEe2w4LjrQN7M_g" label="1" max="1" min="1"/>
+      <parameters xmi:id="_hDPZwbRPEe2w4LjrQN7M_g" name="consecuencias">
+        <modelElement href="EmpresaClase14.uml#_dZcBQrRPEe2w4LjrQN7M_g"/>
+        <cardinality xmi:id="_hDPZwrRPEe2w4LjrQN7M_g" label="1" max="1" min="1"/>
+        <type xmi:id="_hDPZw7RPEe2w4LjrQN7M_g" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_hDPZxLRPEe2w4LjrQN7M_g" name="getConsecuencias">
+      <modelElement href="EmpresaClase14.uml#_dZcoULRPEe2w4LjrQN7M_g"/>
+      <visibility xmi:id="_hDPZxbRPEe2w4LjrQN7M_g" label="+"/>
+      <cardinality xmi:id="_hDPZxrRPEe2w4LjrQN7M_g" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_hDPZx7RPEe2w4LjrQN7M_g">
+        <modelElement href="EmpresaClase14.uml#_dZdPYLRPEe2w4LjrQN7M_g"/>
+        <type xmi:id="_hDPZyLRPEe2w4LjrQN7M_g" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_hDPZybRPEe2w4LjrQN7M_g" name="consecuencias">
+        <modelElement href="EmpresaClase14.uml#_dZcoUbRPEe2w4LjrQN7M_g"/>
+        <cardinality xmi:id="_hDPZyrRPEe2w4LjrQN7M_g" label="1" max="1" min="1"/>
+        <type xmi:id="_hDPZy7RPEe2w4LjrQN7M_g" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+    </operations>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_hEv1YLRPEe2w4LjrQN7M_g" comments="_hEsyELRPEe2w4LjrQN7M_g" targetConnectionVisual="_hEsyEbRPEe2w4LjrQN7M_g" name="VisitaTerreno">
+    <modelElement href="EmpresaClase14.uml#_daE6cLRPEe2w4LjrQN7M_g"/>
+    <visualProperties xmi:id="_hEv1YbRPEe2w4LjrQN7M_g" position="3048.0,-131.0" size="-1.0,-1.0"/>
+    <visibility xmi:id="_hEv1YrRPEe2w4LjrQN7M_g" label="+"/>
+    <attributes xmi:id="_hEv1Y7RPEe2w4LjrQN7M_g" name="idVisitaTerreno">
+      <modelElement href="EmpresaClase14.uml#_da_gcbRPEe2w4LjrQN7M_g"/>
+      <stereotypes xmi:id="_hEv1ZLRPEe2w4LjrQN7M_g" name="LegacyStyledElement">
+        <modelElement href="EmpresaClase14.uml#_dbAHgLRPEe2w4LjrQN7M_g"/>
+      </stereotypes>
+      <visibility xmi:id="_hEv1ZbRPEe2w4LjrQN7M_g" label="-"/>
+      <cardinality xmi:id="_hEv1ZrRPEe2w4LjrQN7M_g" label="1" max="1" min="1"/>
+      <type xmi:id="_hEv1Z7RPEe2w4LjrQN7M_g" name="int">
+        <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_hEv1aLRPEe2w4LjrQN7M_g" name="dia">
+      <modelElement href="EmpresaClase14.uml#_dbAHgbRPEe2w4LjrQN7M_g"/>
+      <stereotypes xmi:id="_hEv1abRPEe2w4LjrQN7M_g" name="LegacyStyledElement">
+        <modelElement href="EmpresaClase14.uml#_dbAukLRPEe2w4LjrQN7M_g"/>
+      </stereotypes>
+      <visibility xmi:id="_hEv1arRPEe2w4LjrQN7M_g" label="-"/>
+      <cardinality xmi:id="_hEv1a7RPEe2w4LjrQN7M_g" label="1" max="1" min="1"/>
+      <type xmi:id="_hEv1bLRPEe2w4LjrQN7M_g" name="String">
+        <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_hEv1bbRPEe2w4LjrQN7M_g" name="hora">
+      <modelElement href="EmpresaClase14.uml#_dbAukbRPEe2w4LjrQN7M_g"/>
+      <stereotypes xmi:id="_hEv1brRPEe2w4LjrQN7M_g" name="LegacyStyledElement">
+        <modelElement href="EmpresaClase14.uml#_dbAukrRPEe2w4LjrQN7M_g"/>
+      </stereotypes>
+      <visibility xmi:id="_hEv1b7RPEe2w4LjrQN7M_g" label="-"/>
+      <cardinality xmi:id="_hEv1cLRPEe2w4LjrQN7M_g" label="1" max="1" min="1"/>
+      <type xmi:id="_hEv1cbRPEe2w4LjrQN7M_g" name="String">
+        <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_hEv1crRPEe2w4LjrQN7M_g" name="lugar">
+      <modelElement href="EmpresaClase14.uml#_dbBVoLRPEe2w4LjrQN7M_g"/>
+      <stereotypes xmi:id="_hEv1c7RPEe2w4LjrQN7M_g" name="LegacyStyledElement">
+        <modelElement href="EmpresaClase14.uml#_dbBVobRPEe2w4LjrQN7M_g"/>
+      </stereotypes>
+      <visibility xmi:id="_hEv1dLRPEe2w4LjrQN7M_g" label="-"/>
+      <cardinality xmi:id="_hEv1dbRPEe2w4LjrQN7M_g" label="1" max="1" min="1"/>
+      <type xmi:id="_hEv1drRPEe2w4LjrQN7M_g" name="String">
+        <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_hEv1d7RPEe2w4LjrQN7M_g" name="comentarios">
+      <modelElement href="EmpresaClase14.uml#_dbBVorRPEe2w4LjrQN7M_g"/>
+      <stereotypes xmi:id="_hEv1eLRPEe2w4LjrQN7M_g" name="LegacyStyledElement">
+        <modelElement href="EmpresaClase14.uml#_dbB8sLRPEe2w4LjrQN7M_g"/>
+      </stereotypes>
+      <visibility xmi:id="_hEv1ebRPEe2w4LjrQN7M_g" label="-"/>
+      <cardinality xmi:id="_hEv1erRPEe2w4LjrQN7M_g" label="1" max="1" min="1"/>
+      <type xmi:id="_hEv1e7RPEe2w4LjrQN7M_g" name="String">
+        <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </type>
+    </attributes>
+    <operations xmi:id="_hEv1fLRPEe2w4LjrQN7M_g" name="VisitaTerreno">
+      <modelElement href="EmpresaClase14.uml#_daGIkLRPEe2w4LjrQN7M_g"/>
+      <keywords xmi:id="_hEv1fbRPEe2w4LjrQN7M_g" keyword="create"/>
+      <stereotypes xmi:id="_hEv1frRPEe2w4LjrQN7M_g" name="LegacyStyledElement">
+        <modelElement href="EmpresaClase14.uml#_daGvoLRPEe2w4LjrQN7M_g"/>
+      </stereotypes>
+      <visibility xmi:id="_hEv1f7RPEe2w4LjrQN7M_g" label="+"/>
+      <cardinality xmi:id="_hEv1gLRPEe2w4LjrQN7M_g" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_hEv1gbRPEe2w4LjrQN7M_g">
+        <modelElement href="EmpresaClase14.uml#_daGvobRPEe2w4LjrQN7M_g"/>
+        <type xmi:id="_hEv1grRPEe2w4LjrQN7M_g" name="VisitaTerreno">
+          <modelElement href="EmpresaClase14.uml#_daE6cLRPEe2w4LjrQN7M_g"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_hEv1g7RPEe2w4LjrQN7M_g" comments="_hEtZILRPEe2w4LjrQN7M_g" targetConnectionVisual="_hEtZIbRPEe2w4LjrQN7M_g" name="VisitaTerreno">
+      <modelElement href="EmpresaClase14.uml#_daHWsLRPEe2w4LjrQN7M_g"/>
+      <keywords xmi:id="_hEv1hLRPEe2w4LjrQN7M_g" keyword="create"/>
+      <visibility xmi:id="_hEv1hbRPEe2w4LjrQN7M_g" label="+"/>
+      <cardinality xmi:id="_hEv1hrRPEe2w4LjrQN7M_g" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_hEv1h7RPEe2w4LjrQN7M_g">
+        <modelElement href="EmpresaClase14.uml#_daH9wbRPEe2w4LjrQN7M_g"/>
+        <type xmi:id="_hEv1iLRPEe2w4LjrQN7M_g" name="VisitaTerreno">
+          <modelElement href="EmpresaClase14.uml#_daE6cLRPEe2w4LjrQN7M_g"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_hEv1ibRPEe2w4LjrQN7M_g" name="idVisitaTerreno">
+        <modelElement href="EmpresaClase14.uml#_daHWsbRPEe2w4LjrQN7M_g"/>
+        <cardinality xmi:id="_hEv1irRPEe2w4LjrQN7M_g" label="1" max="1" min="1"/>
+        <type xmi:id="_hEv1i7RPEe2w4LjrQN7M_g" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_hEv1jLRPEe2w4LjrQN7M_g" name="dia">
+        <modelElement href="EmpresaClase14.uml#_daHWsrRPEe2w4LjrQN7M_g"/>
+        <cardinality xmi:id="_hEv1jbRPEe2w4LjrQN7M_g" label="1" max="1" min="1"/>
+        <type xmi:id="_hEv1jrRPEe2w4LjrQN7M_g" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_hEv1j7RPEe2w4LjrQN7M_g" name="hora">
+        <modelElement href="EmpresaClase14.uml#_daHWs7RPEe2w4LjrQN7M_g"/>
+        <cardinality xmi:id="_hEv1kLRPEe2w4LjrQN7M_g" label="1" max="1" min="1"/>
+        <type xmi:id="_hEv1kbRPEe2w4LjrQN7M_g" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_hEv1krRPEe2w4LjrQN7M_g" name="lugar">
+        <modelElement href="EmpresaClase14.uml#_daHWtLRPEe2w4LjrQN7M_g"/>
+        <cardinality xmi:id="_hEv1k7RPEe2w4LjrQN7M_g" label="1" max="1" min="1"/>
+        <type xmi:id="_hEv1lLRPEe2w4LjrQN7M_g" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_hEv1lbRPEe2w4LjrQN7M_g" name="comentarios">
+        <modelElement href="EmpresaClase14.uml#_daHWtbRPEe2w4LjrQN7M_g"/>
+        <cardinality xmi:id="_hEv1lrRPEe2w4LjrQN7M_g" label="1" max="1" min="1"/>
+        <type xmi:id="_hEv1l7RPEe2w4LjrQN7M_g" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_hEv1mLRPEe2w4LjrQN7M_g" comments="_hEtZIrRPEe2w4LjrQN7M_g" targetConnectionVisual="_hEtZI7RPEe2w4LjrQN7M_g" name="setIdVisitaTerreno">
+      <modelElement href="EmpresaClase14.uml#_daH9wrRPEe2w4LjrQN7M_g"/>
+      <visibility xmi:id="_hEv1mbRPEe2w4LjrQN7M_g" label="+"/>
+      <cardinality xmi:id="_hEv1mrRPEe2w4LjrQN7M_g" label="1" max="1" min="1"/>
+      <parameters xmi:id="_hEv1m7RPEe2w4LjrQN7M_g" name="idVisitaTerreno">
+        <modelElement href="EmpresaClase14.uml#_daH9w7RPEe2w4LjrQN7M_g"/>
+        <cardinality xmi:id="_hEv1nLRPEe2w4LjrQN7M_g" label="1" max="1" min="1"/>
+        <type xmi:id="_hEv1nbRPEe2w4LjrQN7M_g" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_hEv1nrRPEe2w4LjrQN7M_g" name="getIdVisitaTerreno">
+      <modelElement href="EmpresaClase14.uml#_daIk0LRPEe2w4LjrQN7M_g"/>
+      <visibility xmi:id="_hEv1n7RPEe2w4LjrQN7M_g" label="+"/>
+      <cardinality xmi:id="_hEv1oLRPEe2w4LjrQN7M_g" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_hEv1obRPEe2w4LjrQN7M_g">
+        <modelElement href="EmpresaClase14.uml#_daIk0rRPEe2w4LjrQN7M_g"/>
+        <type xmi:id="_hEv1orRPEe2w4LjrQN7M_g" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_hEv1o7RPEe2w4LjrQN7M_g" name="idVisitaTerreno">
+        <modelElement href="EmpresaClase14.uml#_daIk0bRPEe2w4LjrQN7M_g"/>
+        <cardinality xmi:id="_hEv1pLRPEe2w4LjrQN7M_g" label="1" max="1" min="1"/>
+        <type xmi:id="_hEv1pbRPEe2w4LjrQN7M_g" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_hEv1prRPEe2w4LjrQN7M_g" comments="_hEuAMLRPEe2w4LjrQN7M_g" targetConnectionVisual="_hEuAMbRPEe2w4LjrQN7M_g" name="setDia">
+      <modelElement href="EmpresaClase14.uml#_daIk07RPEe2w4LjrQN7M_g"/>
+      <visibility xmi:id="_hEv1p7RPEe2w4LjrQN7M_g" label="+"/>
+      <cardinality xmi:id="_hEv1qLRPEe2w4LjrQN7M_g" label="1" max="1" min="1"/>
+      <parameters xmi:id="_hEv1qbRPEe2w4LjrQN7M_g" name="dia">
+        <modelElement href="EmpresaClase14.uml#_daJL4LRPEe2w4LjrQN7M_g"/>
+        <cardinality xmi:id="_hEv1qrRPEe2w4LjrQN7M_g" label="1" max="1" min="1"/>
+        <type xmi:id="_hEv1q7RPEe2w4LjrQN7M_g" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_hEv1rLRPEe2w4LjrQN7M_g" name="getDia">
+      <modelElement href="EmpresaClase14.uml#_daJL4bRPEe2w4LjrQN7M_g"/>
+      <visibility xmi:id="_hEv1rbRPEe2w4LjrQN7M_g" label="+"/>
+      <cardinality xmi:id="_hEv1rrRPEe2w4LjrQN7M_g" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_hEv1r7RPEe2w4LjrQN7M_g">
+        <modelElement href="EmpresaClase14.uml#_daJL47RPEe2w4LjrQN7M_g"/>
+        <type xmi:id="_hEv1sLRPEe2w4LjrQN7M_g" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_hEv1sbRPEe2w4LjrQN7M_g" name="dia">
+        <modelElement href="EmpresaClase14.uml#_daJL4rRPEe2w4LjrQN7M_g"/>
+        <cardinality xmi:id="_hEv1srRPEe2w4LjrQN7M_g" label="1" max="1" min="1"/>
+        <type xmi:id="_hEv1s7RPEe2w4LjrQN7M_g" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_hEv1tLRPEe2w4LjrQN7M_g" comments="_hEuAMrRPEe2w4LjrQN7M_g" targetConnectionVisual="_hEuAM7RPEe2w4LjrQN7M_g" name="setHora">
+      <modelElement href="EmpresaClase14.uml#_daKaALRPEe2w4LjrQN7M_g"/>
+      <visibility xmi:id="_hEv1tbRPEe2w4LjrQN7M_g" label="+"/>
+      <cardinality xmi:id="_hEv1trRPEe2w4LjrQN7M_g" label="1" max="1" min="1"/>
+      <parameters xmi:id="_hEv1t7RPEe2w4LjrQN7M_g" name="hora">
+        <modelElement href="EmpresaClase14.uml#_daKaAbRPEe2w4LjrQN7M_g"/>
+        <cardinality xmi:id="_hEv1uLRPEe2w4LjrQN7M_g" label="1" max="1" min="1"/>
+        <type xmi:id="_hEv1ubRPEe2w4LjrQN7M_g" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_hEv1urRPEe2w4LjrQN7M_g" name="getHora">
+      <modelElement href="EmpresaClase14.uml#_daLBELRPEe2w4LjrQN7M_g"/>
+      <visibility xmi:id="_hEv1u7RPEe2w4LjrQN7M_g" label="+"/>
+      <cardinality xmi:id="_hEv1vLRPEe2w4LjrQN7M_g" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_hEv1vbRPEe2w4LjrQN7M_g">
+        <modelElement href="EmpresaClase14.uml#_daLBErRPEe2w4LjrQN7M_g"/>
+        <type xmi:id="_hEv1vrRPEe2w4LjrQN7M_g" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_hEv1v7RPEe2w4LjrQN7M_g" name="hora">
+        <modelElement href="EmpresaClase14.uml#_daLBEbRPEe2w4LjrQN7M_g"/>
+        <cardinality xmi:id="_hEv1wLRPEe2w4LjrQN7M_g" label="1" max="1" min="1"/>
+        <type xmi:id="_hEv1wbRPEe2w4LjrQN7M_g" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_hEv1wrRPEe2w4LjrQN7M_g" comments="_hEuANLRPEe2w4LjrQN7M_g" targetConnectionVisual="_hEuANbRPEe2w4LjrQN7M_g" name="setLugar">
+      <modelElement href="EmpresaClase14.uml#_daLoILRPEe2w4LjrQN7M_g"/>
+      <visibility xmi:id="_hEv1w7RPEe2w4LjrQN7M_g" label="+"/>
+      <cardinality xmi:id="_hEv1xLRPEe2w4LjrQN7M_g" label="1" max="1" min="1"/>
+      <parameters xmi:id="_hEv1xbRPEe2w4LjrQN7M_g" name="lugar">
+        <modelElement href="EmpresaClase14.uml#_daLoIbRPEe2w4LjrQN7M_g"/>
+        <cardinality xmi:id="_hEv1xrRPEe2w4LjrQN7M_g" label="1" max="1" min="1"/>
+        <type xmi:id="_hEv1x7RPEe2w4LjrQN7M_g" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_hEv1yLRPEe2w4LjrQN7M_g" name="getLugar">
+      <modelElement href="EmpresaClase14.uml#_daLoIrRPEe2w4LjrQN7M_g"/>
+      <visibility xmi:id="_hEv1ybRPEe2w4LjrQN7M_g" label="+"/>
+      <cardinality xmi:id="_hEv1yrRPEe2w4LjrQN7M_g" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_hEv1y7RPEe2w4LjrQN7M_g">
+        <modelElement href="EmpresaClase14.uml#_daMPMLRPEe2w4LjrQN7M_g"/>
+        <type xmi:id="_hEv1zLRPEe2w4LjrQN7M_g" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_hEv1zbRPEe2w4LjrQN7M_g" name="lugar">
+        <modelElement href="EmpresaClase14.uml#_daLoI7RPEe2w4LjrQN7M_g"/>
+        <cardinality xmi:id="_hEv1zrRPEe2w4LjrQN7M_g" label="1" max="1" min="1"/>
+        <type xmi:id="_hEv1z7RPEe2w4LjrQN7M_g" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_hEv10LRPEe2w4LjrQN7M_g" comments="_hEunQLRPEe2w4LjrQN7M_g" targetConnectionVisual="_hEunQbRPEe2w4LjrQN7M_g" name="setComentarios">
+      <modelElement href="EmpresaClase14.uml#_daMPMbRPEe2w4LjrQN7M_g"/>
+      <visibility xmi:id="_hEv10bRPEe2w4LjrQN7M_g" label="+"/>
+      <cardinality xmi:id="_hEv10rRPEe2w4LjrQN7M_g" label="1" max="1" min="1"/>
+      <parameters xmi:id="_hEv107RPEe2w4LjrQN7M_g" name="comentarios">
+        <modelElement href="EmpresaClase14.uml#_daMPMrRPEe2w4LjrQN7M_g"/>
+        <cardinality xmi:id="_hEv11LRPEe2w4LjrQN7M_g" label="1" max="1" min="1"/>
+        <type xmi:id="_hEv11bRPEe2w4LjrQN7M_g" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_hEv11rRPEe2w4LjrQN7M_g" name="getComentarios">
+      <modelElement href="EmpresaClase14.uml#_daM2QLRPEe2w4LjrQN7M_g"/>
+      <visibility xmi:id="_hEv117RPEe2w4LjrQN7M_g" label="+"/>
+      <cardinality xmi:id="_hEv12LRPEe2w4LjrQN7M_g" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_hEv12bRPEe2w4LjrQN7M_g">
+        <modelElement href="EmpresaClase14.uml#_daM2QrRPEe2w4LjrQN7M_g"/>
+        <type xmi:id="_hEv12rRPEe2w4LjrQN7M_g" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_hEv127RPEe2w4LjrQN7M_g" name="comentarios">
+        <modelElement href="EmpresaClase14.uml#_daM2QbRPEe2w4LjrQN7M_g"/>
+        <cardinality xmi:id="_hEv13LRPEe2w4LjrQN7M_g" label="1" max="1" min="1"/>
+        <type xmi:id="_hEv13bRPEe2w4LjrQN7M_g" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+    </operations>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_hE8CoLRPEe2w4LjrQN7M_g" comments="_hE4YQLRPEe2w4LjrQN7M_g" targetConnectionVisual="_hE4YQbRPEe2w4LjrQN7M_g" name="Revision">
+    <modelElement href="EmpresaClase14.uml#_dZ1p4bRPEe2w4LjrQN7M_g"/>
+    <visualProperties xmi:id="_hE8CobRPEe2w4LjrQN7M_g" position="-731.0,-62.0" size="-1.0,-1.0"/>
+    <visibility xmi:id="_hE8CorRPEe2w4LjrQN7M_g" label="+"/>
+    <attributes xmi:id="_hE8Co7RPEe2w4LjrQN7M_g" name="idRevision">
+      <modelElement href="EmpresaClase14.uml#_da8dILRPEe2w4LjrQN7M_g"/>
+      <stereotypes xmi:id="_hE8CpLRPEe2w4LjrQN7M_g" name="LegacyStyledElement">
+        <modelElement href="EmpresaClase14.uml#_da9EMLRPEe2w4LjrQN7M_g"/>
+      </stereotypes>
+      <visibility xmi:id="_hE8CpbRPEe2w4LjrQN7M_g" label="-"/>
+      <cardinality xmi:id="_hE8CprRPEe2w4LjrQN7M_g" label="1" max="1" min="1"/>
+      <type xmi:id="_hE8Cp7RPEe2w4LjrQN7M_g" name="int">
+        <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_hE8CqLRPEe2w4LjrQN7M_g" name="nombreRevision">
+      <modelElement href="EmpresaClase14.uml#_da9EMbRPEe2w4LjrQN7M_g"/>
+      <stereotypes xmi:id="_hE8CqbRPEe2w4LjrQN7M_g" name="LegacyStyledElement">
+        <modelElement href="EmpresaClase14.uml#_da9rQLRPEe2w4LjrQN7M_g"/>
+      </stereotypes>
+      <visibility xmi:id="_hE8CqrRPEe2w4LjrQN7M_g" label="-"/>
+      <cardinality xmi:id="_hE8Cq7RPEe2w4LjrQN7M_g" label="1" max="1" min="1"/>
+      <type xmi:id="_hE8CrLRPEe2w4LjrQN7M_g" name="String">
+        <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_hE8CrbRPEe2w4LjrQN7M_g" name="detallesRevisar">
+      <modelElement href="EmpresaClase14.uml#_da9rQbRPEe2w4LjrQN7M_g"/>
+      <stereotypes xmi:id="_hE8CrrRPEe2w4LjrQN7M_g" name="LegacyStyledElement">
+        <modelElement href="EmpresaClase14.uml#_da-SULRPEe2w4LjrQN7M_g"/>
+      </stereotypes>
+      <visibility xmi:id="_hE8Cr7RPEe2w4LjrQN7M_g" label="-"/>
+      <cardinality xmi:id="_hE8CsLRPEe2w4LjrQN7M_g" label="1" max="1" min="1"/>
+      <type xmi:id="_hE8CsbRPEe2w4LjrQN7M_g" name="String">
+        <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_hE8CsrRPEe2w4LjrQN7M_g" name="estado">
+      <modelElement href="EmpresaClase14.uml#_da-SUbRPEe2w4LjrQN7M_g"/>
+      <stereotypes xmi:id="_hE8Cs7RPEe2w4LjrQN7M_g" name="LegacyStyledElement">
+        <modelElement href="EmpresaClase14.uml#_da-5YLRPEe2w4LjrQN7M_g"/>
+      </stereotypes>
+      <visibility xmi:id="_hE8CtLRPEe2w4LjrQN7M_g" label="-"/>
+      <cardinality xmi:id="_hE8CtbRPEe2w4LjrQN7M_g" label="1" max="1" min="1"/>
+      <type xmi:id="_hE8CtrRPEe2w4LjrQN7M_g" name="char">
+        <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#char"/>
+      </type>
+    </attributes>
+    <operations xmi:id="_hE8Ct7RPEe2w4LjrQN7M_g" name="Revision">
+      <modelElement href="EmpresaClase14.uml#_dZ24ALRPEe2w4LjrQN7M_g"/>
+      <keywords xmi:id="_hE8CuLRPEe2w4LjrQN7M_g" keyword="create"/>
+      <stereotypes xmi:id="_hE8CubRPEe2w4LjrQN7M_g" name="LegacyStyledElement">
+        <modelElement href="EmpresaClase14.uml#_dZ3fELRPEe2w4LjrQN7M_g"/>
+      </stereotypes>
+      <visibility xmi:id="_hE8CurRPEe2w4LjrQN7M_g" label="+"/>
+      <cardinality xmi:id="_hE8Cu7RPEe2w4LjrQN7M_g" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_hE8CvLRPEe2w4LjrQN7M_g">
+        <modelElement href="EmpresaClase14.uml#_dZ3fEbRPEe2w4LjrQN7M_g"/>
+        <type xmi:id="_hE8CvbRPEe2w4LjrQN7M_g" name="Revision">
+          <modelElement href="EmpresaClase14.uml#_dZ1p4bRPEe2w4LjrQN7M_g"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_hE8CvrRPEe2w4LjrQN7M_g" comments="_hE4_ULRPEe2w4LjrQN7M_g" targetConnectionVisual="_hE4_UbRPEe2w4LjrQN7M_g" name="Revision">
+      <modelElement href="EmpresaClase14.uml#_dZ4GILRPEe2w4LjrQN7M_g"/>
+      <keywords xmi:id="_hE8Cv7RPEe2w4LjrQN7M_g" keyword="create"/>
+      <visibility xmi:id="_hE8CwLRPEe2w4LjrQN7M_g" label="+"/>
+      <cardinality xmi:id="_hE8CwbRPEe2w4LjrQN7M_g" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_hE8CwrRPEe2w4LjrQN7M_g">
+        <modelElement href="EmpresaClase14.uml#_dZ4GJ7RPEe2w4LjrQN7M_g"/>
+        <type xmi:id="_hE8Cw7RPEe2w4LjrQN7M_g" name="Revision">
+          <modelElement href="EmpresaClase14.uml#_dZ1p4bRPEe2w4LjrQN7M_g"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_hE8CxLRPEe2w4LjrQN7M_g" name="idRevision">
+        <modelElement href="EmpresaClase14.uml#_dZ4GIbRPEe2w4LjrQN7M_g"/>
+        <cardinality xmi:id="_hE8CxbRPEe2w4LjrQN7M_g" label="1" max="1" min="1"/>
+        <type xmi:id="_hE8CxrRPEe2w4LjrQN7M_g" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_hE8Cx7RPEe2w4LjrQN7M_g" name="nombreRevision">
+        <modelElement href="EmpresaClase14.uml#_dZ4GIrRPEe2w4LjrQN7M_g"/>
+        <cardinality xmi:id="_hE8CyLRPEe2w4LjrQN7M_g" label="1" max="1" min="1"/>
+        <type xmi:id="_hE8CybRPEe2w4LjrQN7M_g" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_hE8CyrRPEe2w4LjrQN7M_g" name="detallesRevisar">
+        <modelElement href="EmpresaClase14.uml#_dZ4GI7RPEe2w4LjrQN7M_g"/>
+        <cardinality xmi:id="_hE8Cy7RPEe2w4LjrQN7M_g" label="1" max="1" min="1"/>
+        <type xmi:id="_hE8CzLRPEe2w4LjrQN7M_g" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_hE8CzbRPEe2w4LjrQN7M_g" name="estado">
+        <modelElement href="EmpresaClase14.uml#_dZ4GJLRPEe2w4LjrQN7M_g"/>
+        <cardinality xmi:id="_hE8CzrRPEe2w4LjrQN7M_g" label="1" max="1" min="1"/>
+        <type xmi:id="_hE8Cz7RPEe2w4LjrQN7M_g" name="char">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#char"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_hE8C0LRPEe2w4LjrQN7M_g" comments="_hE4_UrRPEe2w4LjrQN7M_g" targetConnectionVisual="_hE4_U7RPEe2w4LjrQN7M_g" name="setIdRevision">
+      <modelElement href="EmpresaClase14.uml#_dZ4tMLRPEe2w4LjrQN7M_g"/>
+      <visibility xmi:id="_hE8C0bRPEe2w4LjrQN7M_g" label="+"/>
+      <cardinality xmi:id="_hE8C0rRPEe2w4LjrQN7M_g" label="1" max="1" min="1"/>
+      <parameters xmi:id="_hE8C07RPEe2w4LjrQN7M_g" name="IdRevision">
+        <modelElement href="EmpresaClase14.uml#_dZ4tMbRPEe2w4LjrQN7M_g"/>
+        <cardinality xmi:id="_hE8C1LRPEe2w4LjrQN7M_g" label="1" max="1" min="1"/>
+        <type xmi:id="_hE8C1bRPEe2w4LjrQN7M_g" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_hE8C1rRPEe2w4LjrQN7M_g" name="getIdRevision">
+      <modelElement href="EmpresaClase14.uml#_dZ4tMrRPEe2w4LjrQN7M_g"/>
+      <visibility xmi:id="_hE8C17RPEe2w4LjrQN7M_g" label="+"/>
+      <cardinality xmi:id="_hE8C2LRPEe2w4LjrQN7M_g" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_hE8C2bRPEe2w4LjrQN7M_g">
+        <modelElement href="EmpresaClase14.uml#_dZ5UQLRPEe2w4LjrQN7M_g"/>
+        <type xmi:id="_hE8C2rRPEe2w4LjrQN7M_g" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_hE8C27RPEe2w4LjrQN7M_g" name="IdRevision">
+        <modelElement href="EmpresaClase14.uml#_dZ4tM7RPEe2w4LjrQN7M_g"/>
+        <cardinality xmi:id="_hE8C3LRPEe2w4LjrQN7M_g" label="1" max="1" min="1"/>
+        <type xmi:id="_hE8C3bRPEe2w4LjrQN7M_g" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_hE8C3rRPEe2w4LjrQN7M_g" comments="_hE5mYLRPEe2w4LjrQN7M_g" targetConnectionVisual="_hE5mYbRPEe2w4LjrQN7M_g" name="setNombreRevision">
+      <modelElement href="EmpresaClase14.uml#_dZ5UQbRPEe2w4LjrQN7M_g"/>
+      <visibility xmi:id="_hE8C37RPEe2w4LjrQN7M_g" label="+"/>
+      <cardinality xmi:id="_hE8C4LRPEe2w4LjrQN7M_g" label="1" max="1" min="1"/>
+      <parameters xmi:id="_hE8C4bRPEe2w4LjrQN7M_g" name="nombreRevision">
+        <modelElement href="EmpresaClase14.uml#_dZ5UQrRPEe2w4LjrQN7M_g"/>
+        <cardinality xmi:id="_hE8C4rRPEe2w4LjrQN7M_g" label="1" max="1" min="1"/>
+        <type xmi:id="_hE8C47RPEe2w4LjrQN7M_g" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_hE8C5LRPEe2w4LjrQN7M_g" name="getNombreRevision">
+      <modelElement href="EmpresaClase14.uml#_dZ57ULRPEe2w4LjrQN7M_g"/>
+      <visibility xmi:id="_hE8C5bRPEe2w4LjrQN7M_g" label="+"/>
+      <cardinality xmi:id="_hE8C5rRPEe2w4LjrQN7M_g" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_hE8C57RPEe2w4LjrQN7M_g">
+        <modelElement href="EmpresaClase14.uml#_dZ57UrRPEe2w4LjrQN7M_g"/>
+        <type xmi:id="_hE8C6LRPEe2w4LjrQN7M_g" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_hE8C6bRPEe2w4LjrQN7M_g" name="nombreRevision">
+        <modelElement href="EmpresaClase14.uml#_dZ57UbRPEe2w4LjrQN7M_g"/>
+        <cardinality xmi:id="_hE8C6rRPEe2w4LjrQN7M_g" label="1" max="1" min="1"/>
+        <type xmi:id="_hE8C67RPEe2w4LjrQN7M_g" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_hE8C7LRPEe2w4LjrQN7M_g" comments="_hE5mYrRPEe2w4LjrQN7M_g" targetConnectionVisual="_hE5mY7RPEe2w4LjrQN7M_g" name="setDetallesRevisar">
+      <modelElement href="EmpresaClase14.uml#_dZ6iYLRPEe2w4LjrQN7M_g"/>
+      <visibility xmi:id="_hE8C7bRPEe2w4LjrQN7M_g" label="+"/>
+      <cardinality xmi:id="_hE8C7rRPEe2w4LjrQN7M_g" label="1" max="1" min="1"/>
+      <parameters xmi:id="_hE8C77RPEe2w4LjrQN7M_g" name="detallesRevisar">
+        <modelElement href="EmpresaClase14.uml#_dZ6iYbRPEe2w4LjrQN7M_g"/>
+        <cardinality xmi:id="_hE8C8LRPEe2w4LjrQN7M_g" label="1" max="1" min="1"/>
+        <type xmi:id="_hE8C8bRPEe2w4LjrQN7M_g" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_hE8C8rRPEe2w4LjrQN7M_g" name="getDetallesRevisar">
+      <modelElement href="EmpresaClase14.uml#_dZ6iYrRPEe2w4LjrQN7M_g"/>
+      <visibility xmi:id="_hE8C87RPEe2w4LjrQN7M_g" label="+"/>
+      <cardinality xmi:id="_hE8C9LRPEe2w4LjrQN7M_g" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_hE8C9bRPEe2w4LjrQN7M_g">
+        <modelElement href="EmpresaClase14.uml#_dZ7JcbRPEe2w4LjrQN7M_g"/>
+        <type xmi:id="_hE8C9rRPEe2w4LjrQN7M_g" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_hE8C97RPEe2w4LjrQN7M_g" name="detallesRevisar">
+        <modelElement href="EmpresaClase14.uml#_dZ7JcLRPEe2w4LjrQN7M_g"/>
+        <cardinality xmi:id="_hE8C-LRPEe2w4LjrQN7M_g" label="1" max="1" min="1"/>
+        <type xmi:id="_hE8C-bRPEe2w4LjrQN7M_g" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_hE8C-rRPEe2w4LjrQN7M_g" comments="_hE5mZLRPEe2w4LjrQN7M_g" targetConnectionVisual="_hE5mZbRPEe2w4LjrQN7M_g" name="setEstado">
+      <modelElement href="EmpresaClase14.uml#_dZ7JcrRPEe2w4LjrQN7M_g"/>
+      <visibility xmi:id="_hE8C-7RPEe2w4LjrQN7M_g" label="+"/>
+      <cardinality xmi:id="_hE8C_LRPEe2w4LjrQN7M_g" label="1" max="1" min="1"/>
+      <parameters xmi:id="_hE8C_bRPEe2w4LjrQN7M_g" name="estado">
+        <modelElement href="EmpresaClase14.uml#_dZ7Jc7RPEe2w4LjrQN7M_g"/>
+        <cardinality xmi:id="_hE8C_rRPEe2w4LjrQN7M_g" label="1" max="1" min="1"/>
+        <type xmi:id="_hE8C_7RPEe2w4LjrQN7M_g" name="char">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#char"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_hE8DALRPEe2w4LjrQN7M_g" name="getEstado">
+      <modelElement href="EmpresaClase14.uml#_dZ7wgLRPEe2w4LjrQN7M_g"/>
+      <visibility xmi:id="_hE8DAbRPEe2w4LjrQN7M_g" label="+"/>
+      <cardinality xmi:id="_hE8DArRPEe2w4LjrQN7M_g" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_hE8DA7RPEe2w4LjrQN7M_g">
+        <modelElement href="EmpresaClase14.uml#_dZ7wgrRPEe2w4LjrQN7M_g"/>
+        <type xmi:id="_hE8DBLRPEe2w4LjrQN7M_g" name="char">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#char"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_hE8DBbRPEe2w4LjrQN7M_g" name="estado">
+        <modelElement href="EmpresaClase14.uml#_dZ7wgbRPEe2w4LjrQN7M_g"/>
+        <cardinality xmi:id="_hE8DBrRPEe2w4LjrQN7M_g" label="1" max="1" min="1"/>
+        <type xmi:id="_hE8DB7RPEe2w4LjrQN7M_g" name="char">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#char"/>
+        </type>
+      </parameters>
+    </operations>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_hFBiMLRPEe2w4LjrQN7M_g" name="Principal">
+    <modelElement href="EmpresaClase14.uml#_dZ0bwLRPEe2w4LjrQN7M_g"/>
+    <visualProperties xmi:id="_hFBiMbRPEe2w4LjrQN7M_g" position="3908.0,244.0" size="-1.0,-1.0"/>
+    <visibility xmi:id="_hFBiMrRPEe2w4LjrQN7M_g" label="+"/>
+    <operations xmi:id="_hFBiM7RPEe2w4LjrQN7M_g" name="main" staticOperation="true">
+      <modelElement href="EmpresaClase14.uml#_dZ1C0LRPEe2w4LjrQN7M_g"/>
+      <visibility xmi:id="_hFBiNLRPEe2w4LjrQN7M_g" label="+"/>
+      <cardinality xmi:id="_hFBiNbRPEe2w4LjrQN7M_g" label="1" max="1" min="1"/>
+      <parameters xmi:id="_hFBiNrRPEe2w4LjrQN7M_g" name="args">
+        <modelElement href="EmpresaClase14.uml#_dZ1C0bRPEe2w4LjrQN7M_g"/>
+        <cardinality xmi:id="_hFBiN7RPEe2w4LjrQN7M_g" label="1..*" max="-1" min="1"/>
+        <type xmi:id="_hFBiOLRPEe2w4LjrQN7M_g" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+    </operations>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_hEeIkLRPEe2w4LjrQN7M_g" comments="_hEbsULRPEe2w4LjrQN7M_g" targetConnectionVisual="_hEbsUbRPEe2w4LjrQN7M_g" name="Usuarios" associationsIn="_hEbFQLRPEe2w4LjrQN7M_g">
+    <modelElement href="EmpresaClase14.uml#_dZ8-oLRPEe2w4LjrQN7M_g"/>
+    <visualProperties xmi:id="_hEeIkbRPEe2w4LjrQN7M_g" position="846.0,-371.0" size="-1.0,-1.0"/>
+    <visibility xmi:id="_hEeIkrRPEe2w4LjrQN7M_g" label="+"/>
+    <attributes xmi:id="_hEeIk7RPEe2w4LjrQN7M_g" name="nombreUsuario">
+      <modelElement href="EmpresaClase14.uml#_da-5YbRPEe2w4LjrQN7M_g"/>
+      <visibility xmi:id="_hEeIlLRPEe2w4LjrQN7M_g" label="+"/>
+      <cardinality xmi:id="_hEeIlbRPEe2w4LjrQN7M_g" label="1" max="1" min="1"/>
+      <type xmi:id="_hEeIlrRPEe2w4LjrQN7M_g" name="String">
+        <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_hEeIl7RPEe2w4LjrQN7M_g" name="fechaNacimiento">
+      <modelElement href="EmpresaClase14.uml#_da-5YrRPEe2w4LjrQN7M_g"/>
+      <visibility xmi:id="_hEeImLRPEe2w4LjrQN7M_g" label="+"/>
+      <cardinality xmi:id="_hEeImbRPEe2w4LjrQN7M_g" label="1" max="1" min="1"/>
+      <type xmi:id="_hEeImrRPEe2w4LjrQN7M_g" name="String">
+        <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_hEeIm7RPEe2w4LjrQN7M_g" name="cliente">
+      <modelElement href="EmpresaClase14.uml#_da_gcLRPEe2w4LjrQN7M_g"/>
+      <visibility xmi:id="_hEeInLRPEe2w4LjrQN7M_g" label="+"/>
+      <cardinality xmi:id="_hEeInbRPEe2w4LjrQN7M_g" label="1" max="1" min="1"/>
+      <type xmi:id="_hEeInrRPEe2w4LjrQN7M_g" name="Cliente">
+        <modelElement href="EmpresaClase14.uml#_dZqDsLRPEe2w4LjrQN7M_g"/>
+      </type>
+    </attributes>
+    <operations xmi:id="_hEeIn7RPEe2w4LjrQN7M_g" name="Usuarios">
+      <modelElement href="EmpresaClase14.uml#_dZ9lsLRPEe2w4LjrQN7M_g"/>
+      <keywords xmi:id="_hEeIoLRPEe2w4LjrQN7M_g" keyword="create"/>
+      <visibility xmi:id="_hEeIobRPEe2w4LjrQN7M_g" label="+"/>
+      <cardinality xmi:id="_hEeIorRPEe2w4LjrQN7M_g" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_hEeIo7RPEe2w4LjrQN7M_g">
+        <modelElement href="EmpresaClase14.uml#_dZ9ls7RPEe2w4LjrQN7M_g"/>
+        <type xmi:id="_hEeIpLRPEe2w4LjrQN7M_g" name="Usuarios">
+          <modelElement href="EmpresaClase14.uml#_dZ8-oLRPEe2w4LjrQN7M_g"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_hEeIpbRPEe2w4LjrQN7M_g" name="Usuarios">
+      <modelElement href="EmpresaClase14.uml#_dZ_a4LRPEe2w4LjrQN7M_g"/>
+      <keywords xmi:id="_hEeIprRPEe2w4LjrQN7M_g" keyword="create"/>
+      <visibility xmi:id="_hEeIp7RPEe2w4LjrQN7M_g" label="+"/>
+      <cardinality xmi:id="_hEeIqLRPEe2w4LjrQN7M_g" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_hEeIqbRPEe2w4LjrQN7M_g">
+        <modelElement href="EmpresaClase14.uml#_daApBbRPEe2w4LjrQN7M_g"/>
+        <type xmi:id="_hEeIqrRPEe2w4LjrQN7M_g" name="Usuarios">
+          <modelElement href="EmpresaClase14.uml#_dZ8-oLRPEe2w4LjrQN7M_g"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_hEeIq7RPEe2w4LjrQN7M_g" name="nombreUsuario">
+        <modelElement href="EmpresaClase14.uml#_dZ_a4bRPEe2w4LjrQN7M_g"/>
+        <cardinality xmi:id="_hEeIrLRPEe2w4LjrQN7M_g" label="1" max="1" min="1"/>
+        <type xmi:id="_hEeIrbRPEe2w4LjrQN7M_g" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_hEeIrrRPEe2w4LjrQN7M_g" name="fechaNacimiento">
+        <modelElement href="EmpresaClase14.uml#_dZ_a4rRPEe2w4LjrQN7M_g"/>
+        <cardinality xmi:id="_hEeIr7RPEe2w4LjrQN7M_g" label="1" max="1" min="1"/>
+        <type xmi:id="_hEeIsLRPEe2w4LjrQN7M_g" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_hEeIsbRPEe2w4LjrQN7M_g" name="rut">
+        <modelElement href="EmpresaClase14.uml#_dZ_a47RPEe2w4LjrQN7M_g"/>
+        <cardinality xmi:id="_hEeIsrRPEe2w4LjrQN7M_g" label="1" max="1" min="1"/>
+        <type xmi:id="_hEeIs7RPEe2w4LjrQN7M_g" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_hEeItLRPEe2w4LjrQN7M_g" name="nombres">
+        <modelElement href="EmpresaClase14.uml#_daAB8LRPEe2w4LjrQN7M_g"/>
+        <cardinality xmi:id="_hEeItbRPEe2w4LjrQN7M_g" label="1" max="1" min="1"/>
+        <type xmi:id="_hEeItrRPEe2w4LjrQN7M_g" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_hEeIt7RPEe2w4LjrQN7M_g" name="apellidos">
+        <modelElement href="EmpresaClase14.uml#_daAB8bRPEe2w4LjrQN7M_g"/>
+        <cardinality xmi:id="_hEeIuLRPEe2w4LjrQN7M_g" label="1" max="1" min="1"/>
+        <type xmi:id="_hEeIubRPEe2w4LjrQN7M_g" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_hEeIurRPEe2w4LjrQN7M_g" name="telefono">
+        <modelElement href="EmpresaClase14.uml#_daAB8rRPEe2w4LjrQN7M_g"/>
+        <cardinality xmi:id="_hEeIu7RPEe2w4LjrQN7M_g" label="1" max="1" min="1"/>
+        <type xmi:id="_hEeIvLRPEe2w4LjrQN7M_g" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_hEeIvbRPEe2w4LjrQN7M_g" name="afp">
+        <modelElement href="EmpresaClase14.uml#_daAB87RPEe2w4LjrQN7M_g"/>
+        <cardinality xmi:id="_hEeIvrRPEe2w4LjrQN7M_g" label="1" max="1" min="1"/>
+        <type xmi:id="_hEeIv7RPEe2w4LjrQN7M_g" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_hEeIwLRPEe2w4LjrQN7M_g" name="sistemaSalud">
+        <modelElement href="EmpresaClase14.uml#_daAB9LRPEe2w4LjrQN7M_g"/>
+        <cardinality xmi:id="_hEeIwbRPEe2w4LjrQN7M_g" label="1" max="1" min="1"/>
+        <type xmi:id="_hEeIwrRPEe2w4LjrQN7M_g" name="char">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#char"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_hEeIw7RPEe2w4LjrQN7M_g" name="direccion">
+        <modelElement href="EmpresaClase14.uml#_daApALRPEe2w4LjrQN7M_g"/>
+        <cardinality xmi:id="_hEeIxLRPEe2w4LjrQN7M_g" label="1" max="1" min="1"/>
+        <type xmi:id="_hEeIxbRPEe2w4LjrQN7M_g" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_hEeIxrRPEe2w4LjrQN7M_g" name="comuna">
+        <modelElement href="EmpresaClase14.uml#_daApAbRPEe2w4LjrQN7M_g"/>
+        <cardinality xmi:id="_hEeIx7RPEe2w4LjrQN7M_g" label="1" max="1" min="1"/>
+        <type xmi:id="_hEeIyLRPEe2w4LjrQN7M_g" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_hEeIybRPEe2w4LjrQN7M_g" name="edad">
+        <modelElement href="EmpresaClase14.uml#_daApArRPEe2w4LjrQN7M_g"/>
+        <cardinality xmi:id="_hEeIyrRPEe2w4LjrQN7M_g" label="1" max="1" min="1"/>
+        <type xmi:id="_hEeIy7RPEe2w4LjrQN7M_g" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_hEeIzLRPEe2w4LjrQN7M_g" name="mostrarEdad">
+      <modelElement href="EmpresaClase14.uml#_daB3ILRPEe2w4LjrQN7M_g"/>
+      <visibility xmi:id="_hEeIzbRPEe2w4LjrQN7M_g" label="+"/>
+      <cardinality xmi:id="_hEeIzrRPEe2w4LjrQN7M_g" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_hEeIz7RPEe2w4LjrQN7M_g">
+        <modelElement href="EmpresaClase14.uml#_daB3IbRPEe2w4LjrQN7M_g"/>
+        <type xmi:id="_hEeI0LRPEe2w4LjrQN7M_g" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_hEeI0bRPEe2w4LjrQN7M_g" name="toString">
+      <modelElement href="EmpresaClase14.uml#_daB3IrRPEe2w4LjrQN7M_g"/>
+      <stereotypes xmi:id="_hEeI0rRPEe2w4LjrQN7M_g" name="LegacyStyledElement">
+        <modelElement href="EmpresaClase14.uml#_daCeMbRPEe2w4LjrQN7M_g"/>
+      </stereotypes>
+      <stereotypes xmi:id="_hEeI07RPEe2w4LjrQN7M_g" name="Annotations">
+        <modelElement href="EmpresaClase14.uml#_daCeMrRPEe2w4LjrQN7M_g"/>
+      </stereotypes>
+      <visibility xmi:id="_hEeI1LRPEe2w4LjrQN7M_g" label="+"/>
+      <cardinality xmi:id="_hEeI1bRPEe2w4LjrQN7M_g" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_hEeI1rRPEe2w4LjrQN7M_g">
+        <modelElement href="EmpresaClase14.uml#_daCeMLRPEe2w4LjrQN7M_g"/>
+        <type xmi:id="_hEeI17RPEe2w4LjrQN7M_g" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </outParameters>
+    </operations>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_hEU-oLRPEe2w4LjrQN7M_g" name="Capacitacion" associationsOut="_hEQtMLRPEe2w4LjrQN7M_g">
+    <modelElement href="EmpresaClase14.uml#_dZedgLRPEe2w4LjrQN7M_g"/>
+    <visualProperties xmi:id="_hEU-obRPEe2w4LjrQN7M_g" position="2198.0,-54.0" size="-1.0,-1.0"/>
+    <visibility xmi:id="_hEU-orRPEe2w4LjrQN7M_g" label="+"/>
+    <attributes xmi:id="_hEU-o7RPEe2w4LjrQN7M_g" name="identificador">
+      <modelElement href="EmpresaClase14.uml#_da1IYLRPEe2w4LjrQN7M_g"/>
+      <visibility xmi:id="_hEU-pLRPEe2w4LjrQN7M_g" label="+"/>
+      <cardinality xmi:id="_hEU-pbRPEe2w4LjrQN7M_g" label="1" max="1" min="1"/>
+      <type xmi:id="_hEU-prRPEe2w4LjrQN7M_g" name="int">
+        <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_hEU-p7RPEe2w4LjrQN7M_g" name="dia">
+      <modelElement href="EmpresaClase14.uml#_da1vcLRPEe2w4LjrQN7M_g"/>
+      <visibility xmi:id="_hEU-qLRPEe2w4LjrQN7M_g" label="+"/>
+      <cardinality xmi:id="_hEU-qbRPEe2w4LjrQN7M_g" label="1" max="1" min="1"/>
+      <type xmi:id="_hEU-qrRPEe2w4LjrQN7M_g" name="String">
+        <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_hEU-q7RPEe2w4LjrQN7M_g" name="hora">
+      <modelElement href="EmpresaClase14.uml#_da1vcbRPEe2w4LjrQN7M_g"/>
+      <visibility xmi:id="_hEU-rLRPEe2w4LjrQN7M_g" label="+"/>
+      <cardinality xmi:id="_hEU-rbRPEe2w4LjrQN7M_g" label="1" max="1" min="1"/>
+      <type xmi:id="_hEU-rrRPEe2w4LjrQN7M_g" name="String">
+        <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_hEU-r7RPEe2w4LjrQN7M_g" name="lugar">
+      <modelElement href="EmpresaClase14.uml#_da2WgLRPEe2w4LjrQN7M_g"/>
+      <visibility xmi:id="_hEU-sLRPEe2w4LjrQN7M_g" label="+"/>
+      <cardinality xmi:id="_hEU-sbRPEe2w4LjrQN7M_g" label="1" max="1" min="1"/>
+      <type xmi:id="_hEU-srRPEe2w4LjrQN7M_g" name="String">
+        <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_hEU-s7RPEe2w4LjrQN7M_g" name="duracion">
+      <modelElement href="EmpresaClase14.uml#_da2WgbRPEe2w4LjrQN7M_g"/>
+      <visibility xmi:id="_hEU-tLRPEe2w4LjrQN7M_g" label="+"/>
+      <cardinality xmi:id="_hEU-tbRPEe2w4LjrQN7M_g" label="1" max="1" min="1"/>
+      <type xmi:id="_hEU-trRPEe2w4LjrQN7M_g" name="int">
+        <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_hEU-t7RPEe2w4LjrQN7M_g" name="cantidadAsistentes">
+      <modelElement href="EmpresaClase14.uml#_da2WgrRPEe2w4LjrQN7M_g"/>
+      <visibility xmi:id="_hEU-uLRPEe2w4LjrQN7M_g" label="+"/>
+      <cardinality xmi:id="_hEU-ubRPEe2w4LjrQN7M_g" label="1" max="1" min="1"/>
+      <type xmi:id="_hEU-urRPEe2w4LjrQN7M_g" name="int">
+        <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_hEU-u7RPEe2w4LjrQN7M_g" defaultValue="new ArrayList&lt;Usuarios>()" name="listaUsuarios">
+      <modelElement href="EmpresaClase14.uml#_da29kLRPEe2w4LjrQN7M_g"/>
+      <stereotypes xmi:id="_hEU-vLRPEe2w4LjrQN7M_g" name="Generics">
+        <modelElement href="EmpresaClase14.uml#_da3koLRPEe2w4LjrQN7M_g"/>
+      </stereotypes>
+      <stereotypes xmi:id="_hEU-vbRPEe2w4LjrQN7M_g" name="LegacyStyledElement">
+        <modelElement href="EmpresaClase14.uml#_da4LsLRPEe2w4LjrQN7M_g"/>
+      </stereotypes>
+      <visibility xmi:id="_hEU-vrRPEe2w4LjrQN7M_g" label="-"/>
+      <cardinality xmi:id="_hEU-v7RPEe2w4LjrQN7M_g" label="1" max="1" min="1"/>
+      <type xmi:id="_hEU-wLRPEe2w4LjrQN7M_g" name="ArrayList">
+        <modelElement href="EmpresaClase14.uml#_dafKILRPEe2w4LjrQN7M_g"/>
+      </type>
+    </attributes>
+    <operations xmi:id="_hEU-wbRPEe2w4LjrQN7M_g" name="Capacitacion">
+      <modelElement href="EmpresaClase14.uml#_dZgSsLRPEe2w4LjrQN7M_g"/>
+      <keywords xmi:id="_hEU-wrRPEe2w4LjrQN7M_g" keyword="create"/>
+      <stereotypes xmi:id="_hEU-w7RPEe2w4LjrQN7M_g" name="LegacyStyledElement">
+        <modelElement href="EmpresaClase14.uml#_dZg5wrRPEe2w4LjrQN7M_g"/>
+      </stereotypes>
+      <visibility xmi:id="_hEU-xLRPEe2w4LjrQN7M_g" label="+"/>
+      <cardinality xmi:id="_hEU-xbRPEe2w4LjrQN7M_g" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_hEU-xrRPEe2w4LjrQN7M_g">
+        <modelElement href="EmpresaClase14.uml#_dZg5w7RPEe2w4LjrQN7M_g"/>
+        <type xmi:id="_hEU-x7RPEe2w4LjrQN7M_g" name="Capacitacion">
+          <modelElement href="EmpresaClase14.uml#_dZedgLRPEe2w4LjrQN7M_g"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_hEU-yLRPEe2w4LjrQN7M_g" name="Capacitacion">
+      <modelElement href="EmpresaClase14.uml#_dZiH4LRPEe2w4LjrQN7M_g"/>
+      <keywords xmi:id="_hEU-ybRPEe2w4LjrQN7M_g" keyword="create"/>
+      <visibility xmi:id="_hEU-yrRPEe2w4LjrQN7M_g" label="+"/>
+      <cardinality xmi:id="_hEU-y7RPEe2w4LjrQN7M_g" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_hEU-zLRPEe2w4LjrQN7M_g">
+        <modelElement href="EmpresaClase14.uml#_dZiu8rRPEe2w4LjrQN7M_g"/>
+        <type xmi:id="_hEU-zbRPEe2w4LjrQN7M_g" name="Capacitacion">
+          <modelElement href="EmpresaClase14.uml#_dZedgLRPEe2w4LjrQN7M_g"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_hEU-zrRPEe2w4LjrQN7M_g" name="identificador">
+        <modelElement href="EmpresaClase14.uml#_dZiH4bRPEe2w4LjrQN7M_g"/>
+        <cardinality xmi:id="_hEU-z7RPEe2w4LjrQN7M_g" label="1" max="1" min="1"/>
+        <type xmi:id="_hEU-0LRPEe2w4LjrQN7M_g" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_hEU-0bRPEe2w4LjrQN7M_g" name="dia">
+        <modelElement href="EmpresaClase14.uml#_dZiH4rRPEe2w4LjrQN7M_g"/>
+        <cardinality xmi:id="_hEU-0rRPEe2w4LjrQN7M_g" label="1" max="1" min="1"/>
+        <type xmi:id="_hEU-07RPEe2w4LjrQN7M_g" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_hEU-1LRPEe2w4LjrQN7M_g" name="hora">
+        <modelElement href="EmpresaClase14.uml#_dZiH47RPEe2w4LjrQN7M_g"/>
+        <cardinality xmi:id="_hEU-1bRPEe2w4LjrQN7M_g" label="1" max="1" min="1"/>
+        <type xmi:id="_hEU-1rRPEe2w4LjrQN7M_g" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_hEU-17RPEe2w4LjrQN7M_g" name="lugar">
+        <modelElement href="EmpresaClase14.uml#_dZiH5LRPEe2w4LjrQN7M_g"/>
+        <cardinality xmi:id="_hEU-2LRPEe2w4LjrQN7M_g" label="1" max="1" min="1"/>
+        <type xmi:id="_hEU-2bRPEe2w4LjrQN7M_g" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_hEU-2rRPEe2w4LjrQN7M_g" name="duracion">
+        <modelElement href="EmpresaClase14.uml#_dZiH5bRPEe2w4LjrQN7M_g"/>
+        <cardinality xmi:id="_hEU-27RPEe2w4LjrQN7M_g" label="1" max="1" min="1"/>
+        <type xmi:id="_hEU-3LRPEe2w4LjrQN7M_g" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_hEU-3bRPEe2w4LjrQN7M_g" name="toString">
+      <modelElement href="EmpresaClase14.uml#_dZiu87RPEe2w4LjrQN7M_g"/>
+      <stereotypes xmi:id="_hEU-3rRPEe2w4LjrQN7M_g" name="LegacyStyledElement">
+        <modelElement href="EmpresaClase14.uml#_dZjWAbRPEe2w4LjrQN7M_g"/>
+      </stereotypes>
+      <stereotypes xmi:id="_hEU-37RPEe2w4LjrQN7M_g" name="Annotations">
+        <modelElement href="EmpresaClase14.uml#_dZj9ELRPEe2w4LjrQN7M_g"/>
+      </stereotypes>
+      <visibility xmi:id="_hEU-4LRPEe2w4LjrQN7M_g" label="+"/>
+      <cardinality xmi:id="_hEU-4bRPEe2w4LjrQN7M_g" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_hEU-4rRPEe2w4LjrQN7M_g">
+        <modelElement href="EmpresaClase14.uml#_dZjWALRPEe2w4LjrQN7M_g"/>
+        <type xmi:id="_hEU-47RPEe2w4LjrQN7M_g" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_hEU-5LRPEe2w4LjrQN7M_g" name="getUsuarios">
+      <modelElement href="EmpresaClase14.uml#_dZkkIbRPEe2w4LjrQN7M_g"/>
+      <stereotypes xmi:id="_hEU-5bRPEe2w4LjrQN7M_g" name="Generics">
+        <modelElement href="EmpresaClase14.uml#_dZlyQLRPEe2w4LjrQN7M_g"/>
+      </stereotypes>
+      <visibility xmi:id="_hEU-5rRPEe2w4LjrQN7M_g" label="+"/>
+      <cardinality xmi:id="_hEU-57RPEe2w4LjrQN7M_g" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_hEU-6LRPEe2w4LjrQN7M_g">
+        <modelElement href="EmpresaClase14.uml#_dar-cLRPEe2w4LjrQN7M_g"/>
+        <type xmi:id="_hEU-6bRPEe2w4LjrQN7M_g" name="ArrayList">
+          <modelElement href="EmpresaClase14.uml#_dafKILRPEe2w4LjrQN7M_g"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_hEU-6rRPEe2w4LjrQN7M_g" name="mostrarDetalle">
+      <modelElement href="EmpresaClase14.uml#_dZnAYLRPEe2w4LjrQN7M_g"/>
+      <visibility xmi:id="_hEU-67RPEe2w4LjrQN7M_g" label="+"/>
+      <cardinality xmi:id="_hEU-7LRPEe2w4LjrQN7M_g" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_hEU-7bRPEe2w4LjrQN7M_g">
+        <modelElement href="EmpresaClase14.uml#_dZnAYbRPEe2w4LjrQN7M_g"/>
+        <type xmi:id="_hEU-7rRPEe2w4LjrQN7M_g" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_hEU-77RPEe2w4LjrQN7M_g" name="agregarAsistentes">
+      <modelElement href="EmpresaClase14.uml#_dag_ULRPEe2w4LjrQN7M_g"/>
+      <visibility xmi:id="_hEU-8LRPEe2w4LjrQN7M_g" label="+"/>
+      <cardinality xmi:id="_hEU-8bRPEe2w4LjrQN7M_g" label="1" max="1" min="1"/>
+      <parameters xmi:id="_hEU-8rRPEe2w4LjrQN7M_g" name="usuario">
+        <modelElement href="EmpresaClase14.uml#_dag_UbRPEe2w4LjrQN7M_g"/>
+        <cardinality xmi:id="_hEU-87RPEe2w4LjrQN7M_g" label="1" max="1" min="1"/>
+        <type xmi:id="_hEU-9LRPEe2w4LjrQN7M_g" name="Usuarios">
+          <modelElement href="EmpresaClase14.uml#_dZ8-oLRPEe2w4LjrQN7M_g"/>
+        </type>
+      </parameters>
+    </operations>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_hEHjQLRPEe2w4LjrQN7M_g" name="Cliente" associationsOut="_hEG8MLRPEe2w4LjrQN7M_g _hEbFQLRPEe2w4LjrQN7M_g">
+    <modelElement href="EmpresaClase14.uml#_dZqDsLRPEe2w4LjrQN7M_g"/>
+    <visualProperties xmi:id="_hEHjQbRPEe2w4LjrQN7M_g" position="1022.0,-131.0" size="-1.0,-1.0"/>
+    <visibility xmi:id="_hEHjQrRPEe2w4LjrQN7M_g" label="+"/>
+    <attributes xmi:id="_hEHjQ7RPEe2w4LjrQN7M_g" name="rut">
+      <modelElement href="EmpresaClase14.uml#_da4ywLRPEe2w4LjrQN7M_g"/>
+      <visibility xmi:id="_hEHjRLRPEe2w4LjrQN7M_g" label="+"/>
+      <cardinality xmi:id="_hEHjRbRPEe2w4LjrQN7M_g" label="1" max="1" min="1"/>
+      <type xmi:id="_hEHjRrRPEe2w4LjrQN7M_g" name="int">
+        <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_hEHjR7RPEe2w4LjrQN7M_g" name="nombres">
+      <modelElement href="EmpresaClase14.uml#_da4ywbRPEe2w4LjrQN7M_g"/>
+      <visibility xmi:id="_hEHjSLRPEe2w4LjrQN7M_g" label="+"/>
+      <cardinality xmi:id="_hEHjSbRPEe2w4LjrQN7M_g" label="1" max="1" min="1"/>
+      <type xmi:id="_hEHjSrRPEe2w4LjrQN7M_g" name="String">
+        <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_hEHjS7RPEe2w4LjrQN7M_g" name="apellidos">
+      <modelElement href="EmpresaClase14.uml#_da5Z0LRPEe2w4LjrQN7M_g"/>
+      <visibility xmi:id="_hEHjTLRPEe2w4LjrQN7M_g" label="+"/>
+      <cardinality xmi:id="_hEHjTbRPEe2w4LjrQN7M_g" label="1" max="1" min="1"/>
+      <type xmi:id="_hEHjTrRPEe2w4LjrQN7M_g" name="String">
+        <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_hEHjT7RPEe2w4LjrQN7M_g" name="telefono">
+      <modelElement href="EmpresaClase14.uml#_da5Z0bRPEe2w4LjrQN7M_g"/>
+      <visibility xmi:id="_hEHjULRPEe2w4LjrQN7M_g" label="+"/>
+      <cardinality xmi:id="_hEHjUbRPEe2w4LjrQN7M_g" label="1" max="1" min="1"/>
+      <type xmi:id="_hEHjUrRPEe2w4LjrQN7M_g" name="String">
+        <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_hEHjU7RPEe2w4LjrQN7M_g" name="afp">
+      <modelElement href="EmpresaClase14.uml#_da5Z0rRPEe2w4LjrQN7M_g"/>
+      <visibility xmi:id="_hEHjVLRPEe2w4LjrQN7M_g" label="+"/>
+      <cardinality xmi:id="_hEHjVbRPEe2w4LjrQN7M_g" label="1" max="1" min="1"/>
+      <type xmi:id="_hEHjVrRPEe2w4LjrQN7M_g" name="String">
+        <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_hEHjV7RPEe2w4LjrQN7M_g" name="sistemaSalud">
+      <modelElement href="EmpresaClase14.uml#_da5Z07RPEe2w4LjrQN7M_g"/>
+      <visibility xmi:id="_hEHjWLRPEe2w4LjrQN7M_g" label="+"/>
+      <cardinality xmi:id="_hEHjWbRPEe2w4LjrQN7M_g" label="1" max="1" min="1"/>
+      <type xmi:id="_hEHjWrRPEe2w4LjrQN7M_g" name="char">
+        <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#char"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_hEHjW7RPEe2w4LjrQN7M_g" name="direccion">
+      <modelElement href="EmpresaClase14.uml#_da6A4LRPEe2w4LjrQN7M_g"/>
+      <visibility xmi:id="_hEHjXLRPEe2w4LjrQN7M_g" label="+"/>
+      <cardinality xmi:id="_hEHjXbRPEe2w4LjrQN7M_g" label="1" max="1" min="1"/>
+      <type xmi:id="_hEHjXrRPEe2w4LjrQN7M_g" name="String">
+        <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_hEHjX7RPEe2w4LjrQN7M_g" name="comuna">
+      <modelElement href="EmpresaClase14.uml#_da6A4bRPEe2w4LjrQN7M_g"/>
+      <visibility xmi:id="_hEHjYLRPEe2w4LjrQN7M_g" label="+"/>
+      <cardinality xmi:id="_hEHjYbRPEe2w4LjrQN7M_g" label="1" max="1" min="1"/>
+      <type xmi:id="_hEHjYrRPEe2w4LjrQN7M_g" name="String">
+        <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_hEHjY7RPEe2w4LjrQN7M_g" name="edad">
+      <modelElement href="EmpresaClase14.uml#_da6A4rRPEe2w4LjrQN7M_g"/>
+      <visibility xmi:id="_hEHjZLRPEe2w4LjrQN7M_g" label="+"/>
+      <cardinality xmi:id="_hEHjZbRPEe2w4LjrQN7M_g" label="1" max="1" min="1"/>
+      <type xmi:id="_hEHjZrRPEe2w4LjrQN7M_g" name="int">
+        <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_hEHjZ7RPEe2w4LjrQN7M_g" defaultValue="0" name="cantCapacitaciones">
+      <modelElement href="EmpresaClase14.uml#_da6A47RPEe2w4LjrQN7M_g"/>
+      <stereotypes xmi:id="_hEHjaLRPEe2w4LjrQN7M_g" name="LegacyStyledElement">
+        <modelElement href="EmpresaClase14.uml#_da6n8LRPEe2w4LjrQN7M_g"/>
+      </stereotypes>
+      <visibility xmi:id="_hEHjabRPEe2w4LjrQN7M_g" label="-"/>
+      <cardinality xmi:id="_hEHjarRPEe2w4LjrQN7M_g" label="0..1" max="1"/>
+      <type xmi:id="_hEHja7RPEe2w4LjrQN7M_g" name="int">
+        <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_hEHjbLRPEe2w4LjrQN7M_g" defaultValue="new ArrayList&lt;Capacitacion>()" name="listaCapacitaciones">
+      <modelElement href="EmpresaClase14.uml#_da6n8bRPEe2w4LjrQN7M_g"/>
+      <stereotypes xmi:id="_hEHjbbRPEe2w4LjrQN7M_g" name="Generics">
+        <modelElement href="EmpresaClase14.uml#_da7PALRPEe2w4LjrQN7M_g"/>
+      </stereotypes>
+      <stereotypes xmi:id="_hEHjbrRPEe2w4LjrQN7M_g" name="LegacyStyledElement">
+        <modelElement href="EmpresaClase14.uml#_da72EbRPEe2w4LjrQN7M_g"/>
+      </stereotypes>
+      <visibility xmi:id="_hEHjb7RPEe2w4LjrQN7M_g" label="-"/>
+      <cardinality xmi:id="_hEHjcLRPEe2w4LjrQN7M_g" label="1" max="1" min="1"/>
+      <type xmi:id="_hEHjcbRPEe2w4LjrQN7M_g" name="ArrayList">
+        <modelElement href="EmpresaClase14.uml#_dafKILRPEe2w4LjrQN7M_g"/>
+      </type>
+    </attributes>
+    <operations xmi:id="_hEHjcrRPEe2w4LjrQN7M_g" name="Cliente">
+      <modelElement href="EmpresaClase14.uml#_dZr44LRPEe2w4LjrQN7M_g"/>
+      <keywords xmi:id="_hEHjc7RPEe2w4LjrQN7M_g" keyword="create"/>
+      <stereotypes xmi:id="_hEHjdLRPEe2w4LjrQN7M_g" name="LegacyStyledElement">
+        <modelElement href="EmpresaClase14.uml#_dZsf8rRPEe2w4LjrQN7M_g"/>
+      </stereotypes>
+      <visibility xmi:id="_hEHjdbRPEe2w4LjrQN7M_g" label="+"/>
+      <cardinality xmi:id="_hEHjdrRPEe2w4LjrQN7M_g" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_hEHjd7RPEe2w4LjrQN7M_g">
+        <modelElement href="EmpresaClase14.uml#_dZtHALRPEe2w4LjrQN7M_g"/>
+        <type xmi:id="_hEHjeLRPEe2w4LjrQN7M_g" name="Cliente">
+          <modelElement href="EmpresaClase14.uml#_dZqDsLRPEe2w4LjrQN7M_g"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_hEHjebRPEe2w4LjrQN7M_g" name="Cliente">
+      <modelElement href="EmpresaClase14.uml#_dZtuELRPEe2w4LjrQN7M_g"/>
+      <keywords xmi:id="_hEHjerRPEe2w4LjrQN7M_g" keyword="create"/>
+      <visibility xmi:id="_hEHje7RPEe2w4LjrQN7M_g" label="+"/>
+      <cardinality xmi:id="_hEHjfLRPEe2w4LjrQN7M_g" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_hEHjfbRPEe2w4LjrQN7M_g">
+        <modelElement href="EmpresaClase14.uml#_dZu8MLRPEe2w4LjrQN7M_g"/>
+        <type xmi:id="_hEHjfrRPEe2w4LjrQN7M_g" name="Cliente">
+          <modelElement href="EmpresaClase14.uml#_dZqDsLRPEe2w4LjrQN7M_g"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_hEHjf7RPEe2w4LjrQN7M_g" name="rut">
+        <modelElement href="EmpresaClase14.uml#_dZtuEbRPEe2w4LjrQN7M_g"/>
+        <cardinality xmi:id="_hEHjgLRPEe2w4LjrQN7M_g" label="1" max="1" min="1"/>
+        <type xmi:id="_hEHjgbRPEe2w4LjrQN7M_g" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_hEHjgrRPEe2w4LjrQN7M_g" name="nombres">
+        <modelElement href="EmpresaClase14.uml#_dZtuErRPEe2w4LjrQN7M_g"/>
+        <cardinality xmi:id="_hEHjg7RPEe2w4LjrQN7M_g" label="1" max="1" min="1"/>
+        <type xmi:id="_hEHjhLRPEe2w4LjrQN7M_g" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_hEHjhbRPEe2w4LjrQN7M_g" name="apellidos">
+        <modelElement href="EmpresaClase14.uml#_dZuVILRPEe2w4LjrQN7M_g"/>
+        <cardinality xmi:id="_hEHjhrRPEe2w4LjrQN7M_g" label="1" max="1" min="1"/>
+        <type xmi:id="_hEHjh7RPEe2w4LjrQN7M_g" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_hEHjiLRPEe2w4LjrQN7M_g" name="telefono">
+        <modelElement href="EmpresaClase14.uml#_dZuVIbRPEe2w4LjrQN7M_g"/>
+        <cardinality xmi:id="_hEHjibRPEe2w4LjrQN7M_g" label="1" max="1" min="1"/>
+        <type xmi:id="_hEHjirRPEe2w4LjrQN7M_g" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_hEHji7RPEe2w4LjrQN7M_g" name="afp">
+        <modelElement href="EmpresaClase14.uml#_dZuVIrRPEe2w4LjrQN7M_g"/>
+        <cardinality xmi:id="_hEHjjLRPEe2w4LjrQN7M_g" label="1" max="1" min="1"/>
+        <type xmi:id="_hEHjjbRPEe2w4LjrQN7M_g" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_hEHjjrRPEe2w4LjrQN7M_g" name="sistemaSalud">
+        <modelElement href="EmpresaClase14.uml#_dZuVI7RPEe2w4LjrQN7M_g"/>
+        <cardinality xmi:id="_hEHjj7RPEe2w4LjrQN7M_g" label="1" max="1" min="1"/>
+        <type xmi:id="_hEHjkLRPEe2w4LjrQN7M_g" name="char">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#char"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_hEHjkbRPEe2w4LjrQN7M_g" name="direccion">
+        <modelElement href="EmpresaClase14.uml#_dZuVJLRPEe2w4LjrQN7M_g"/>
+        <cardinality xmi:id="_hEHjkrRPEe2w4LjrQN7M_g" label="1" max="1" min="1"/>
+        <type xmi:id="_hEHjk7RPEe2w4LjrQN7M_g" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_hEHjlLRPEe2w4LjrQN7M_g" name="comuna">
+        <modelElement href="EmpresaClase14.uml#_dZuVJbRPEe2w4LjrQN7M_g"/>
+        <cardinality xmi:id="_hEHjlbRPEe2w4LjrQN7M_g" label="1" max="1" min="1"/>
+        <type xmi:id="_hEHjlrRPEe2w4LjrQN7M_g" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_hEHjl7RPEe2w4LjrQN7M_g" name="edad">
+        <modelElement href="EmpresaClase14.uml#_dZuVJrRPEe2w4LjrQN7M_g"/>
+        <cardinality xmi:id="_hEHjmLRPEe2w4LjrQN7M_g" label="1" max="1" min="1"/>
+        <type xmi:id="_hEHjmbRPEe2w4LjrQN7M_g" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_hEHjmrRPEe2w4LjrQN7M_g" name="toString">
+      <modelElement href="EmpresaClase14.uml#_dZu8MbRPEe2w4LjrQN7M_g"/>
+      <stereotypes xmi:id="_hEHjm7RPEe2w4LjrQN7M_g" name="LegacyStyledElement">
+        <modelElement href="EmpresaClase14.uml#_dZvjQbRPEe2w4LjrQN7M_g"/>
+      </stereotypes>
+      <stereotypes xmi:id="_hEHjnLRPEe2w4LjrQN7M_g" name="Annotations">
+        <modelElement href="EmpresaClase14.uml#_dZwKULRPEe2w4LjrQN7M_g"/>
+      </stereotypes>
+      <visibility xmi:id="_hEHjnbRPEe2w4LjrQN7M_g" label="+"/>
+      <cardinality xmi:id="_hEHjnrRPEe2w4LjrQN7M_g" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_hEHjn7RPEe2w4LjrQN7M_g">
+        <modelElement href="EmpresaClase14.uml#_dZvjQLRPEe2w4LjrQN7M_g"/>
+        <type xmi:id="_hEHjoLRPEe2w4LjrQN7M_g" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_hEHjobRPEe2w4LjrQN7M_g" name="obtenerNombre">
+      <modelElement href="EmpresaClase14.uml#_dZwKUrRPEe2w4LjrQN7M_g"/>
+      <visibility xmi:id="_hEHjorRPEe2w4LjrQN7M_g" label="+"/>
+      <cardinality xmi:id="_hEHjo7RPEe2w4LjrQN7M_g" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_hEHjpLRPEe2w4LjrQN7M_g">
+        <modelElement href="EmpresaClase14.uml#_dZwKU7RPEe2w4LjrQN7M_g"/>
+        <type xmi:id="_hEHjpbRPEe2w4LjrQN7M_g" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_hEHjprRPEe2w4LjrQN7M_g" name="obtenerSistemaSalud">
+      <modelElement href="EmpresaClase14.uml#_dZwxYLRPEe2w4LjrQN7M_g"/>
+      <visibility xmi:id="_hEHjp7RPEe2w4LjrQN7M_g" label="+"/>
+      <cardinality xmi:id="_hEHjqLRPEe2w4LjrQN7M_g" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_hEHjqbRPEe2w4LjrQN7M_g">
+        <modelElement href="EmpresaClase14.uml#_dZwxYbRPEe2w4LjrQN7M_g"/>
+        <type xmi:id="_hEHjqrRPEe2w4LjrQN7M_g" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_hEHjq7RPEe2w4LjrQN7M_g" name="agregarCapacitaciones">
+      <modelElement href="EmpresaClase14.uml#_dakpsLRPEe2w4LjrQN7M_g"/>
+      <visibility xmi:id="_hEHjrLRPEe2w4LjrQN7M_g" label="+"/>
+      <cardinality xmi:id="_hEHjrbRPEe2w4LjrQN7M_g" label="1" max="1" min="1"/>
+      <parameters xmi:id="_hEHjrrRPEe2w4LjrQN7M_g" name="nuevaCapacitacion">
+        <modelElement href="EmpresaClase14.uml#_dakpsbRPEe2w4LjrQN7M_g"/>
+        <cardinality xmi:id="_hEHjr7RPEe2w4LjrQN7M_g" label="1" max="1" min="1"/>
+        <type xmi:id="_hEHjsLRPEe2w4LjrQN7M_g" name="Capacitacion">
+          <modelElement href="EmpresaClase14.uml#_dZedgLRPEe2w4LjrQN7M_g"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_bbYuQLRREe2w4LjrQN7M_g" name="setCantCapacitaciones">
+      <modelElement href="EmpresaClase14.uml#_bbW5ELRREe2w4LjrQN7M_g"/>
+      <visibility xmi:id="_bbYuQbRREe2w4LjrQN7M_g" label="+"/>
+      <cardinality xmi:id="_bbYuQrRREe2w4LjrQN7M_g" label="1" max="1" min="1"/>
+      <parameters xmi:id="_bbYuQ7RREe2w4LjrQN7M_g" name="cantCapacitaciones">
+        <modelElement href="EmpresaClase14.uml#_bbW5EbRREe2w4LjrQN7M_g"/>
+        <cardinality xmi:id="_bbYuRLRREe2w4LjrQN7M_g" label="1" max="1" min="1"/>
+        <type xmi:id="_bbYuRbRREe2w4LjrQN7M_g" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_bcDcoLRREe2w4LjrQN7M_g" name="getCantCapacitaciones">
+      <modelElement href="EmpresaClase14.uml#_bbW5ErRREe2w4LjrQN7M_g"/>
+      <visibility xmi:id="_bcDcobRREe2w4LjrQN7M_g" label="+"/>
+      <cardinality xmi:id="_bcDcorRREe2w4LjrQN7M_g" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_bcDco7RREe2w4LjrQN7M_g">
+        <modelElement href="EmpresaClase14.uml#_bbW5FLRREe2w4LjrQN7M_g"/>
+        <type xmi:id="_bcDcpLRREe2w4LjrQN7M_g" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_bcDcpbRREe2w4LjrQN7M_g" name="cantCapacitaciones">
+        <modelElement href="EmpresaClase14.uml#_bbW5E7RREe2w4LjrQN7M_g"/>
+        <cardinality xmi:id="_bcDcprRREe2w4LjrQN7M_g" label="1" max="1" min="1"/>
+        <type xmi:id="_bcDcp7RREe2w4LjrQN7M_g" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </parameters>
+    </operations>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_kUP3QLRPEe2w4LjrQN7M_g" name="ArrayList" associationsIn="_hEQtMLRPEe2w4LjrQN7M_g _hEG8MLRPEe2w4LjrQN7M_g">
+    <modelElement href="EmpresaClase14.uml#_dafKILRPEe2w4LjrQN7M_g"/>
+    <visualProperties xmi:id="_kUP3QbRPEe2w4LjrQN7M_g" position="2436.0,-311.0" size="-1.0,-1.0"/>
+    <stereotypes xmi:id="_kUP3QrRPEe2w4LjrQN7M_g" name="Reference">
+      <modelElement href="EmpresaClase14.uml#_dafxMLRPEe2w4LjrQN7M_g"/>
+    </stereotypes>
+    <visibility xmi:id="_kUP3Q7RPEe2w4LjrQN7M_g" label="+"/>
+  </nodes>
+</com.yattasolutions.uml.diagrams.classifier:ClassDiagram>
