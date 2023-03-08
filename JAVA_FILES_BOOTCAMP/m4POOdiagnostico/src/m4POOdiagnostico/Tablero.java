@@ -39,25 +39,19 @@ public class Tablero {
     	
     	//CREA OBJETOS KROMI Y LO AÑADE AL ARRAY
     	for(int i = 0; i < kromis; i++) {
-    		
     		//listaCarro[indicePosicion] = kromi;
-
     		ubicarKromi();
     		indicePosicion++;
     	}
     	//CREA OBJETOS CAGUANO Y LO AÑADE AL ARRAY
     	for(int i = 0; i < caguanos; i++) {
-    		Carro caguano = new Caguano();
     		//listaCarro[indicePosicion] = caguano;
-    		listaCarro.add(caguano);
     		ubicarCaguano();
     		indicePosicion++;
     	}
     	//CREA OBJETOS TRUPALLA Y LO AÑADE AL ARRAY
     	for(int i = 0; i < trupallas; i++) {
-    		Carro trupalla = new Trupalla();
     		//listaCarro[indicePosicion] = trupalla;
-    		listaCarro.add(trupalla);
     		ubicarTrupalla();
     		indicePosicion++;
     	}      
@@ -108,6 +102,7 @@ public class Tablero {
     	//2 METROS Y HORIZONTAL
     	int x = (int)(Math.random() * 15);
     	int y = (int)(Math.random() * 14);
+    	int [][] punto = new int[2][2];
     	
     	if(matrix[x][y] == ' ' && matrix[x][y+1] == ' ') {
     		matrix[x][y] = 'C';
@@ -123,12 +118,26 @@ public class Tablero {
                 }
     		}
     	}
+    	punto[0][0] = x;
+		punto[0][1] = y;
+		
+		punto[1][0] = x;
+		punto[1][1] = y+1;
+		
+		
+		Carro caguano = new Caguano();
+		listaCarro.add(caguano);
+		ArrayList<int[][]> listaCoordenadas = new ArrayList<>();
+		listaCoordenadas.add(punto);
+		caguano.setCoordenadas(listaCoordenadas);
+		
     }
     
     public void ubicarTrupalla(){
     	//1 METRO
     	int x = (int)(Math.random() * 15);
     	int y = (int)(Math.random() * 15);
+    	int [][] punto = new int[1][2];
     	
     	if(matrix[x][y] == ' ') {
     		matrix[x][y] = 'T';
@@ -143,6 +152,14 @@ public class Tablero {
                 }
     		}
     	}
+    	punto[0][0] = x;
+    	punto[0][1] = y;
+    	
+		Carro trupalla = new Trupalla();
+		listaCarro.add(trupalla);
+		ArrayList<int[][]> listaCoordenadas = new ArrayList<>();
+		listaCoordenadas.add(punto);
+		trupalla.setCoordenadas(listaCoordenadas);
     }
     
     public void mostrarPlano() {
@@ -173,65 +190,112 @@ public class Tablero {
     
     
     public void lanzarHuevo(){
+    	String regEx = "^(0|[1-9]|1[0-4])(?<!00)$";
+    	String coorX = "";
+    	String coorY = "";
+    	Scanner input = new Scanner(System.in);
+    	
         System.out.println("\nEs tu turno de lanzar huevos");
         int x = -1, y = -1;
         do {
-            Scanner input = new Scanner(System.in);
             System.out.print("Ingresa la coordenada X: ");
-            x = input.nextInt();
-            if(x < 0 || x > 14 ) {
-            	System.out.println("Ingresa una coordenada X que este dentro del tablero");
-            }
-            else {
-            System.out.print("Ingresa la coordenada Y: ");
-            y = input.nextInt();
-	            if(y < 0 || y > 14) {
-	            	System.out.println("Ingresa una coordenada Y que este dentro del tablero");
+            coorX = input.nextLine();
+            
+            //x = input.nextInt();
+            
+            if(!coorX.matches("^(0|[1-9]|1[0-4])(?<!00)$")) {
+            	System.out.println("Ingresa una coordenada X que esté dentro del tablero");
+            }else {
+            	x = Integer.parseInt(coorX);
+            	System.out.print("Ingresa la coordenada Y: ");
+            	coorY = input.nextLine();
+            	//y = input.nextInt();
+	            if(!coorY.matches(regEx)) {
+	            	System.out.println("Ingresa una coordenada Y que esté dentro del tablero");
+	            }else {
+	            	y = Integer.parseInt(coorY);	            	
 	            }
             }
 
-            if ((x >= 0 && x < 15) && (y >= 0 && y < 15)) //intento valido
+            if ((x >= 0 && x < 15) && (y >= 0 && y < 15)) //intento válido
             {
                 if (matrix[x][y] == 'T') //si es que le pega a un Trupalla
                 {
                     System.out.println("Boom! Le achuntaste a un Trupalla");
-                    matrix[x][y] = 'H'; //Hit mark
+                    matrix[x][y] = 'H'; //marca que lo golpeó
                     puntajeObtenido.add(1); 
                     System.out.println("+1 punto"); //DEBUG
                     mostrarPlano();
-                    
-                }else if(matrix[x][y] == 'C') {
+                }
+                else if(matrix[x][y] == 'C') {
                 	System.out.println("BOOM! le diste a un Caguano");
                 	matrix[x][y] = 'H';
                 	puntajeObtenido.add(2);
                 	System.out.println("+2 puntos"); //DEBUG
-                	if ((matrix[x][y] == 'H' && matrix[x][y+1] == 'H') || (matrix[x][y] =='H' && matrix[x][y-1] == 'H')) {
-                		System.out.println("Felicidades! Hundiste un Caguano");
-                		puntajeObtenido.add(7);
-                		System.out.println("+7 puntos"); //DEBUG
+                		if ((y == 0) && (matrix[x][y] == 'H' && matrix[x][y+1] == 'H')) // verifica si esta en el extremo izquiero, y si esque se hundio o no el caguano
+                		{	
+                			System.out.println("Felicidades! Hundiste un Caguano");
+                			puntajeObtenido.add(7);
+                			System.out.println("+7 puntos"); //DEBUG
+                		}
+                		else if((y == 14) && (matrix[x][y] =='H' && matrix[x][y-1] == 'H')) // verifica que esta en el extremo derecho y si esque se hundio un caguano
+                		{
+                			System.out.println("Felicidades! Hundiste un Caguano");
+                			puntajeObtenido.add(7);
+                			System.out.println("+7 puntos"); //DEBUG
+                		}
+                		else if((y >= 1 || y <= 13) && (matrix[x][y] == 'H' && matrix[x][y+1] == 'H') || (matrix[x][y] =='H' && matrix[x][y-1] == 'H')) //verifica que no este en los extremos y si esque el caguano se hundio o no 
+                		{
+                			System.out.println("Felicidades! Hundiste un Caguano");
+                			puntajeObtenido.add(7);
+                			System.out.println("+7 puntos"); //DEBUG
+                			
+                		}
+                		else{
+                			mostrarPlano(); 
                 	}
-                	mostrarPlano();
+                		
                 }else if(matrix[x][y] == 'K') {
                 	System.out.println("POW! le diste a una Kromi");
                 	matrix[x][y] = 'H';
                 	puntajeObtenido.add(3);
-                	if((matrix[x][y] == 'H' && matrix[x+1][y] == 'H' && matrix[x+2][y] == 'H') || 
-                		(matrix[x][y] == 'H' && matrix[x-1][y] == 'H' && matrix[x-2][y] == 'H') || 
-                		(matrix[x][y] == 'H' && matrix[x+1][y] == 'H' && matrix[x-1][y] == 'H') ) {
+                	if((x == 0) && (matrix[x][y] == 'H' && matrix[x+1][y] == 'H' && matrix[x+2][y] == 'H')) //verifica que esta en el extremo superior, y si esque la kromi se hundio o no
+                	{
                 		System.out.println("Felicidades! Hundiste una Kromi");
                 		puntajeObtenido.add(10);
-                		System.out.println("+10 puntos"); //DEBUG
+                		System.out.println("+10 puntos I"); //DEBUG
+                		mostrarPlano();
                 	}
-                	mostrarPlano();
+                	else if ((x == 14) && (matrix[x][y] == 'H' && matrix[x-1][y] == 'H' && matrix[x-2][y] == 'H') ) {
+                		System.out.println("Felicidades! Hundiste una Kromi");
+                		puntajeObtenido.add(10);
+                		System.out.println("+10 puntos II"); //DEBUG
+                		mostrarPlano();
+                	}
+                	else if((x >= 2 && x <=12) && ((matrix[x][y] == 'H' && matrix[x+1][y] == 'H' && matrix[x+2][y] == 'H') || (matrix[x][y] == 'H' && matrix[x-1][y] == 'H' && matrix[x-2][y] == 'H') )) {
+                		System.out.println("Felicidades! Hundiste una Kromi");
+                		puntajeObtenido.add(10);
+                		System.out.println("+10 puntos IV"); //DEBUG
+                		mostrarPlano();
+                		if ((x >= 1 || x <=13) && (matrix[x][y] == 'H' && matrix[x+1][y] == 'H' && matrix[x-1][y] == 'H') ) {
+                			System.out.println("Felicidades! Hundiste una Kromi");
+                			puntajeObtenido.add(10);
+                			System.out.println("+10 puntos III"); //DEBUG
+                			mostrarPlano();
+                		}
+                	}
+                	else { 
+                		mostrarPlano();
+                	}
                 }else if (matrix[x][y] == ' ' || matrix[x][y] == 'H') {
                     System.out.println("Sorry, no golpeaste nada");
-                    //matrix[x][y] = '~';
                     matrix[x][y] = 'H';
                     mostrarPlano();
-                }else if ((x < 0 || x >= 15) || (y < 0 || y >= 15))  //intento invalido
+                }else if ((x < 0 || x >= 15) || (y < 0 || y >= 15))  //intento inválido
                 	System.out.println("No puedes poner coordenadas que no se encuentran dentro del tablero");
                 }}
-        while((x < 0 || x >= 15) || (y < 0 || y >= 15));  //keep re-prompting till valid guess
+        //while((x < 0 || x >= 15) || (y < 0 || y >= 15));  //keep re-prompting till valid guess
+        while(!coorX.matches(regEx) || !coorY.matches(regEx));
     }
     
     public void puntaje() {
@@ -272,15 +336,16 @@ public class Tablero {
 			    while (true) {
 			        lanzarHuevo();
 			        contadorHuevos++;
-			        System.out.print("¿Deseas lanzar otro huevo? (s/n): ");
+			        System.out.print("[+] ¿Deseas lanzar otro huevo? (s/n): ");
 			        String respuesta = input.next();
 			        if (respuesta.trim().equalsIgnoreCase("s")) {
 			            continue;
 			        } else if (respuesta.trim().equalsIgnoreCase("n")) {
-			            System.out.println("Se lanzaron " + contadorHuevos + " huevos.");
+			            System.out.println("[!] Se lanzaron " + contadorHuevos + " huevos.");
 			            break;
 			        } else {
-			            System.out.println("Respuesta inválida. Por favor ingrese 's' o 'n'.");
+			            System.out.println("[+] Respuesta inválida. Por favor ingrese 's' o 'n'.");
+			            continue;
 			        }
 			    }
 				break;
