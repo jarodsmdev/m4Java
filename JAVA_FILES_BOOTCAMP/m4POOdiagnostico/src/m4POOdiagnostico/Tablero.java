@@ -279,18 +279,21 @@ public class Tablero {
                 			System.out.println("Felicidades! Hundiste un Caguano");
                 			puntajeObtenido.add(7);
                 			System.out.println("+7 puntos"); //DEBUG
+                			mostrarHuevo(); 
                 		}
                 		else if((y == 14) && (matrix[x][y] =="H" && matrix[x][y-1] == "H")) // verifica que esta en el extremo derecho y si esque se hundio un caguano
                 		{
                 			System.out.println("Felicidades! Hundiste un Caguano");
                 			puntajeObtenido.add(7);
                 			System.out.println("+7 puntos"); //DEBUG
+                			mostrarHuevo(); 
                 		}
                 		else if(((y >= 1 || y <= 13) && (y != 14 && y!=0)) && ((matrix[x][y] == "H" && matrix[x][y+1] == "H") || (matrix[x][y] =="H" && matrix[x][y-1] == "H"))) //verifica que no este en los extremos y si esque el caguano se hundio o no 
                 		{
                 			System.out.println("Felicidades! Hundiste un Caguano");
                 			puntajeObtenido.add(7);
                 			System.out.println("+7 puntos"); //DEBUG
+                			mostrarHuevo(); 
                 			
                 		}
                 		else{
@@ -305,24 +308,24 @@ public class Tablero {
                 	{
                 		System.out.println("Felicidades! Destruiste una Kromi");
                 		puntajeObtenido.add(10);
-                		System.out.println("+10 puntos I"); //DEBUG
+                		System.out.println("+10 puntos"); //DEBUG
                 		mostrarHuevo();
                 	}
                 	else if ((x == 14) && (matrix[x][y] == "H" && matrix[x-1][y] == "H" && matrix[x-2][y] == "H") ) {
                 		System.out.println("Felicidades! Destruiste una Kromi");
                 		puntajeObtenido.add(10);
-                		System.out.println("+10 puntos II"); //DEBUG
+                		System.out.println("+10 puntos"); //DEBUG
                 		mostrarHuevo();
                 	}
                 	else if((x >= 2 && x <=12) && ((matrix[x][y] == "H" && matrix[x+1][y] == "H" && matrix[x+2][y] == "H") || (matrix[x][y] == "H" && matrix[x-1][y] == "H" && matrix[x-2][y] == "H") )) {
                 		System.out.println("Felicidades! Destruiste una Kromi");
                 		puntajeObtenido.add(10);
-                		System.out.println("+10 puntos IV"); //DEBUG
+                		System.out.println("+10 puntos"); //DEBUG
                 		mostrarHuevo();
                 		if ((x >= 1 || x <=13) && (matrix[x][y] == "H" && matrix[x+1][y] == "H" && matrix[x-1][y] == "H") ) {
                 			System.out.println("Felicidades! Destruiste una Kromi");
                 			puntajeObtenido.add(10);
-                			System.out.println("+10 puntos III"); //DEBUG
+                			System.out.println("+10 puntos"); //DEBUG
                 			mostrarHuevo();
                 		}
                 	}
