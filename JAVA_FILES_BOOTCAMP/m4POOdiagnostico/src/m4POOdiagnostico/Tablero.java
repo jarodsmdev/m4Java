@@ -402,7 +402,7 @@ public class Tablero {
 			case 2:
 				System.out.println("Mostrar Tablero");
 				mostrarHuevo();
-				//mostrarPlano(); //DEBUG
+				mostrarPlano(); //DEBUG
 				break;
 			case 3:
 				System.out.println("Calcular Puntaje");
@@ -410,7 +410,7 @@ public class Tablero {
 				puntaje();
 				break;
 			case 4:
-				System.out.println("Fin del juego");
+				System.out.println("\n[!] Fin del juego");
 				mostrarPlano();
 				CarrosRestantes();
 				puntaje();
@@ -470,7 +470,7 @@ public class Tablero {
     public void CarrosRestantes() {
     	int carros = 0;
     	int T = 0;
-    	int C =0;
+    	int C = 0;
     	int K = 0;
     	for(int i = 0; i < 15; i++) {
     		for(int j = 0; j < 15; j++) {
@@ -484,7 +484,7 @@ public class Tablero {
     				K++;
     			}
     		}
-    		carros = (K/3)+(C/2)+T;
+    		carros = K+C+T;
     	}
     	if(carros == 0) {
     		System.out.println("[!] ¡¡FELICIDADES!! HAS DERROTADO A TODOS LOS CARROS PKS");
@@ -495,10 +495,10 @@ public class Tablero {
     		//Finalizar Juego
     		System.exit(0);
     	}else {
-    		System.out.println("\nTrupallas: " + T);
-    		System.out.println("Caguanos: " + C);
-    		System.out.println("Kromis: " + K);
-    		System.out.println("Aún hay: " + carros + " Carros");
+    		//System.out.println("\nTrupallas: " + T);
+    		//System.out.println("Caguanos: " + C/2);
+    		//System.out.println("Kromis: " + K/3);
+    		System.out.println("\nAún hay carros que destruir");
     	}
     }
     
