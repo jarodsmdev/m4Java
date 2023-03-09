@@ -10,7 +10,7 @@ public class Principal {
 		// TODO Auto-generated method stub
 		Tablero tablero = new Tablero();
 		tablero.crearCarros();
-		tablero.mostrarPlano();
+		//tablero.mostrarPlano();
 		tablero.menu();
 	}
 	
