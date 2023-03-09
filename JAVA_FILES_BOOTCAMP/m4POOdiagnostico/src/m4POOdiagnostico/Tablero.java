@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.Random;
 import java.util.Scanner;
+
 /**
  * La clase Tablero representa el tablero de juego.
  */
@@ -61,11 +62,10 @@ public class Tablero {
     }
 
     /**
-
-     Este método se encarga de ubicar una instancia de la clase Kromi en una posición aleatoria dentro de la matriz del juego.
-     La posición debe ser horizontal y ocupar tres celdas contiguas en una misma fila.
-     Si la posición aleatoria elegida no cumple con los requisitos, el método intenta encontrar una nueva posición hasta que lo logra.
-     Después de ubicar la Kromi, se agrega a la lista de carros del juego y se asignan sus coordenadas y otros atributos.
+     * Este método se encarga de ubicar una instancia de la clase Kromi en una posición aleatoria dentro de la matriz del juego.
+     * La posición debe ser horizontal y ocupar tres celdas contiguas en una misma fila.
+     * Si la posición aleatoria elegida no cumple con los requisitos, el método intenta encontrar una nueva posición hasta que lo logra.
+     * Después de ubicar la Kromi, se agrega a la lista de carros del juego y se asignan sus coordenadas y otros atributos.
      */
     public void ubicarKromi() {
         //3 METROS Y VERTICAL
@@ -107,11 +107,11 @@ public class Tablero {
         kromi.setCantOcupantes(getRandom(15, 0));
         kromi.setFechaIngreso("14/01/1999");
     }
-    /**
 
-     Método para ubicar dos caguamas en la matriz de juego de forma aleatoria.
-     Las caguamas ocupan dos espacios contiguos horizontalmente.
-     Si los espacios elegidos aleatoriamente no están vacíos, se repite el proceso hasta encontrar dos espacios contiguos vacíos.
+    /**
+     * Método para ubicar dos caguamas en la matriz de juego de forma aleatoria.
+     * Las caguamas ocupan dos espacios contiguos horizontalmente.
+     * Si los espacios elegidos aleatoriamente no están vacíos, se repite el proceso hasta encontrar dos espacios contiguos vacíos.
      */
     public void ubicarCaguano() {
         //2 METROS Y HORIZONTAL
@@ -133,12 +133,13 @@ public class Tablero {
             }
         }
     }
-    /**
 
-     Este método ubica una Trupalla en una posición aleatoria dentro de una matriz de 15x15.
-     Si la posición aleatoria ya está ocupada por otro elemento en la matriz, el método seguirá buscando una posición libre.
-     Si encuentra una posición libre, colocará la Trupalla en esa posición.
-     @return void
+    /**
+     * Este método ubica una Trupalla en una posición aleatoria dentro de una matriz de 15x15.
+     * Si la posición aleatoria ya está ocupada por otro elemento en la matriz, el método seguirá buscando una posición libre.
+     * Si encuentra una posición libre, colocará la Trupalla en esa posición.
+     *
+     * @return void
      */
 
     public void ubicarTrupalla() {
@@ -160,18 +161,19 @@ public class Tablero {
             }
         }
     }
-    /**
 
-     Este método muestra en consola una representación visual de una matriz en la que se encuentra un huevo.
-     La matriz es de 15x15 y cada celda puede contener un huevo ("H") o estar vacía (" ").
-     El método muestra en la parte superior de la matriz los números correspondientes a las columnas y a la izquierda los números correspondientes a las filas.
-     Si una celda contiene un huevo, el método lo muestra como "H" y si está vacía, muestra un espacio en blanco.
-     @return void
+    /**
+     * Este método muestra en consola una representación visual de una matriz en la que se encuentra un huevo.
+     * La matriz es de 15x15 y cada celda puede contener un huevo ("H") o estar vacía (" ").
+     * El método muestra en la parte superior de la matriz los números correspondientes a las columnas y a la izquierda los números correspondientes a las filas.
+     * Si una celda contiene un huevo, el método lo muestra como "H" y si está vacía, muestra un espacio en blanco.
+     *
+     * @return void
      */
 
     public void mostrarHuevo() {
 
-     //    horizontal numeros
+        // Imprimir números horizontales
         System.out.print("  ");
         for (int i = 0; i < matrix.length; i++) {
             if (i <= 14) {
@@ -182,46 +184,46 @@ public class Tablero {
         }
         System.out.println();
 
-//
-
-
-        // vertical numeros
+        // Imprimir matriz
         for (int i = 0; i < matrix.length; i++) {
             for (int j = 0; j < matrix[i].length; j++) {
                 if (matrix[i][j].equals("H")) {
-                    if (j == 0) {
-                        System.out.print(String.format("%2d", i) + "|");
-                    }
-                    System.out.print(matrix[i][j]);
-                } else {
+                    // Imprimir número vertical y valor de la matriz
                     if (j == 0) {
                         System.out.print(String.format("%2d", i) + "| ");
-                    } else {
-                        System.out.print("  ");
                     }
+                    System.out.print(String.format("%2s", matrix[i][j]));
+                } else {
+                    // Imprimir espacio vacío
+                    if (j == 0) {
+                        System.out.print(String.format("%2d", i) + "| ");
+                    }
+                    System.out.print("  ");
                 }
                 System.out.print("|");
             }
             System.out.println();
         }
 
-    }
-    /**
 
-     Este método muestra en consola una representación visual de una matriz de 15x15.
-     El método muestra en la parte superior de la matriz los números correspondientes a las columnas y a la izquierda los números correspondientes a las filas.
-     Cada celda de la matriz contiene un elemento que puede ser un tanque ("T"), una trupalla ("H"), un huevo ("H"), una pared ("#") o estar vacía (" ").
-     El método muestra cada elemento en su respectiva celda, separados por un "|".
-     @return void
+    }
+
+    /**
+     * Este método muestra en consola una representación visual de una matriz de 15x15.
+     * El método muestra en la parte superior de la matriz los números correspondientes a las columnas y a la izquierda los números correspondientes a las filas.
+     * Cada celda de la matriz contiene un elemento que puede ser un tanque ("T"), una trupalla ("H"), un huevo ("H"), una pared ("#") o estar vacía (" ").
+     * El método muestra cada elemento en su respectiva celda, separados por un "|".
+     *
+     * @return void
      */
 
-        public void mostrarPlano() {
+    public void mostrarPlano() {
 
 
         //SUPERIOR DEL PLANO
         System.out.print("  ");
         for (int i = 0; i < matrix.length; i++)
-            if (i <= 9) {
+            if (i <= 14) {
                 System.out.print(String.format("%2d", i));
 
             } else {
@@ -244,11 +246,10 @@ public class Tablero {
     }
 
     /**
-
-     Método que permite al jugador lanzar un huevo en una coordenada del tablero.
-     Si el jugador acierta en una nave, se actualiza el puntaje del jugador y se marca la casilla como acertada.
-     Si el jugador no acierta en ninguna nave, se marca la casilla como fallida.
-     Se muestra el estado actual del tablero después de cada intento.
+     * Método que permite al jugador lanzar un huevo en una coordenada del tablero.
+     * Si el jugador acierta en una nave, se actualiza el puntaje del jugador y se marca la casilla como acertada.
+     * Si el jugador no acierta en ninguna nave, se marca la casilla como fallida.
+     * Se muestra el estado actual del tablero después de cada intento.
      */
     public void lanzarHuevo() {
         System.out.println("\nEs tu turno de lanzar huevos");
