@@ -1,4 +1,7 @@
-package m4POOdiagnostico;
+
+/**
+ * @authors Valentina Saldías, Priscila Carrillo, Andrés Contreras, Kevin Moreno, Leonel Briones
+ */package m4POOdiagnostico;
 
 public class Trupalla extends Carro{
 
