@@ -355,7 +355,7 @@ public class Tablero {
     }
     
     /**
-     * 
+     * MENÚ PRINCIPAL
      */
     public void menu() {
 		Scanner input = new Scanner(System.in);
@@ -402,7 +402,7 @@ public class Tablero {
 			case 2:
 				System.out.println("Mostrar Tablero");
 				mostrarHuevo();
-				mostrarPlano();
+				//mostrarPlano(); //DEBUG
 				break;
 			case 3:
 				System.out.println("Calcular Puntaje");
@@ -412,6 +412,7 @@ public class Tablero {
 			case 4:
 				System.out.println("Fin del juego");
 				mostrarPlano();
+				CarrosRestantes();
 				puntaje();
 				break;
 			default:
@@ -431,9 +432,9 @@ public class Tablero {
     public void mostrarHuevo() {
 
         // Imprimir números horizontales
-        System.out.print("  ");
+        System.out.print("    ");
         for (int i = 0; i < matrix.length; i++) {
-            if (i <= 14) { // Números de 1 a 14 ocupan 2 espacios, el resto ocupa 1 espacio
+            if (i <= 14) {
                 System.out.print(String.format("%2d ", i));
             } else {
                 System.out.print(i);
@@ -441,29 +442,28 @@ public class Tablero {
         }
         System.out.println();
 
-        // Imprimir contenido de la matriz
+        // Imprimir matriz
         for (int i = 0; i < matrix.length; i++) {
             for (int j = 0; j < matrix[i].length; j++) {
-                if (matrix[i][j].equals("H")) { // Si la celda contiene un huevo, imprimir "H"
-                    System.out.print(String.format("%2d", i) + "|"); // Imprimir número de fila y separador
+                if (matrix[i][j].equals("H")) {
+                    // Imprimir número vertical y valor de la matriz
                     if (j == 0) {
-                        System.out.print(matrix[i][j]); // Si es la primera columna, solo imprimir la H
-                    } else {
-                        System.out.print(" " + matrix[i][j]); // Si no es la primera columna, imprimir un espacio en blanco antes de la H
+                        System.out.print(String.format("%2d", i) + "| ");
                     }
-                    System.out.print("|"); // Imprimir separador entre celdas
-                } else { // Si la celda está vacía, imprimir un espacio en blanco
-                    if (j == 0) { // Si es la primera columna, imprimir número de fila y separador
-                        System.out.print(String.format("%2d", i) + "|");
-                    } else {
-                        System.out.print("  ");
+                    System.out.print(String.format("%2s", matrix[i][j]));
+                } else {
+                    // Imprimir espacio vacío
+                    if (j == 0) {
+                        System.out.print(String.format("%2d", i) + "| ");
                     }
-                    System.out.print("|"); // Imprimir separador entre celdas
+                    System.out.print("  ");
                 }
+                System.out.print("|");
             }
-            System.out.println(); // Cambiar de línea después de cada fila
+            System.out.println();
         }
-}
+    }
+
 /**
  * Cuenta cantidad de carros para validar el termino del juego
  */
@@ -498,11 +498,16 @@ public class Tablero {
     		System.out.println("\nTrupallas: " + T);
     		System.out.println("Caguanos: " + C);
     		System.out.println("Kromis: " + K);
-    		
     		System.out.println("Aún hay: " + carros + " Carros");
     	}
     }
     
+    /**
+     * 
+     * @param max número maximo a elegir
+     * @param min numero minimo a elegir
+     * @return numero aleatorio entre el numero max y minimo
+     */
 	public static int getRandom(int max, int min) {
 		Random num = new Random();
 		return num.nextInt(max+min);
