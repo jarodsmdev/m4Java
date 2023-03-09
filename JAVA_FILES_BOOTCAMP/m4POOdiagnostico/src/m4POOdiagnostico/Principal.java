@@ -1,4 +1,6 @@
 package m4POOdiagnostico;
+import java.util.Scanner;
+import java.util.InputMismatchException;
 
 
 public class Principal {
@@ -7,8 +9,9 @@ public class Principal {
 		// TODO Auto-generated method stub
 		Tablero tablero = new Tablero();
 		tablero.crearCarros();
-		tablero.mostrarPlano();
+		//tablero.mostrarPlano();
 		tablero.menu();
+		tablero.mostrarHuevo();
 	}
 	
 	
