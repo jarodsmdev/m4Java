@@ -296,7 +296,6 @@ public class Tablero {
                 }else if ((x < 0 || x >= 15) || (y < 0 || y >= 15))  //intento inválido
                 	System.out.println("No puedes poner coordenadas que no se encuentran dentro del tablero");
                 }}
-        //while((x < 0 || x >= 15) || (y < 0 || y >= 15));  //keep re-prompting till valid guess
         while(!coorX.matches(regEx) || !coorY.matches(regEx));
     }
     
