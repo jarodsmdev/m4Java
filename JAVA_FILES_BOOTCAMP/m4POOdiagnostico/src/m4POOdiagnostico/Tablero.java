@@ -1,3 +1,7 @@
+
+/**
+ * @authors Valentina Saldías, Priscila Carrillo, Andrés Contreras, Kevin Moreno, Leonel Briones
+ */
 package m4POOdiagnostico;
 
 import java.util.ArrayList;
@@ -286,7 +290,7 @@ public class Tablero {
                 			puntajeObtenido.add(7);
                 			System.out.println("+7 puntos"); //DEBUG
                 		}
-                		else if(((y >= 1 || y <= 13) && (y != 14 && y!=0)) && (matrix[x][y] == "H" && matrix[x][y+1] == "H") || (matrix[x][y] =="H" && matrix[x][y-1] == "H")) //verifica que no este en los extremos y si esque el caguano se hundio o no 
+                		else if(((y >= 1 || y <= 13) && (y != 14 && y!=0)) && ((matrix[x][y] == "H" && matrix[x][y+1] == "H") || (matrix[x][y] =="H" && matrix[x][y-1] == "H"))) //verifica que no este en los extremos y si esque el caguano se hundio o no 
                 		{
                 			System.out.println("Felicidades! Hundiste un Caguano");
                 			puntajeObtenido.add(7);
@@ -336,7 +340,6 @@ public class Tablero {
                 }else if ((x < 0 || x >= 15) || (y < 0 || y >= 15))  //intento inválido
                 	System.out.println("No puedes poner coordenadas que no se encuentran dentro del tablero");
                 }}
-        //while((x < 0 || x >= 15) || (y < 0 || y >= 15));  //keep re-prompting till valid guess
         while(!coorX.matches(regEx) || !coorY.matches(regEx));
     }
     
@@ -377,6 +380,7 @@ public class Tablero {
 			switch (opciones) {
 			
 			case 1:
+				CarrosRestantes();
 				System.out.println("Lanzar Huevo");
 			    int contadorHuevos = 0;
 			    while (true) {
@@ -398,9 +402,11 @@ public class Tablero {
 			case 2:
 				System.out.println("Mostrar Tablero");
 				mostrarHuevo();
+				mostrarPlano();
 				break;
 			case 3:
 				System.out.println("Calcular Puntaje");
+				CarrosRestantes();
 				puntaje();
 				break;
 			case 4:
@@ -424,39 +430,77 @@ public class Tablero {
     */
     public void mostrarHuevo() {
 
-        //    horizontal numeros
+        // Imprimir números horizontales
         System.out.print("  ");
         for (int i = 0; i < matrix.length; i++) {
-            if (i <= 14) {
+            if (i <= 14) { // Números de 1 a 14 ocupan 2 espacios, el resto ocupa 1 espacio
                 System.out.print(String.format("%2d ", i));
             } else {
                 System.out.print(i);
             }
         }
         System.out.println();
-   //
 
-
-     // vertical numeros
+        // Imprimir contenido de la matriz
         for (int i = 0; i < matrix.length; i++) {
             for (int j = 0; j < matrix[i].length; j++) {
-                if (matrix[i][j].equals("H")) {
+                if (matrix[i][j].equals("H")) { // Si la celda contiene un huevo, imprimir "H"
+                    System.out.print(String.format("%2d", i) + "|"); // Imprimir número de fila y separador
                     if (j == 0) {
-                        System.out.print(String.format("%2d", i) + "|");
+                        System.out.print(matrix[i][j]); // Si es la primera columna, solo imprimir la H
+                    } else {
+                        System.out.print(" " + matrix[i][j]); // Si no es la primera columna, imprimir un espacio en blanco antes de la H
                     }
-                    System.out.print(matrix[i][j] + " ");
-                } else {
-                    if (j == 0) {
+                    System.out.print("|"); // Imprimir separador entre celdas
+                } else { // Si la celda está vacía, imprimir un espacio en blanco
+                    if (j == 0) { // Si es la primera columna, imprimir número de fila y separador
                         System.out.print(String.format("%2d", i) + "|");
                     } else {
                         System.out.print("  ");
                     }
+                    System.out.print("|"); // Imprimir separador entre celdas
                 }
-                System.out.print("|");
             }
-            System.out.println();
+            System.out.println(); // Cambiar de línea después de cada fila
         }
-
+}
+/**
+ * Cuenta cantidad de carros para validar el termino del juego
+ */
+    public void CarrosRestantes() {
+    	int carros = 0;
+    	int T = 0;
+    	int C =0;
+    	int K = 0;
+    	for(int i = 0; i < 15; i++) {
+    		for(int j = 0; j < 15; j++) {
+    			if(matrix[i][j].equals("T")) {
+    				T++;	
+    			}
+    			if(matrix[i][j].equals("C")){
+    				C++;
+    			}
+    			if(matrix[i][j].equals("K")){
+    				K++;
+    			}
+    		}
+    		carros = (K/3)+(C/2)+T;
+    	}
+    	if(carros == 0) {
+    		System.out.println("[!] ¡¡FELICIDADES!! HAS DERROTADO A TODOS LOS CARROS PKS");
+    		//Mostrar Puntaje
+    		puntaje();
+    		//Mostrar Tablero
+    		mostrarPlano();
+    		//Finalizar Juego
+    		System.exit(0);
+    	}else {
+    		System.out.println("\nTrupallas: " + T);
+    		System.out.println("Caguanos: " + C);
+    		System.out.println("Kromis: " + K);
+    		
+    		System.out.println("Aún hay: " + carros + " Carros");
+    	}
     }
     
 	public static int getRandom(int max, int min) {

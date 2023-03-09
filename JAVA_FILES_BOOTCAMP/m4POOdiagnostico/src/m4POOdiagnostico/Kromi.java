@@ -1,3 +1,6 @@
+/**
+ * @authors Valentina Saldías, Priscila Carrillo, Andrés Contreras, Kevin Moreno, Leonel Briones
+ */
 package m4POOdiagnostico;
 
 /**
