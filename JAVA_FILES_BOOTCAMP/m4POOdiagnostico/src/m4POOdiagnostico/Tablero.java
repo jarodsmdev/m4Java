@@ -265,24 +265,24 @@ public class Tablero {
                 	{
                 		System.out.println("Felicidades! Hundiste una Kromi");
                 		puntajeObtenido.add(10);
-                		System.out.println("+10 puntos I"); //DEBUG
+                		System.out.println("+10 puntos"); //DEBUG
                 		mostrarPlano();
                 	}
                 	else if ((x == 14) && (matrix[x][y] == "H" && matrix[x-1][y] == "H" && matrix[x-2][y] == "H") ) {
                 		System.out.println("Felicidades! Hundiste una Kromi");
                 		puntajeObtenido.add(10);
-                		System.out.println("+10 puntos II"); //DEBUG
+                		System.out.println("+10 puntos"); //DEBUG
                 		mostrarPlano();
                 	}
                 	else if((x >= 2 && x <=12) && ((matrix[x][y] == "H" && matrix[x+1][y] == "H" && matrix[x+2][y] == "H") || (matrix[x][y] == "H" && matrix[x-1][y] == "H" && matrix[x-2][y] == "H") )) {
                 		System.out.println("Felicidades! Hundiste una Kromi");
                 		puntajeObtenido.add(10);
-                		System.out.println("+10 puntos IV"); //DEBUG
+                		System.out.println("+10 puntos"); //DEBUG
                 		mostrarPlano();
                 		if ((x >= 1 || x <=13) && (matrix[x][y] == "H" && matrix[x+1][y] == "H" && matrix[x-1][y] == "H") ) {
                 			System.out.println("Felicidades! Hundiste una Kromi");
                 			puntajeObtenido.add(10);
-                			System.out.println("+10 puntos III"); //DEBUG
+                			System.out.println("+10 puntos"); //DEBUG
                 			mostrarPlano();
                 		}
                 	}
@@ -291,7 +291,7 @@ public class Tablero {
                 	}
                 }else if (matrix[x][y] == " " || matrix[x][y] == "H") {
                     System.out.println("Sorry, no golpeaste nada");
-                    matrix[x][y] = "H";
+                    matrix[x][y] = "~";
                     mostrarPlano();
                 }else if ((x < 0 || x >= 15) || (y < 0 || y >= 15))  //intento inválido
                 	System.out.println("No puedes poner coordenadas que no se encuentran dentro del tablero");
