@@ -1,6 +1,4 @@
 package m4POOdiagnostico;
-import java.util.Scanner;
-import java.util.InputMismatchException;
 
 
 public class Principal {
