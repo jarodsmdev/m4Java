@@ -1,4 +1,0 @@
-INDEX VERSION 1.131+/home/jarod/Desktop/Web/cursos/TALENTO_DIGITAL/M4/.metadata/.plugins/org.eclipse.jdt.core
-1865797976.index
-829334671.index
-1402089441.index

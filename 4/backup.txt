@@ -1,0 +1,74 @@
+//VARIABLE GLOBAL CAPTURA DATOS TIPO STRING POR SHOWINPUTDIALOG
+		String capturador = "";
+		
+		//VARIABLES
+		int rutCliente = 0;
+		String nombreCliente = "";
+		String direccionCliente = "";
+		
+		
+		
+		//CREAR CAPACITACION
+		//INGRESO RUT CLIENTE + VALIDACION
+		do{
+			capturador = JOptionPane.showInputDialog("Ingrese RUT Cliente:").trim();
+			if(capturador.length() == 0) {
+				System.out.println("[ERROR] Debe ingresar RUT de la empresa");
+			}else if(capturador.length() > 9) {
+				System.out.println("[ERROR] Debe ingresar un RUT válido");
+			}else if(isNumeric(capturador) == false){
+				System.out.println("[ERROR] Favor digite sólo números sin digito verificador");
+			}else {
+				rutCliente = Integer.parseInt(capturador); //GUARDA EL DATO DE CAPTURADOR
+			}
+
+		}while(capturador.length() == 0 || capturador.length() >9 || isNumeric(capturador)==false);
+		
+		//INGRESO NOMBRE + VALIDACION
+		
+		do {
+			capturador = JOptionPane.showInputDialog("Ingrese Nombre del cliente:").trim();
+			nombreCliente = capturador;
+			if(capturador.length()==0){
+				System.out.println("[ERROR] Debe ingresar Nombre del Cliente");
+			}
+		}while(capturador.length() == 0);
+		
+		//INGRESO DIRECCIÓN + VALIDACION
+		do {
+			capturador = JOptionPane.showInputDialog("Ingrese Dirección: ").trim();
+			direccionCliente = capturador;
+			if(capturador.length()==0){
+				System.out.println("[ERROR] Debe ingresar Dirección");
+			}
+		}while(capturador.length() == 0);
+		
+		//INGRESO COMUNA + VALIDACION
+		do {
+			capturador = JOptionPane.showInputDialog(direccionCliente).trim();
+			if(capturador.length()==0){
+				System.out.println("[ERROR] Debe ingresar comuna");
+			}
+		}while(capturador.length() == 0);
+		
+		//MOSTRAR MENSAJE FINAL POR PANTALLA
+		System.out.println(ShowMessage(rutCliente, nombreCliente, direccionCliente));
+	}
+
+
+	private static boolean isNumeric(String cadena){
+		try{
+			Integer.parseInt(cadena);
+			return true;
+		}catch(NumberFormatException nfe){
+			return false;
+		}
+	}
+	
+	private static String ShowMessage(int rutCliente, String nombreCliente, String direccionCliente) {
+		String message;
+		message = "Rut Cliente :" + rutCliente +"\nNombre Cliente: " + nombreCliente + "\nDirección: " + direccionCliente;
+		return message;
+	}
+
+    ArrayList <String> asistentes = new ArrayList <String>();
