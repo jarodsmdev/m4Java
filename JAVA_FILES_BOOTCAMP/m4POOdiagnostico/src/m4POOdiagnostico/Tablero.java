@@ -27,7 +27,7 @@ public class Tablero {
     	
     	//ARRAY PUNTAJE
         puntajeObtenido = new ArrayList<Integer>();
-    	//INICIALIZAR EL TABLERO VACÍO
+    	/** INICIALIZAR EL TABLERO VACIO */
     	matrix = new String[15][15];
     	 for(int i = 0; i < matrix.length; i++) {
              for(int j = 0; j < matrix[i].length; j++) {
@@ -280,21 +280,24 @@ public class Tablero {
                 	System.out.println("+2 puntos"); //DEBUG
                 		if ((y == 0) && (matrix[x][y] == "H" && matrix[x][y+1] == "H")) // verifica si esta en el extremo izquiero, y si esque se hundio o no el caguano
                 		{	
-                			System.out.println("Felicidades! Hundiste un Caguano");
+                			System.out.println("Felicidades! Destruiste un Caguano");
                 			puntajeObtenido.add(7);
                 			System.out.println("+7 puntos"); //DEBUG
+                			mostrarHuevo(); 
                 		}
                 		else if((y == 14) && (matrix[x][y] =="H" && matrix[x][y-1] == "H")) // verifica que esta en el extremo derecho y si esque se hundio un caguano
                 		{
-                			System.out.println("Felicidades! Hundiste un Caguano");
+                			System.out.println("Felicidades! Destruiste un Caguano");
                 			puntajeObtenido.add(7);
                 			System.out.println("+7 puntos"); //DEBUG
+                			mostrarHuevo(); 
                 		}
                 		else if(((y >= 1 || y <= 13) && (y != 14 && y!=0)) && ((matrix[x][y] == "H" && matrix[x][y+1] == "H") || (matrix[x][y] =="H" && matrix[x][y-1] == "H"))) //verifica que no este en los extremos y si esque el caguano se hundio o no 
                 		{
-                			System.out.println("Felicidades! Hundiste un Caguano");
+                			System.out.println("Felicidades! Destruiste un Caguano");
                 			puntajeObtenido.add(7);
                 			System.out.println("+7 puntos"); //DEBUG
+                			mostrarHuevo(); 
                 			
                 		}
                 		else{
@@ -309,24 +312,24 @@ public class Tablero {
                 	{
                 		System.out.println("Felicidades! Destruiste una Kromi");
                 		puntajeObtenido.add(10);
-                		System.out.println("+10 puntos I"); //DEBUG
+                		System.out.println("+10 puntos"); //DEBUG
                 		mostrarHuevo();
                 	}
                 	else if ((x == 14) && (matrix[x][y] == "H" && matrix[x-1][y] == "H" && matrix[x-2][y] == "H") ) {
                 		System.out.println("Felicidades! Destruiste una Kromi");
                 		puntajeObtenido.add(10);
-                		System.out.println("+10 puntos II"); //DEBUG
+                		System.out.println("+10 puntos"); //DEBUG
                 		mostrarHuevo();
                 	}
                 	else if((x >= 2 && x <=12) && ((matrix[x][y] == "H" && matrix[x+1][y] == "H" && matrix[x+2][y] == "H") || (matrix[x][y] == "H" && matrix[x-1][y] == "H" && matrix[x-2][y] == "H") )) {
                 		System.out.println("Felicidades! Destruiste una Kromi");
                 		puntajeObtenido.add(10);
-                		System.out.println("+10 puntos IV"); //DEBUG
+                		System.out.println("+10 puntos"); //DEBUG
                 		mostrarHuevo();
                 		if ((x >= 1 || x <=13) && (matrix[x][y] == "H" && matrix[x+1][y] == "H" && matrix[x-1][y] == "H") ) {
                 			System.out.println("Felicidades! Destruiste una Kromi");
                 			puntajeObtenido.add(10);
-                			System.out.println("+10 puntos III"); //DEBUG
+                			System.out.println("+10 puntos"); //DEBUG
                 			mostrarHuevo();
                 		}
                 	}
@@ -422,6 +425,7 @@ public class Tablero {
 		} while (opciones != 4);
 	}
     
+    
     /**
     Este método muestra en consola una representación visual de una matriz en la que se encuentra un huevo.
     La matriz es de 15x15 y cada celda puede contener un huevo ("H") o estar vacía (" ").
@@ -429,6 +433,7 @@ public class Tablero {
     Si una celda contiene un huevo, el método lo muestra como "H" y si está vacía, muestra un espacio en blanco.
     @return void
     */
+
     public void mostrarHuevo() {
 
         // Imprimir números horizontales
@@ -498,7 +503,7 @@ public class Tablero {
     		//System.out.println("\nTrupallas: " + T);
     		//System.out.println("Caguanos: " + C/2);
     		//System.out.println("Kromis: " + K/3);
-    		System.out.println("\nAún hay carros que destruir");
+    		System.out.println("\nAún quedan carros que destruir");
     	}
     }
     

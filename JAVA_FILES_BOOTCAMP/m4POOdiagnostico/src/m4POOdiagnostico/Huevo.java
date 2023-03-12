@@ -4,6 +4,7 @@
 package m4POOdiagnostico;
 
 import java.util.ArrayList;
+import java.util.Scanner;
 
 
 public class Huevo extends Tablero{
@@ -47,8 +48,9 @@ public class Huevo extends Tablero{
     public void setColumna(int coorY){
         columna = coorY;
     }
-
-
-
+    
+    static ArrayList<Integer>puntajeObtenido = new ArrayList<Integer>();
 
 }
+   
+
