@@ -173,7 +173,7 @@ public class M4APBRO4 {
 	// RETORNA LA POSICION DEL RUT
 	public static int posicionRUT(String rut, String[][] listadoUsuario) {
 		for (int i = 0; i < listadoUsuario.length; i++) {
-			if (rut.equals(listadoUsuario[i][2])) {
+			if (rut.equalsIgnoreCase(listadoUsuario[i][2])) {
 				return i;
 			}
 		}
